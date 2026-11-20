@@ -1,0 +1,37 @@
+54 — AUDIT: formulas of known lipid classes labelled non-lipid (master.parquet)
+generated formulas: 6,498 over 25 classes
+  label lipid     :  2,150 of 9,935 formulas match a generated lipid formula
+  label non_lipid :    313 of 84,053 formulas match a generated lipid formula
+  label discarded :  3,090 of 21,836 formulas match a generated lipid formula
+
+non-lipid formulas that match a lipid class: 313 (0.37 % of the non-lipid layer)
+  in_refmet_nonlipid  :    12
+  in_chebi            :   210
+  in_coconut          :   166
+  also flagged as lipid by RefMet (in_refmet_lipid): 200
+
+by class (a formula may match more than one class):
+  MG            11 non-lipid formulas (of 119 generated)
+  DG            36 non-lipid formulas (of 403 generated)
+  TG             4 non-lipid formulas (of 496 generated)
+  MGDG          38 non-lipid formulas (of 403 generated)
+  DGDG          30 non-lipid formulas (of 403 generated)
+  SQDG          12 non-lipid formulas (of 403 generated)
+  MGMG          34 non-lipid formulas (of 119 generated)
+  DGMG          11 non-lipid formulas (of 119 generated)
+  SQMG           4 non-lipid formulas (of 119 generated)
+  DGTS/DGTA     73 non-lipid formulas (of 403 generated)
+  PA             6 non-lipid formulas (of 403 generated)
+  PC            10 non-lipid formulas (of 403 generated)
+  PE            13 non-lipid formulas (of 403 generated)
+  PG             2 non-lipid formulas (of 403 generated)
+  PI             5 non-lipid formulas (of 403 generated)
+  PS             3 non-lipid formulas (of 403 generated)
+  LPA            9 non-lipid formulas (of 119 generated)
+  LPE            1 non-lipid formulas (of 119 generated)
+  LPG            1 non-lipid formulas (of 119 generated)
+  Cer            9 non-lipid formulas (of 375 generated)
+  HexCer         9 non-lipid formulas (of 375 generated)
+  CE             2 non-lipid formulas (of 91 generated)
+
+  Saved: results/54_audit_nonlipids.csv

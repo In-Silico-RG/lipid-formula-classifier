@@ -1,0 +1,16 @@
+========================================================================================
+40 — BASELINES AND TREE MODELS, merged protocol · input list R2C
+========================================================================================
+entries 49,966 (9,935 formulas) · task B formulas 93,988 (9,935 lipids) · seeds [0, 1, 2] · 5-fold grouped by formula
+
+--- task C (86 labels, unit = entry, n = 49,966); classes with ≥ 20 entries: 53
+  majority         acc  13.88 ± 0.00   macro F1   0.28 ± 0.00   bal. acc   1.16   permissive  13.94  F1(≥20)   0.46   [31 s]
+  look-up table    acc  13.88 ± 0.00   macro F1   0.28 ± 0.00   bal. acc   1.16   permissive  13.94  F1(≥20)   0.46   [102 s]
+  RF               acc  85.18 ± 0.12   macro F1  56.59 ± 0.50   bal. acc  54.46   permissive  95.62  F1(≥20)  71.56   [117 s]
+  RF-weighted      acc  84.21 ± 0.43   macro F1  57.67 ± 0.61   bal. acc  56.37   permissive  95.18  F1(≥20)  71.64   [121 s]
+  XGB              acc  84.09 ± 0.13   macro F1  54.91 ± 0.77   bal. acc  52.96   permissive  94.98  F1(≥20)  70.90   [1127 s]
+  XGB-weighted     acc  67.24 ± 4.47   macro F1  35.31 ± 4.05   bal. acc  40.57   permissive  77.59  F1(≥20)  49.95   [1374 s]
+  kNN-1            acc  62.98 ± 0.47   macro F1  33.22 ± 0.05   bal. acc  32.89   permissive  72.51  F1(≥20)  43.85   [40 s]
+  kNN-5            acc  63.54 ± 0.60   macro F1  29.77 ± 0.28   bal. acc  28.23   permissive  72.74  F1(≥20)  41.78   [39 s]
+
+  Saved: results/40_models_R2C_C.csv

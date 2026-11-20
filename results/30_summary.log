@@ -1,0 +1,46 @@
+30 — FEATURE SELECTION: SUMMARY OVER MODELS (rule D4)
+
+--- knn
+task  category  main_class
+set                       
+R1       80.84       26.21
+R2       83.09       33.96
+R2C      80.46       29.73
+R5       85.14       38.62
+T10      87.55       47.31
+T12      89.54       40.73
+  category: best T12 89.54 ± 0.33; within 1 SD: T12
+  main_class: best T10 47.31 ± 0.54; within 1 SD: T10
+  knn: no set within 1 SD in both tasks
+
+--- rf
+task  category  main_class
+set                       
+R1       91.92       51.21
+R2       90.44       54.88
+R2C      92.92       56.60
+R5       91.30       58.48
+T10      91.29       54.89
+T12      92.50       55.52
+  category: best R2C 92.92 ± 0.57; within 1 SD: R2C, T12
+  main_class: best R5 58.48 ± 0.32; within 1 SD: R5
+  rf: no set within 1 SD in both tasks
+
+--- xgb
+task  category  main_class
+set                       
+R1       92.59       53.11
+R2       92.59       53.29
+R2C      93.09       54.82
+R5       92.76       55.06
+T10      92.34       52.81
+T12      92.76       53.75
+  category: best R2C 93.09 ± 0.16; within 1 SD: R2C
+  main_class: best R5 55.06 ± 0.46; within 1 SD: R2C, R5
+  CHOSEN by xgb: R2C
+
+--- agreement
+  knn: no list within 1 SD in both tasks
+  rf: no list within 1 SD in both tasks
+  xgb: R2C
+  NO AGREEMENT: 1 of 3 models give a list (R2C); decision goes back to AC

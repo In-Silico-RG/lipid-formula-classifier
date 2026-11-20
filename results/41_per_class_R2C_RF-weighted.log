@@ -1,0 +1,28 @@
+41 — PER CATEGORY, PER CLASS AND TWO-STEP · R2C · RF-weighted
+
+--- task A, per category (mean over seeds)
+  Fatty Acyls            n 11,691  sensitivity  93.81  precision  92.50  F1  93.14 ± 1.30  PR-AUC  97.43
+  Glycerolipids          n  7,795  sensitivity  97.74  precision  99.05  F1  98.39 ± 0.04  PR-AUC  99.76
+  Glycerophospholipids   n 10,544  sensitivity  99.97  precision  99.53  F1  99.75 ± 0.02  PR-AUC 100.00
+  Polyketides            n  7,218  sensitivity  95.22  precision  97.83  F1  96.51 ± 0.07  PR-AUC  98.84
+  Prenol Lipids          n  2,639  sensitivity  68.28  precision  84.12  F1  75.36 ± 0.18  PR-AUC  84.10
+  Saccharolipids         n  1,351  sensitivity  97.93  precision  98.95  F1  98.44 ± 0.11  PR-AUC  99.72
+  Sphingolipids          n  4,631  sensitivity  98.20  precision  98.36  F1  98.28 ± 0.10  PR-AUC  99.84
+  Sterol Lipids          n  4,097  sensitivity  92.06  precision  80.52  F1  85.85 ± 3.17  PR-AUC  92.32
+
+--- confusion (seed 0, % of each true category; rows = true)
+                      Fatty Acyls  Glycerolipids  Glycerophospholipids  Polyketides  Prenol Lipids  Saccharolipids  Sphingolipids  Sterol Lipids
+Fatty Acyls                  91.2            0.2                   0.0          0.5            1.2             0.0            0.4            6.5
+Glycerolipids                 1.3           97.7                   0.0          0.0            0.2             0.1            0.1            0.5
+Glycerophospholipids          0.0            0.0                 100.0          0.0            0.0             0.0            0.0            0.0
+Polyketides                   2.1            0.2                   0.1         95.0            0.7             0.0            0.1            1.8
+Prenol Lipids                14.7            1.1                   0.8          2.1           67.4             0.2            0.3           13.4
+Saccharolipids                1.0            0.2                   0.1          0.0            0.0            98.1            0.1            0.4
+Sphingolipids                 1.4            0.0                   0.2          0.0            0.0             0.0           98.3            0.0
+Sterol Lipids                 4.6            0.2                   0.2          0.8            2.5             0.0            0.0           91.8
+
+--- task C: direct model vs two-step arrangement (mean ± SD over seeds)
+  direct    acc  84.65 ± 0.79   macro F1  56.83 ± 0.76
+  two-step  acc  84.89 ± 0.13   macro F1  55.16 ± 1.42
+
+  classes with F1 < 50 % (n ≥ 20): Aromatic polyketides [PK13] (31), Fatty aldehydes [FA06] (46), Glycosylmonoradylglycerols [GL04] (38), Hopanoids [PR04] (33), Monoradylglycerols [GL01] (42), Other acyl sugars [SL05] (31), Oxygenated hydrocarbons [FA12] (48), Phenolic lipids [PK15] (24), Polyether antibiotics [PK09] (20), Quinones and hydroquinones [PR02] (27), Steroids [ST02] (45)

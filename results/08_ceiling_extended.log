@@ -1,0 +1,60 @@
+================================================================================
+TECHO RECALCULADO SOBRE LMSD_extended Y BAJO LOS DOS CRITERIOS
+================================================================================
+
+  LMSD_extended: 50,572 entradas
+  fórmula no parseable: 606  →  quedan 49,966 entradas, 9,935 fórmulas únicas
+  Guardado: data/lmsd_extended.csv
+
+================================================================================
+LOS DOS CRITERIOS
+================================================================================
+  ESTRICTO  : ¿acierto la etiqueta de ESTA molécula? El óptimo predice la
+              mayoritaria de la fórmula y falla en los isómeros minoritarios.
+  PERMISIVO : ¿doy una etiqueta compatible con ESTA fórmula? El óptimo elige
+              cualquiera del conjunto admisible, así que nunca falla.
+
+  --- Categoría ---
+    etiquetas distintas                           8
+    fórmulas únicas                           9,935
+    ambiguas por isomería (estricto)            587  (5.91 %)
+    con más de una etiqueta admisible           607  (6.11 %)
+    TECHO criterio ESTRICTO                  97.46 %
+    TECHO criterio PERMISIVO                100.00 %   (por construcción)
+
+  --- Clase principal ---
+    etiquetas distintas                          86
+    fórmulas únicas                           9,935
+    ambiguas por isomería (estricto)          1,270  (12.78 %)
+    con más de una etiqueta admisible         2,229  (22.44 %)
+    TECHO criterio ESTRICTO                  91.18 %
+    TECHO criterio PERMISIVO                100.00 %   (por construcción)
+
+  --- Subclase ---
+    etiquetas distintas                         299
+    fórmulas únicas                           9,935
+    ambiguas por isomería (estricto)          2,232  (22.47 %)
+    con más de una etiqueta admisible         3,208  (32.29 %)
+    TECHO criterio ESTRICTO                  82.96 %
+    TECHO criterio PERMISIVO                100.00 %   (por construcción)
+
+================================================================================
+COMPARACIÓN CON LAS CIFRAS ANTERIORES (LMSD abr-2026, criterio estricto)
+================================================================================
+  Nivel                   antes      ahora        Δ
+  Categoría              97.44%     97.46%    +0.02
+  Clase principal        91.20%     91.18%    -0.02
+  Subclase                    —     82.96%
+
+================================================================================
+LECTURA
+================================================================================
+  El techo del criterio estricto NO es una propiedad del problema: es una
+  propiedad de CÓMO SE CORRIGE. Bajo el criterio permisivo -el que corresponde
+  a MS1, donde solo se dispone de la fórmula- no hay techo por debajo del 100 %.
+
+  Consecuencia práctica: el margen de mejora es MAYOR de lo que parecía.
+  El modelo actual da 85,90 % con criterio permisivo, así que quedan 14 puntos,
+  no los 8-9 que sugería el techo estricto.
+
+  Guardado: results/08_ceiling_extended.csv

@@ -1,0 +1,6 @@
+20 — Table lookup: per-entry accuracy under the two splits (5 seeds)
+  LMSD September 2026: 49,966 valid entries, 9,935 unique formulas
+  per-entry split           89.04 % (± 0.24)
+  per-formula split         23.67 % (± 2.85)
+  difference                65.38 points
+  Saved: results/20_entry_lookup.csv

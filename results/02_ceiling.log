@@ -1,0 +1,39 @@
+==============================================================================
+FASE 1.1 y 1.2 — Techo teórico y cuantificación de fuga
+==============================================================================
+
+[0] DATOS
+  LMSD septiembre 2026: 49,966 entradas válidas, 9,935 fórmulas únicas
+
+[1] TECHO TEÓRICO (LMSD septiembre 2026)
+  Clasificador de Bayes óptimo bajo información de sólo-fórmula:
+  para cada fórmula predice su etiqueta mayoritaria. Ningún método que use
+  únicamente la fórmula puede superarlo.
+
+  --- Categoría (8) ---
+    etiquetas distintas                       8
+    fórmulas únicas                       9,935
+    fórmulas ambiguas (>1 etiqueta)         587  (5.91 %)
+    TECHO ponderado por entradas         97.46 %
+    TECHO ponderado por fórmula          98.24 %
+
+  --- Clase principal ---
+    etiquetas distintas                      86
+    fórmulas únicas                       9,935
+    fórmulas ambiguas (>1 etiqueta)       1,270  (12.78 %)
+    TECHO ponderado por entradas         91.18 %
+    TECHO ponderado por fórmula          95.54 %
+
+[2] TECHO A NIVEL DE DETECCIÓN LÍPIDO / NO-LÍPIDO
+    fórmulas en LIPID MAPS y también en alguna base de no-lípidos: 3,923
+    (cota inferior de la ambigüedad lípido/no-lípido: incluye ambigüedad real y
+     posible contaminación residual de las bases de negativos)
+    sobre 9,935 fórmulas lipídicas → 39.49 % en conflicto
+
+[3] FUGA (LMSD septiembre 2026)
+
+  --- Fuga por esquema de partición (media de 5 semillas) ---
+    80/20 aleatorio por fila             89.88 %  (± 0.16)
+    80/20 agrupado por fórmula            0.00 %
+
+  Guardados: results/02_ceiling.csv, results/02_leakage.csv

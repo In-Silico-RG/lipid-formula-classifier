@@ -1,0 +1,19 @@
+53 — FIGURES AND TABLES · R2C · RF-weighted
+- fig_leak_limit
+  figure: figures/fig1_leakage_and_limit.pdf
+- fig_features
+  figure: figures/m1_feature_selection.pdf
+- fig_models
+  figure: figures/m2_models.pdf
+  table: results/53_table_models_R2C.tex
+- fig_confusion
+  figure: figures/m7_confusion.pdf
+- fig_external
+  figure: figures/m3_independent_data.pdf
+  table: results/53_table_external_R2C_RF-weighted.tex
+- fig_conformal
+  figure: figures/m4_prediction_sets.pdf
+- fig_rules
+  figure: figures/m5_readable_rules.pdf
+- fig_novelty
+  figure: figures/m6_distance_check.pdf

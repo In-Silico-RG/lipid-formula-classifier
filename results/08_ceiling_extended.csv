@@ -1,0 +1,4 @@
+nivel,n_etiquetas,n_formulas,ambiguas_estricto,multi_admisible,techo_estricto,techo_permisivo
+Categoría,8,9935,587,607,97.458,100.0
+Clase principal,86,9935,1270,2229,91.18,100.0
+Subclase,299,9935,2232,3208,82.956,100.0

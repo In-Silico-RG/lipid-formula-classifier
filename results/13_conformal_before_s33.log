@@ -1,0 +1,289 @@
+====================================================================================
+E1 — PREDICCIÓN CONFORME: conjuntos con garantía de cobertura, no etiquetas
+====================================================================================
+split conformal · s = 1 − p̂(y) · 64/16/20 agrupado por fórmula · 5 semillas · α ∈ {0,10, 0,05, 0,01}
+
+====================================================================================
+TAREA A — Categoría (8) · RF balanceado · techo estricto 97,46 % / permisivo 100 %
+====================================================================================
+  9,650 fórmulas · ambiguas 6.27 %
+
+  α = 0.10  (objetivo ≥ 90 %) · marginal
+    cobertura estricta   89.20 %  (± 1.02)   · permisiva  90.39 %
+    tamaño medio 0.973   · singletons  95.2 %   · vacíos  3.8 %
+    tamaño en NO ambiguas 0.975   vs   AMBIGUAS 0.939   → razón 0.96×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            0.973     89.6 %
+      Glycerolipids          0.949     85.4 %
+      Glycerophospholipids   1.001     99.9 %
+      Polyketides            0.967     88.3 %
+      Prenol Lipids          0.936     61.9 %
+      Saccharolipids         0.955     79.2 %
+      Sphingolipids          1.003     96.7 %
+      Sterol Lipids          0.919     79.9 %
+
+  α = 0.10  (objetivo ≥ 90 %) · MONDRIAN (por clase)
+    cobertura estricta   90.19 %  (± 1.27)   · permisiva  91.32 %
+    tamaño medio 1.490   · singletons  52.5 %   · vacíos  2.2 %
+    tamaño en NO ambiguas 1.472   vs   AMBIGUAS 1.759   → razón 1.19×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            1.551     88.5 %
+      Glycerolipids          1.589     94.3 %
+      Glycerophospholipids   1.318     91.1 %
+      Polyketides            1.492     90.2 %
+      Prenol Lipids          1.692     91.0 %
+      Saccharolipids         1.162     91.1 %
+      Sphingolipids          1.332     89.4 %
+      Sterol Lipids          1.772     90.2 %
+
+  α = 0.05  (objetivo ≥ 95 %) · marginal
+    cobertura estricta   95.05 %  (± 0.82)   · permisiva  95.93 %
+    tamaño medio 1.134   · singletons  87.4 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 1.114   vs   AMBIGUAS 1.423   → razón 1.28×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            1.165     95.8 %
+      Glycerolipids          1.167     93.9 %
+      Glycerophospholipids   1.006     99.9 %
+      Polyketides            1.107     93.7 %
+      Prenol Lipids          1.371     81.3 %
+      Saccharolipids         1.123     83.8 %
+      Sphingolipids          1.055     98.6 %
+      Sterol Lipids          1.283     91.9 %
+
+  α = 0.05  (objetivo ≥ 95 %) · MONDRIAN (por clase)
+    cobertura estricta   95.38 %  (± 1.13)   · permisiva  96.03 %
+    tamaño medio 1.745   · singletons  44.4 %   · vacíos  0.4 %
+    tamaño en NO ambiguas 1.707   vs   AMBIGUAS 2.307   → razón 1.35×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            1.889     94.3 %
+      Glycerolipids          1.807     97.4 %
+      Glycerophospholipids   1.382     95.3 %
+      Polyketides            1.735     95.3 %
+      Prenol Lipids          2.072     96.8 %
+      Saccharolipids         1.638     92.6 %
+      Sphingolipids          1.450     95.5 %
+      Sterol Lipids          2.367     95.8 %
+
+  α = 0.01  (objetivo ≥ 99 %) · marginal
+    cobertura estricta   99.05 %  (± 0.37)   · permisiva  99.31 %
+    tamaño medio 1.782   · singletons  58.5 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 1.735   vs   AMBIGUAS 2.476   → razón 1.43×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            1.990     99.2 %
+      Glycerolipids          1.927     98.7 %
+      Glycerophospholipids   1.112    100.0 %
+      Polyketides            1.704     98.0 %
+      Prenol Lipids          2.632     96.9 %
+      Saccharolipids         2.574     97.1 %
+      Sphingolipids          1.256     99.6 %
+      Sterol Lipids          2.792     99.3 %
+
+  α = 0.01  (objetivo ≥ 99 %) · MONDRIAN (por clase)
+    cobertura estricta   99.37 %  (± 0.25)   · permisiva  99.49 %
+    tamaño medio 3.063   · singletons   9.7 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 3.014   vs   AMBIGUAS 3.788   → razón 1.26×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            3.497     99.3 %
+      Glycerolipids          3.181     99.4 %
+      Glycerophospholipids   2.352     99.3 %
+      Polyketides            2.731     99.3 %
+      Prenol Lipids          3.857     99.2 %
+      Saccharolipids         3.787     96.4 %
+      Sphingolipids          2.443     99.8 %
+      Sterol Lipids          4.171     99.7 %
+
+  referencia: exactitud puntual del mismo RF sobre los mismos conjuntos de prueba 90.95 %
+
+  --- bajo CAMBIO DE DISTRIBUCIÓN (calibrado en el catálogo; sin fuga) ---
+
+  PNNL (anotación) · n=831 · α = 0.10 · marginal
+    cobertura estricta   92.37 %  (± 1.03)   · permisiva  92.76 %
+    tamaño medio 0.949   · singletons  93.7 %   · vacíos  5.7 %
+    tamaño en NO ambiguas 0.948   vs   AMBIGUAS 0.978   → razón 1.03×
+    por grupo (tamaño medio · cobertura estricta):
+      Glycerolipids          0.856     80.3 %
+      Glycerophospholipids   1.000     99.5 %
+      Sphingolipids          1.008     98.1 %
+      Sterol Lipids          1.000    100.0 %
+
+  PNNL (anotación) · n=831 · α = 0.10 · MONDRIAN (por clase)
+    cobertura estricta   91.72 %  (± 2.29)   · permisiva  92.20 %
+    tamaño medio 1.258   · singletons  67.7 %   · vacíos  5.3 %
+    tamaño en NO ambiguas 1.267   vs   AMBIGUAS 1.007   → razón 0.80×
+    por grupo (tamaño medio · cobertura estricta):
+      Glycerolipids          1.538     97.9 %
+      Glycerophospholipids   1.109     89.8 %
+      Sphingolipids          1.059     81.1 %
+      Sterol Lipids          1.200    100.0 %
+
+  PNNL (anotación) · n=831 · α = 0.05 · marginal
+    cobertura estricta   97.52 %  (± 1.09)   · permisiva  97.86 %
+    tamaño medio 1.072   · singletons  92.9 %   · vacíos  0.2 %
+    tamaño en NO ambiguas 1.066   vs   AMBIGUAS 1.259   → razón 1.18×
+    por grupo (tamaño medio · cobertura estricta):
+      Glycerolipids          1.151     93.5 %
+      Glycerophospholipids   1.004     99.8 %
+      Sphingolipids          1.120     99.8 %
+      Sterol Lipids          1.000    100.0 %
+
+  PNNL (anotación) · n=831 · α = 0.05 · MONDRIAN (por clase)
+    cobertura estricta   97.50 %  (± 1.83)   · permisiva  97.93 %
+    tamaño medio 1.448   · singletons  66.3 %   · vacíos  0.9 %
+    tamaño en NO ambiguas 1.442   vs   AMBIGUAS 1.615   → razón 1.12×
+    por grupo (tamaño medio · cobertura estricta):
+      Glycerolipids          1.821     99.5 %
+      Glycerophospholipids   1.197     96.3 %
+      Sphingolipids          1.392     96.2 %
+      Sterol Lipids          1.240    100.0 %
+
+  MassBank (LIPID MAPS) · n=1,719 · α = 0.10 · marginal
+    cobertura estricta   84.53 %  (± 1.68)   · permisiva  88.03 %
+    tamaño medio 0.963   · singletons  94.2 %   · vacíos  4.7 %
+    tamaño en NO ambiguas 0.972   vs   AMBIGUAS 0.913   → razón 0.94×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            0.977     95.2 %
+      Glycerolipids          0.944     78.1 %
+      Glycerophospholipids   1.000    100.0 %
+      Polyketides            0.978     91.4 %
+      Prenol Lipids          0.910     38.9 %
+      Saccharolipids         0.900      0.0 %
+      Sphingolipids          1.010     86.5 %
+      Sterol Lipids          0.871     66.7 %
+
+  MassBank (LIPID MAPS) · n=1,719 · α = 0.10 · MONDRIAN (por clase)
+    cobertura estricta   87.75 %  (± 1.87)   · permisiva  91.03 %
+    tamaño medio 1.306   · singletons  67.7 %   · vacíos  2.9 %
+    tamaño en NO ambiguas 1.276   vs   AMBIGUAS 1.458   → razón 1.14×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            1.302     94.6 %
+      Glycerolipids          1.359     86.3 %
+      Glycerophospholipids   1.089     88.3 %
+      Polyketides            1.266     93.2 %
+      Prenol Lipids          1.593     74.9 %
+      Saccharolipids         1.900     70.0 %
+      Sphingolipids          1.050     70.1 %
+      Sterol Lipids          1.553     81.5 %
+
+  MassBank (LIPID MAPS) · n=1,719 · α = 0.05 · marginal
+    cobertura estricta   90.58 %  (± 1.36)   · permisiva  93.78 %
+    tamaño medio 1.144   · singletons  86.4 %   · vacíos  0.1 %
+    tamaño en NO ambiguas 1.101   vs   AMBIGUAS 1.363   → razón 1.24×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            1.109     99.1 %
+      Glycerolipids          1.141     83.7 %
+      Glycerophospholipids   1.001    100.0 %
+      Polyketides            1.104     94.9 %
+      Prenol Lipids          1.293     51.2 %
+      Saccharolipids         1.300     20.0 %
+      Sphingolipids          1.184     94.1 %
+      Sterol Lipids          1.361     85.8 %
+
+  MassBank (LIPID MAPS) · n=1,719 · α = 0.05 · MONDRIAN (por clase)
+    cobertura estricta   94.31 %  (± 1.63)   · permisiva  96.42 %
+    tamaño medio 1.619   · singletons  56.7 %   · vacíos  0.5 %
+    tamaño en NO ambiguas 1.520   vs   AMBIGUAS 2.128   → razón 1.40×
+    por grupo (tamaño medio · cobertura estricta):
+      Fatty Acyls            1.573     98.5 %
+      Glycerolipids          1.567     91.1 %
+      Glycerophospholipids   1.183     95.9 %
+      Polyketides            1.462     96.7 %
+      Prenol Lipids          2.152     86.3 %
+      Saccharolipids         3.000     70.0 %
+      Sphingolipids          1.360     82.4 %
+      Sterol Lipids          2.319     92.0 %
+
+====================================================================================
+TAREA C — Clase principal · XGB balanceado · techo estricto 91,18 %
+====================================================================================
+  9,566 fórmulas · 57 clases · ambiguas 23.06 %
+
+  α = 0.10  (objetivo ≥ 90 %) · marginal
+    cobertura estricta   89.85 %  (± 1.23)   · permisiva  92.34 %
+    tamaño medio 1.443   · singletons  70.4 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 1.371   vs   AMBIGUAS 1.684   → razón 1.23×
+
+  α = 0.10  (objetivo ≥ 90 %) · MONDRIAN (por clase)
+    cobertura estricta   89.71 %  (± 0.97)   · permisiva  91.77 %
+    tamaño medio 2.260   · singletons  52.7 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 2.057   vs   AMBIGUAS 2.947   → razón 1.43×
+
+  α = 0.05  (objetivo ≥ 95 %) · marginal
+    cobertura estricta   95.13 %  (± 0.53)   · permisiva  96.51 %
+    tamaño medio 2.533   · singletons  49.0 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 2.345   vs   AMBIGUAS 3.171   → razón 1.35×
+
+  α = 0.05  (objetivo ≥ 95 %) · MONDRIAN (por clase)
+    cobertura estricta   94.88 %  (± 0.67)   · permisiva  96.20 %
+    tamaño medio 4.011   · singletons  27.3 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 3.697   vs   AMBIGUAS 5.074   → razón 1.37×
+
+  α = 0.01  (objetivo ≥ 99 %) · marginal
+    cobertura estricta   99.21 %  (± 0.39)   · permisiva  99.45 %
+    tamaño medio 13.746   · singletons  10.2 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 12.375   vs   AMBIGUAS 18.394   → razón 1.49×
+
+  α = 0.01  (objetivo ≥ 99 %) · MONDRIAN (por clase)
+    cobertura estricta   97.96 %  (± 0.46)   · permisiva  98.56 %
+    tamaño medio 11.795   · singletons  10.7 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 10.644   vs   AMBIGUAS 15.700   → razón 1.48×
+
+  referencia: exactitud puntual del mismo XGB 80.67 %  (de 57 clases posibles)
+
+====================================================================================
+TAREA B — Detección · XGB · el conjunto {lípido, no-lípido} significa «no se puede decidir»
+====================================================================================
+
+  α = 0.10  (objetivo ≥ 90 %) · marginal
+    cobertura estricta   89.73 %  (± 0.56)   · permisiva  90.22 %
+    tamaño medio 0.906   · singletons  90.6 %   · vacíos  9.4 %
+    tamaño en NO ambiguas 0.927   vs   AMBIGUAS 0.406   → razón 0.44×
+    por grupo (tamaño medio · cobertura estricta):
+      lipido                 0.602     53.6 %
+      no_lipido              0.941     93.9 %
+
+  α = 0.10  (objetivo ≥ 90 %) · MONDRIAN (por clase)
+    cobertura estricta   89.84 %  (± 0.34)   · permisiva  90.08 %
+    tamaño medio 0.940   · singletons  94.0 %   · vacíos  6.0 %
+    tamaño en NO ambiguas 0.942   vs   AMBIGUAS 0.881   → razón 0.94×
+    por grupo (tamaño medio · cobertura estricta):
+      lipido                 0.935     90.3 %
+      no_lipido              0.941     89.8 %
+
+  α = 0.05  (objetivo ≥ 95 %) · marginal
+    cobertura estricta   94.86 %  (± 0.43)   · permisiva  95.88 %
+    tamaño medio 0.972   · singletons  97.2 %   · vacíos  2.8 %
+    tamaño en NO ambiguas 0.979   vs   AMBIGUAS 0.802   → razón 0.82×
+    por grupo (tamaño medio · cobertura estricta):
+      lipido                 0.881     74.0 %
+      no_lipido              0.983     97.3 %
+
+  α = 0.05  (objetivo ≥ 95 %) · MONDRIAN (por clase)
+    cobertura estricta   94.83 %  (± 0.33)   · permisiva  95.19 %
+    tamaño medio 1.028   · singletons  97.2 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 1.026   vs   AMBIGUAS 1.054   → razón 1.03×
+    por grupo (tamaño medio · cobertura estricta):
+      lipido                 1.030     95.2 %
+      no_lipido              1.027     94.8 %
+
+  α = 0.01  (objetivo ≥ 99 %) · marginal
+    cobertura estricta   99.02 %  (± 0.19)   · permisiva  99.55 %
+    tamaño medio 1.088   · singletons  91.2 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 1.068   vs   AMBIGUAS 1.565   → razón 1.47×
+    por grupo (tamaño medio · cobertura estricta):
+      lipido                 1.374     92.9 %
+      no_lipido              1.055     99.7 %
+
+  α = 0.01  (objetivo ≥ 99 %) · MONDRIAN (por clase)
+    cobertura estricta   99.04 %  (± 0.12)   · permisiva  99.10 %
+    tamaño medio 1.216   · singletons  78.4 %   · vacíos  0.0 %
+    tamaño en NO ambiguas 1.207   vs   AMBIGUAS 1.445   → razón 1.20×
+    por grupo (tamaño medio · cobertura estricta):
+      lipido                 1.255     99.2 %
+      no_lipido              1.212     99.0 %
+  α = 0.05, marginal, semilla 0: conjunto doble («no se puede decidir») en el 0.0 % de las fórmulas que COLISIONAN y el 0.0 % de las demás
+  α = 0.01, marginal, semilla 0: conjunto doble («no se puede decidir») en el 54.7 % de las fórmulas que COLISIONAN y el 6.8 % de las demás
+  α = 0.05, Mondrian, semilla 0: conjunto doble («no se puede decidir») en el 5.1 % de las fórmulas que COLISIONAN y el 2.7 % de las demás
+  α = 0.01, Mondrian, semilla 0: conjunto doble («no se puede decidir») en el 46.8 % de las fórmulas que COLISIONAN y el 24.8 % de las demás
+
+====================================================================================
+Guardado: resultados/13_conformal.csv

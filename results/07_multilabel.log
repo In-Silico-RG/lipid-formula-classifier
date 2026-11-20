@@ -1,0 +1,31 @@
+====================================================================================
+¿ESTÁ MAL EVALUADA LA TAREA C? — efecto de las clases alternativas
+====================================================================================
+
+  LMSD_extended: 50,572 entradas
+  con fórmula válida y clase: 49,966  ·  9,935 fórmulas únicas
+
+  fórmulas con MÁS DE UNA clase admisible: 2,229 (22.44 %)
+  clases admisibles por fórmula, media: 1.30
+
+  conjunto de trabajo: 9,851 fórmulas, 57 clases
+
+====================================================================================
+RESULTADO — mismo modelo, dos formas de corregir el examen
+====================================================================================
+
+  Evaluación                Exactitud
+  ---------------------- ------------
+  ESTRICTA                     82.70%   (± 0.65)
+  PERMISIVA                    86.18%   (± 0.54)
+  diferencia                   +3.48
+
+  De los 341 fallos contabilizados por semilla (media):
+    eran en realidad una clase oficial alternativa: 69
+    → 20.1 % de los 'errores' eran aciertos
+
+  Para referencia, con evaluación estricta:
+    F1 macro           71.32 %
+    balanced accuracy  72.35 %
+
+  Guardado: resultados/07_multietiqueta.csv

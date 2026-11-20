@@ -1,0 +1,75 @@
+====================================================================================
+VALIDACIÓN EXTERNA 2 — MassBank EU 2026.03: minoritarias y negativos reales
+====================================================================================
+
+  MassBank: 6,405 fórmulas únicas con espectro MS2
+    lípidos medidos (∩ LIPID MAPS):          1,722
+    no-lípidos medidos (∩ negativos curados): 4,041
+    excluidas por estado desconocido:         642
+
+====================================================================================
+TAREA A — Categoría · RF balanceado sobre R2 · muestra externa, etiqueta de LIPID MAPS
+====================================================================================
+  distribución externa (por fórmula): Fatty Acyls 521, Polyketides 343, Glycerophospholipids 309, Prenol Lipids 197, Sterol Lipids 192, Sphingolipids 101, Glycerolipids 54, Saccharolipids 2
+
+  SIN FUGA — entrenado excluyendo las fórmulas de MassBank
+    exactitud ESTRICTA    86.53 %  (± 0.12)   · ponderada por nº de espectros  82.55 %
+    exactitud PERMISIVA   90.72 %  (± 0.08)
+    F1 macro  73.49 %   · balanced accuracy  71.52 %
+    sensibilidad por categoría:
+      Fatty Acyls            n= 521     97.7 %
+      Polyketides            n= 343     93.0 %
+      Glycerophospholipids   n= 309    100.0 %
+      Prenol Lipids          n= 197     40.5 %
+      Sterol Lipids          n= 192     71.9 %
+      Sphingolipids          n= 101     87.5 %
+      Glycerolipids          n=  54     81.5 %
+      Saccharolipids         n=   2      0.0 %
+
+  CON FUGA — entrenado con todo el catálogo
+    exactitud ESTRICTA   100.00 %  (± 0.00)   · ponderada por nº de espectros 100.00 %
+    exactitud PERMISIVA  100.00 %  (± 0.00)
+    F1 macro 100.00 %   · balanced accuracy 100.00 %
+    sensibilidad por categoría:
+      Fatty Acyls            n= 521    100.0 %
+      Polyketides            n= 343    100.0 %
+      Glycerophospholipids   n= 309    100.0 %
+      Prenol Lipids          n= 197    100.0 %
+      Sterol Lipids          n= 192    100.0 %
+      Sphingolipids          n= 101    100.0 %
+      Glycerolipids          n=  54    100.0 %
+      Saccharolipids         n=   2    100.0 %
+
+====================================================================================
+TAREA B — Detección · XGBoost sobre R2 · externo con LAS DOS clases medidas
+====================================================================================
+  maestro: 93,988 fórmulas; 5,763 están en MassBank (se excluyen en SIN FUGA)
+  externo: 1,722 lípidos + 4,041 no-lípidos = 5,763
+
+  SIN FUGA — entrenado excluyendo las fórmulas de MassBank
+    sensibilidad (lípidos detectados)    70.62 %  (± 0.00)
+    especificidad (no-lípidos rechazados)  97.50 %  (± 0.00)
+    balanced accuracy  84.06 %   · F1 macro  86.44 %   · exactitud  89.47 %
+
+  CON FUGA — entrenado con todo
+    sensibilidad (lípidos detectados)    99.59 %  (± 0.00)
+    especificidad (no-lípidos rechazados)  99.75 %  (± 0.00)
+    balanced accuracy  99.67 %   · F1 macro  99.65 %   · exactitud  99.71 %
+
+  Referencia interna del mismo modelo (partición agrupada, sesión 21): balanced acc 89,1-90,2 %
+
+  lípidos reales NO detectados: 506 de 1,722
+      Fatty Acyls             261 de  521  ( 50.1 % perdidos)
+      Polyketides             106 de  343  ( 30.9 % perdidos)
+      Prenol Lipids            69 de  197  ( 35.0 % perdidos)
+      Sterol Lipids            39 de  192  ( 20.3 % perdidos)
+      Sphingolipids            13 de  101  ( 12.9 % perdidos)
+      Glycerophospholipids     12 de  309  (  3.9 % perdidos)
+      ?                         3 de    3  (100.0 % perdidos)
+      Saccharolipids            2 de    2  (100.0 % perdidos)
+      Glycerolipids             1 de   54  (  1.9 % perdidos)
+  no-lípidos reales tomados por lípido: 101 de 4,041
+    ejemplos: C11H12O4, C11H14O3, C11H16O4, C12H14O3, C12H18O, C12H27NO, C13H12O3, C14H13NO4, C14H14O5, C14H16O4
+
+====================================================================================
+Guardado: resultados/12_validacion_massbank.csv

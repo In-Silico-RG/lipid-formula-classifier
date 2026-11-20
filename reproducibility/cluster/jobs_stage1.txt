@@ -1,0 +1,15 @@
+# STAGE 1 — 12 independent jobs (feature selection already done, results/30_summary.log); all can run at the same time. SET is given by A. Combariza.
+# BEFORE stage 1, once per copy of data/: cd scripts && python 55_exclude_audited.py (non-lipid audit).
+# One line = one job:  bash reproducibility/cluster/submit.sh reproducibility/cluster/jobs_stage1.txt <SET>
+python 40_models.py --set=$SET --tasks=A --jobs=24
+python 40_models.py --set=$SET --tasks=B --jobs=24
+python 40_models.py --set=$SET --tasks=C --jobs=24
+python 43_networks.py --set=$SET --tasks=A --jobs=24
+python 43_networks.py --set=$SET --tasks=B --jobs=24
+python 43_networks.py --set=$SET --tasks=C --jobs=24
+python 42_hyperparameters.py --set=$SET --model=RF --task=A --jobs=24
+python 42_hyperparameters.py --set=$SET --model=XGB --task=A --jobs=24
+python 42_hyperparameters.py --set=$SET --model=RF --task=B --jobs=24
+python 42_hyperparameters.py --set=$SET --model=XGB --task=B --jobs=24
+python 42_hyperparameters.py --set=$SET --model=RF --task=C --jobs=24
+python 42_hyperparameters.py --set=$SET --model=XGB --task=C --jobs=24

@@ -1,0 +1,68 @@
+# Lipid category from the molecular formula: 16-leaf decision tree, readable features
+# Out-of-fold accuracy (5-fold grouped by formula, 3 seeds) 89.76 %, macro F1 85.04 %
+# Fitted on all LIPID MAPS entries (September 2026 extended release).
+
+|--- P_COUNT <= 0.50
+|   |--- H_C_RATIO <= 1.25
+|   |   |--- DBE <= 8.50
+|   |   |   |--- class: Fatty Acyls
+|   |   |--- DBE >  8.50
+|   |   |   |--- class: Polyketides
+|   |--- H_C_RATIO >  1.25
+|   |   |--- C_COUNT <= 38.50
+|   |   |   |--- C_COUNT <= 23.50
+|   |   |   |   |--- class: Fatty Acyls
+|   |   |   |--- C_COUNT >  23.50
+|   |   |   |   |--- H_C_RATIO <= 1.80
+|   |   |   |   |   |--- N_C_RATIO <= 0.03
+|   |   |   |   |   |   |--- class: Sterol Lipids
+|   |   |   |   |   |--- N_C_RATIO >  0.03
+|   |   |   |   |   |   |--- class: Fatty Acyls
+|   |   |   |   |--- H_C_RATIO >  1.80
+|   |   |   |   |   |--- N_C_RATIO <= 0.01
+|   |   |   |   |   |   |--- class: Fatty Acyls
+|   |   |   |   |   |--- N_C_RATIO >  0.01
+|   |   |   |   |   |   |--- class: Sphingolipids
+|   |   |--- C_COUNT >  38.50
+|   |   |   |--- N_C_RATIO <= 0.01
+|   |   |   |   |--- C_COUNT <= 125.00
+|   |   |   |   |   |--- O_COUNT <= 4.50
+|   |   |   |   |   |   |--- H_C_RATIO <= 1.85
+|   |   |   |   |   |   |   |--- class: Prenol Lipids
+|   |   |   |   |   |   |--- H_C_RATIO >  1.85
+|   |   |   |   |   |   |   |--- class: Fatty Acyls
+|   |   |   |   |   |--- O_COUNT >  4.50
+|   |   |   |   |   |   |--- O_COUNT <= 6.50
+|   |   |   |   |   |   |   |--- class: Glycerolipids
+|   |   |   |   |   |   |--- O_COUNT >  6.50
+|   |   |   |   |   |   |   |--- class: Prenol Lipids
+|   |   |   |   |--- C_COUNT >  125.00
+|   |   |   |   |   |--- class: Saccharolipids
+|   |   |   |--- N_C_RATIO >  0.01
+|   |   |   |   |--- class: Sphingolipids
+|--- P_COUNT >  0.50
+|   |--- N_COUNT <= 1.50
+|   |   |--- class: Glycerophospholipids
+|   |--- N_COUNT >  1.50
+|   |   |--- N_C_RATIO <= 0.15
+|   |   |   |--- class: Sphingolipids
+|   |   |--- N_C_RATIO >  0.15
+|   |   |   |--- class: Fatty Acyls
+
+# Leaves, largest first: predicted category, entries, purity, composition
+leaf  17: Glycerophospholipids  n=10761  purity=0.976  [Glycerophospholipids 10506, Sphingolipids 176, Prenol Lipids 50, Sterol Lipids 11, Fatty Acyls 6, Glycerolipids 6, Polyketides 5, Saccharolipids 1]
+leaf   9: Fatty Acyls  n=10130  purity=0.836  [Fatty Acyls 8473, Prenol Lipids 893, Sterol Lipids 449, Polyketides 137, Sphingolipids 93, Glycerolipids 81, Saccharolipids 4]
+leaf  19: Glycerolipids  n= 7397  purity=0.983  [Glycerolipids 7268, Prenol Lipids 114, Fatty Acyls 11, Sterol Lipids 4]
+leaf  24: Polyketides  n= 6930  purity=0.960  [Polyketides 6650, Fatty Acyls 137, Prenol Lipids 109, Sterol Lipids 28, Glycerolipids 6]
+leaf  29: Sterol Lipids  n= 4199  purity=0.737  [Sterol Lipids 3096, Prenol Lipids 467, Fatty Acyls 279, Polyketides 246, Glycerolipids 86, Saccharolipids 13, Sphingolipids 12]
+leaf   8: Sphingolipids  n= 4006  purity=0.975  [Sphingolipids 3906, Fatty Acyls 34, Polyketides 22, Prenol Lipids 20, Glycerolipids 17, Sterol Lipids 7]
+leaf  27: Fatty Acyls  n= 1631  purity=0.860  [Fatty Acyls 1403, Glycerolipids 146, Polyketides 43, Prenol Lipids 26, Saccharolipids 7, Sterol Lipids 6]
+leaf  12: Saccharolipids  n= 1252  purity=0.998  [Saccharolipids 1250, Prenol Lipids 2]
+leaf  21: Prenol Lipids  n=  848  purity=0.772  [Prenol Lipids 655, Sterol Lipids 150, Glycerolipids 31, Fatty Acyls 12]
+leaf  20: Prenol Lipids  n=  755  purity=0.348  [Prenol Lipids 263, Sterol Lipids 212, Glycerolipids 138, Saccharolipids 56, Polyketides 51, Fatty Acyls 35]
+leaf  22: Fatty Acyls  n=  392  purity=0.969  [Fatty Acyls 380, Prenol Lipids 7, Glycerolipids 5]
+leaf  26: Fatty Acyls  n=  381  purity=0.979  [Fatty Acyls 373, Sterol Lipids 7, Saccharolipids 1]
+leaf  30: Fatty Acyls  n=  353  purity=0.643  [Fatty Acyls 227, Sterol Lipids 80, Polyketides 34, Prenol Lipids 5, Sphingolipids 5, Glycerolipids 2]
+leaf  28: Sphingolipids  n=  340  purity=0.650  [Sphingolipids 221, Fatty Acyls 94, Sterol Lipids 9, Glycerolipids 7, Polyketides 6, Prenol Lipids 3]
+leaf  25: Sphingolipids  n=  310  purity=0.703  [Sphingolipids 218, Glycerophospholipids 38, Sterol Lipids 23, Saccharolipids 19, Fatty Acyls 7, Prenol Lipids 3, Glycerolipids 2]
+leaf  23: Fatty Acyls  n=  281  purity=0.783  [Fatty Acyls 220, Polyketides 24, Prenol Lipids 22, Sterol Lipids 15]

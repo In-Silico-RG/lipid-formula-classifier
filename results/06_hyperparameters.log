@@ -1,0 +1,34 @@
+========================================================================================
+FASE 4 — HIPERPARÁMETROS CON VALIDACIÓN ANIDADA
+========================================================================================
+Optuna (TPE), 30 pruebas por semilla externa, 5 semillas.
+Representación R2 (la mejor de la Fase 3). Pesado de clases siempre activo.
+
+La columna 'interno' es la puntuación que se obtuvo durante la búsqueda, y
+'optimismo' es cuánto la supera respecto del conjunto de prueba real. Esa
+diferencia es exactamente lo que se habría reportado de más sin anidar.
+
+========================================================================================
+TAREA B — Detección lípido / no-lípido      Fase 3: XGB 90,82 %  ·  k-NN 94,35 %
+========================================================================================
+  Modelo   Exact.    Bal.acc   F1 macro
+  XGB     96.12%     92.18%     90.14% (±0.37)    interno  89.70%  optimismo -0.44
+  RF      96.29%     90.50%     90.17% (±0.27)    interno  89.80%  optimismo -0.37
+
+========================================================================================
+TAREA C — Clase principal                   Fase 3: XGB 71,52 %  ·  techo 95,50 %
+========================================================================================
+  (57 clases, 9,851 fórmulas)
+  Modelo   Exact.    Bal.acc   F1 macro
+  XGB     83.21%     74.19%     73.27% (±1.46)    interno  70.80%  optimismo -2.47
+  RF      83.35%     75.81%     73.99% (±1.33)    interno  72.61%  optimismo -1.38
+
+========================================================================================
+TAREA A — Categoría (solo para comparar)    Fase 3: RF-bal 89,32 %  ·  techo 98,22 %
+========================================================================================
+  Modelo   Exact.    Bal.acc   F1 macro
+  XGB     91.88%     88.96%     89.26% (±0.56)    interno  88.68%  optimismo -0.58
+  RF      91.79%     88.26%     89.26% (±0.90)    interno  89.09%  optimismo -0.17
+
+  Tiempo total: 367.0 min
+  Guardado: resultados/06_hiperparametros.csv, 06_mejores_params.json

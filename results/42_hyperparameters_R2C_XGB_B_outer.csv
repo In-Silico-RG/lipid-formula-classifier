@@ -1,0 +1,2 @@
+set,model,task,accuracy,macro_f1,balanced_accuracy,permissive_accuracy
+R2C,XGB,B,96.30851347744863,90.67838033269416,92.49276224525573,97.25113424072592

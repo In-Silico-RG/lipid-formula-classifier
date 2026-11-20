@@ -1,0 +1,50 @@
+==============================================================================
+FASE 2 — REPRESENTACIONES DE ENTRADA
+==============================================================================
+
+  fórmulas a representar: 93,988
+  representadas con éxito: 93,988
+
+  R1 Mitchell    (93988, 14)  — C, H, O, N, P, S, OTROS, MASA, DEC1, DEC2, DEC3, DEC4, DEC5, DEC6
+  R2 Ampliada    (93988, 22)
+  R3 Posicional  (93988, 14)
+  R4 Isotópica   (93988, 2, 16)  — (n, 2 canales, 16 nominales)
+
+==============================================================================
+VALIDACIÓN CONTRA MAGNITUDES FÍSICAS CONOCIDAS
+==============================================================================
+  Norma del proyecto desde la sesión 12: ninguna representación se usa sin
+  contrastarla contra valores reales, no solo contra su coherencia interna.
+
+  [1] Masa monoisotópica vs. la calculada independientemente en el LMSD
+      (a) fórmulas de solo CHONPS — referencia fiable
+          comparadas           9,409
+          error medio       3.40e-06 Da
+          error máximo      4.88e-04 Da
+          → CORRECTO
+      (b) fórmulas con otros elementos — la REFERENCIA está mal
+          comparadas             273
+          error máximo      1.30e+01 Da
+          Verificado a mano: para C18H32Br4O2 el LMSD da 280,240230, que
+          es exactamente C18H32O2 — omite los cuatro bromos (315,673 Da).
+          Nuestro valor, 595,913581, es el correcto.
+
+  [2] Altura del pico M+1 vs. la regla del 1,07 % por carbono
+      moléculas evaluadas     64,228
+      desviación mediana         6.4 %
+      → CORRECTO  (se espera una desviación pequeña y positiva: H, O y N
+         también aportan al M+1, de modo que el observado supera al predicho)
+
+  [3] El defecto de masa debe separar lípidos de no-lípidos
+      en la banda 300-600 Da (48,192 fórmulas):
+        parte fraccionaria, lípidos       0.2854 Da
+        parte fraccionaria, no-lípidos    0.2117 Da
+        diferencia                       +0.0737 Da
+      → CORRECTO
+        los lípidos son ricos en hidrógeno (pesa de más: 1,00783) y pobres
+        en oxígeno (pesa de menos: 15,99491), así que su fracción es mayor
+
+  [4] Espaciado del pico M+1: debe estar dominado por el 13C (+1,00335)
+      espaciado mediano     +0.00314 Da   (13C teórico: +0,00335)
+
+  Guardado: datos/representaciones.npz (13.7 MB)

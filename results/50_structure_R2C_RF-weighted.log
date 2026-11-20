@@ -1,0 +1,8 @@
+50 — STRUCTURE (Morgan fingerprints) vs FORMULA (R2C, RF-weighted), molecule by molecule
+entries 49,966; with a readable structure 49,966 (others left out)
+entries whose formula carries more than one category: 7,910 (15.83 %)
+  seed 0: structure 99.46  formula 94.24  (shared formulas: 98.38 vs 74.21); limit 97.46
+  seed 1: structure 99.50  formula 95.36  (shared formulas: 98.48 vs 80.43); limit 97.46
+  seed 2: structure 99.47  formula 95.26  (shared formulas: 98.37 vs 80.23); limit 97.46
+
+  mean ± SD: structure 99.47 ± 0.02  formula 94.95 ± 0.62  structure_shared 98.41 ± 0.06  formula_shared 78.29 ± 3.53  upper_limit 97.46 ± 0.00

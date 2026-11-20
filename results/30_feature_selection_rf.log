@@ -1,0 +1,29 @@
+====================================================================================
+30 — FEATURE SELECTION FOR THE MERGED PIPELINE (decision D4) — model rf
+====================================================================================
+LIPID MAPS entries: 49,966; parsed with category and main class: 49,966; formulas: 9,935
+model = rf · unit = entry · 5-fold StratifiedGroupKFold by formula · seeds [0, 1, 2]
+rule (fixed before running): smallest set with macro F1 within 1 SD of the best, both tasks
+
+--- task: category (8 labels)
+  R1   (13 feat.)  acc  94.06 ± 0.76   macro F1  91.92 ± 0.75   bal. acc  91.13 ± 0.53   [108 s]
+  T10  (10 feat.)  acc  93.43 ± 0.89   macro F1  91.29 ± 0.91   bal. acc  90.64 ± 0.77   [103 s]
+  T12  (12 feat.)  acc  94.41 ± 0.33   macro F1  92.50 ± 0.30   bal. acc  91.84 ± 0.25   [98 s]
+  R2   (22 feat.)  acc  92.71 ± 0.31   macro F1  90.44 ± 0.38   bal. acc  89.94 ± 0.39   [131 s]
+  R2C  (24 feat.)  acc  94.82 ± 0.62   macro F1  92.92 ± 0.57   bal. acc  92.19 ± 0.35   [119 s]
+  R5   (45 feat.)  acc  93.69 ± 0.65   macro F1  91.30 ± 0.67   bal. acc  90.71 ± 0.50   [222 s]
+
+--- task: main_class (86 labels)
+  R1   (13 feat.)  acc  82.83 ± 0.60   macro F1  51.21 ± 0.70   bal. acc  49.60 ± 0.61   [216 s]
+  T10  (10 feat.)  acc  82.08 ± 0.28   macro F1  54.89 ± 0.54   bal. acc  54.01 ± 0.58   [200 s]
+  T12  (12 feat.)  acc  84.13 ± 0.39   macro F1  55.52 ± 0.50   bal. acc  53.95 ± 0.65   [171 s]
+  R2   (22 feat.)  acc  81.94 ± 0.17   macro F1  54.88 ± 0.56   bal. acc  53.19 ± 0.58   [199 s]
+  R2C  (24 feat.)  acc  85.15 ± 0.12   macro F1  56.60 ± 1.08   bal. acc  54.57 ± 1.14   [205 s]
+  R5   (45 feat.)  acc  84.45 ± 0.06   macro F1  58.48 ± 0.32   bal. acc  57.36 ± 0.17   [247 s]
+
+--- selection rule
+  category: best R2C 92.92 ± 0.57; within 1 SD: R2C, T12
+  main_class: best R5 58.48 ± 0.32; within 1 SD: R5
+  no set is within 1 SD of the best in both tasks: decision goes back to AC
+
+  Saved: results/30_feature_selection_rf.csv

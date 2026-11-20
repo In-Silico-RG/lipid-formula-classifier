@@ -1,0 +1,28 @@
+========================================================================================
+44 — INDEPENDENT DATA · input list R2C · model RF-weighted · formulas of each set withheld
+========================================================================================
+GNPS rows rejected by the parser: 0
+GNPS: 867 formulas; with category 866 (851 from the laboratory annotation); unmapped abbreviations (left out): {'8332519531 826.003784179688Name: PC': 1, '9384765625 3560.47509765625Name: PI': 1}
+MassBank: 1,719 lipid formulas, 4,041 measured non-lipids, 642 unknown (excluded)
+NIST: 339 species, 329 distinct formulas; in LIPID MAPS: 325
+HMDB: 1,917 non-lipid formulas never used in training
+  GNPS      category               no leakage             n =   866    95.23 ± 0.24 %
+  GNPS      category: 95 % set coverage no leakage             n =   866    80.45 ± 0.48 %
+  GNPS      category: 95 % set size no leakage             n =   866     0.91 ± 0.00 %
+  GNPS      category               leakage (all trained)  n =   866    98.38 ± 0.12 %
+  MassBank  category               no leakage             n = 1,719    87.55 ± 0.06 %
+  MassBank  category: 95 % set coverage no leakage             n = 1,719    90.32 ± 0.03 %
+  MassBank  category: 95 % set size no leakage             n = 1,719     1.17 ± 0.00 %
+  MassBank  category               leakage (all trained)  n = 1,719    96.96 ± 0.07 %
+  NIST      category               no leakage             n =   329    98.58 ± 0.35 %
+  NIST      category: 95 % set coverage no leakage             n =   329    95.85 ± 0.70 %
+  NIST      category: 95 % set size no leakage             n =   329     1.01 ± 0.01 %
+  NIST      main_class             no leakage             n =   329    86.52 ± 0.46 %
+  NIST      main_class: 95 % set coverage no leakage             n =   329    99.49 ± 0.18 %
+  NIST      main_class: 95 % set size no leakage             n =   329     1.48 ± 0.01 %
+  GNPS      detection: lipids found no leakage             n =   867    96.42 ± 0.23 %
+  MassBank  detection: lipids found no leakage             n = 1,719    57.80 ± 0.27 %
+  MassBank  detection: non-lipids rejected no leakage             n = 4,041    97.08 ± 0.07 %
+  HMDB      detection: non-lipids rejected no leakage             n = 1,917    98.24 ± 0.06 %
+
+  Saved: results/44_external_R2C_RF-weighted.csv and _predictions.csv

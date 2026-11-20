@@ -1,0 +1,10 @@
+========================================================================================
+46 — ARTIFICIAL NON-LIPIDS · input list R2C · model RF-weighted
+========================================================================================
+N4a 28,468, N4b 4,988; identical to data/n4_adversarial.csv: True
+  N1-N3              sensitivity  78.71 ± 0.25   N4a called lipid  67.17   N4b called lipid  1.597   ratio 0.0203
+  +N4b               sensitivity  78.53 ± 0.23   N4a called lipid  63.95   N4b called lipid  0.100   ratio 0.0013
+  +N4b+N4a(same n)   sensitivity  68.25 ± 0.25   N4a called lipid  12.33   N4b called lipid  0.033   ratio 0.0005
+  +N4a+N4b           sensitivity  53.68 ± 0.25   N4a called lipid   0.83   N4b called lipid  0.000   ratio 0.0000
+
+  Saved: results/46_adversarial_R2C_RF-weighted.csv

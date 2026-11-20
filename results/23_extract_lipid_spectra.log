@@ -1,0 +1,4 @@
+registros leídos 1,317,257 · MS2 1,317,257 · de moléculas de LIPID MAPS 28,855 · guardados 20,074 (2,080 moléculas, 1,259 fórmulas)
+categorías: {'Fatty Acyls [FA]': 469, 'Glycerolipids [GL]': 46, 'Glycerophospholipids [GP]': 289, 'Polyketides [PK]': 770, 'Prenol Lipids [PR]': 225, 'Saccharolipids [SL]': 2, 'Sphingolipids [SP]': 90, 'Sterol Lipids [ST]': 189}
+modos: {'P': 11114, 'N': 8960}
+aductos top: {'[M-H]-': 6199, '[M+H]+': 6053, '[M+Na]+': 1683, 'M-H': 1299, '': 872, '[M+K]+': 823, '[M+NH4]+': 774, '[M-H]1-': 482}

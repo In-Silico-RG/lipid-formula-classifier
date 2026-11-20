@@ -1,0 +1,55 @@
+====================================================================================
+VALIDACIÓN EXTERNA — el clasificador sobre fórmulas MEDIDAS (GNPS / PNNL / HCE)
+====================================================================================
+
+  espectros/filas: 46,815  →  fórmulas únicas: 847
+  abreviaturas sin mapa a categoría (se excluyen de la tarea A): {'CoQ4': 2, 'CoQ9': 94, '8332519531 826.003784179688Name: PC': 1, 'CoQ10': 150, 'DGTSA': 126, 'CoQ8': 4, '9384765625 3560.47509765625Name: PI': 1}
+  con etiqueta de categoría: 846  (831 por anotación experimental, 15 por LIPID MAPS)
+
+  CONSISTENCIA anotación experimental vs LIPID MAPS (sobre 757 fórmulas en ambos):
+    la categoría mayoritaria del catálogo NO coincide con la anotación: 7 (0.9 %)
+      C14H29NO2        catálogo=Fatty Acyls            anotación=Sphingolipids
+      C16H33NO2        catálogo=Fatty Acyls            anotación=Sphingolipids
+      C18H37NO2        catálogo=Fatty Acyls            anotación=Sphingolipids
+      C21H38O4         catálogo=Fatty Acyls            anotación=Glycerolipids
+      C23H38O4         catálogo=Sterol Lipids          anotación=Glycerolipids
+      C37H71NO3        catálogo=Fatty Acyls            anotación=Sphingolipids
+  R2 calculada para 846 fórmulas externas
+  distribución externa: Glycerophospholipids 422, Glycerolipids 301, Sphingolipids 105, Fatty Acyls 13, Sterol Lipids 5
+
+====================================================================================
+TAREA A — Categoría · RF balanceado sobre R2 · verdad = anotación experimental
+====================================================================================
+  catálogo: 9,788 fórmulas; de ellas 772 están en el conjunto externo
+
+  SIN FUGA — entrenado excluyendo las fórmulas externas
+    exactitud ESTRICTA  (pred ∈ anotación):           96.41 %  (± 0.18)
+    exactitud PERMISIVA (pred ∈ anotación ∪ catálogo):  96.76 %  (± 0.18)
+    sensibilidad por categoría: Fatty Acyls 100.0 %, Glycerolipids 90.9 %, Glycerophospholipids 99.5 %, Sphingolipids 99.0 %, Sterol Lipids 100.0 %
+
+  CON FUGA — entrenado con todo el catálogo (780 ya vistas)
+    exactitud ESTRICTA  (pred ∈ anotación):           98.58 %  (± 0.00)
+    exactitud PERMISIVA (pred ∈ anotación ∪ catálogo):  99.41 %  (± 0.00)
+    sensibilidad por categoría: Fatty Acyls 100.0 %, Glycerolipids 98.0 %, Glycerophospholipids 99.8 %, Sphingolipids 95.2 %, Sterol Lipids 100.0 %
+
+====================================================================================
+TAREA B — Detección · XGBoost sobre R2 · el externo es todo lípido → SENSIBILIDAD
+====================================================================================
+  maestro: 93,986 fórmulas; 797 están en el externo (se excluyen en SIN FUGA)
+
+  INTERNA — partición agrupada 80/20, referencia
+    sensibilidad sobre lípidos:  79.84 %  (± 1.39)   · balanced acc 89.14 %
+
+  EXTERNA SIN FUGA — entrenado excluyendo las 867
+    sensibilidad sobre lípidos:  95.87 %  (± 0.00)
+
+  EXTERNA CON FUGA — entrenado con todo (780 ya vistas)
+    sensibilidad sobre lípidos:  95.63 %  (± 0.00)
+
+  fórmulas reales NO detectadas como lípido (semilla 0, sin fuga): 35 de 847
+    por librería: PNNL-LIPIDS-POSITIVE 24/631, PNNL-LIPIDS-NEGATIVE 11/220, HCE-CELL-LYSATE-LIPIDS 0/16
+    por clase anotada: SQDG 14, CL 11, DGDG 3, PS 2, PC 2, Cer 1, PE 1, SM 1
+    ejemplos: C27H44NO7P, C28H44NO9P, C30H50NO7P, C30H54NO7P, C41H74O12S, C42H74O12S, C42H79NO3, C43H72O12S
+
+====================================================================================
+Guardado: resultados/11_validacion_externa.csv

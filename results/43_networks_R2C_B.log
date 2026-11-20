@@ -1,0 +1,13 @@
+========================================================================================
+43 — NEURAL NETWORKS, merged protocol · input list R2C (MLP), R3 (MLP), R4 (CNN)
+========================================================================================
+
+--- task B (2 labels, n = 93,675)
+  MLP(R2C)               acc  95.35 ± 0.03   macro F1  87.83 ± 0.07   permissive  96.95   [1989 s]
+  MLP(R2C)-weighted      acc  92.35 ± 0.15   macro F1  83.84 ± 0.21   permissive  92.86   [1822 s]
+  MLP(R3)                acc  95.44 ± 0.03   macro F1  87.96 ± 0.07   permissive  97.14   [1735 s]
+  MLP(R3)-weighted       acc  92.65 ± 0.21   macro F1  84.38 ± 0.33   permissive  93.14   [1559 s]
+  CNN(R4)                acc  92.98 ± 0.07   macro F1  80.78 ± 0.36   permissive  95.47   [5149 s]
+  CNN(R4)-weighted       acc  89.40 ± 0.14   macro F1  77.85 ± 0.38   permissive  90.63   [3373 s]
+
+  Saved: results/43_networks_R2C_B.csv

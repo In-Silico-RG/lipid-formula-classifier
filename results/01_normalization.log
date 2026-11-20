@@ -1,0 +1,52 @@
+==============================================================================
+FASE 0.3-0.5 — Normalización de fórmulas y tabla maestra
+==============================================================================
+
+[1] POSITIVOS — LIPID MAPS
+  LMSD septiembre 2026          49,966 filas →    49,966 fórmulas válidas (100.0 %)
+
+[2] NEGATIVOS
+  RefMet: 208,170 filas → 189,862 lipídicas, 18,308 no lipídicas
+  N1 RefMet no-lípidos          18,308 filas →    18,298 fórmulas válidas ( 99.9 %)
+      descartadas por sin_carbono           8
+      descartadas por vacia                 2
+  RefMet lípidos (externo)     189,862 filas →   189,835 fórmulas válidas (100.0 %)
+      descartadas por vacia                27
+  ontología ChEBI: 42,346 términos lipídicos bajo 6 raíces (lipid, steroid, terpenoid, polyketide, fatty acid, isoprenoid)
+  ChEBI: 202,686 filas → 41,318 lipídicas por ontología, excluidas de N2
+  N2 ChEBI (no lipídico)       161,368 filas →   151,112 fórmulas válidas ( 93.6 %)
+      descartadas por sintaxis          6,033
+      descartadas por elemento          2,579
+      descartadas por sin_carbono       1,617
+      descartadas por vacia                27
+  COCONUT: 738,827 filas → 445,220 lipídicas por ClassyFire/NPClassifier, excluidas de N3
+  N3 COCONUT (no lipídico)     293,607 filas →   286,835 fórmulas válidas ( 97.7 %)
+      descartadas por sintaxis          6,528
+      descartadas por sin_carbono         209
+      descartadas por elemento             35
+
+[3] TABLA MAESTRA — una fila por fórmula única
+
+[4] LIMPIEZA DE NEGATIVOS (Fase 0.5)
+  Regla: ninguna fórmula presente en LIPID MAPS puede usarse como negativo.
+  N1 RefMet       6,964 fórmulas únicas ·     590 también en LIPID MAPS ( 8.5 %) → excluidas de los negativos
+  N2 ChEBI       50,570 fórmulas únicas ·   3,664 también en LIPID MAPS ( 7.2 %) → excluidas de los negativos
+  N3 COCONUT     61,020 fórmulas únicas ·   2,213 también en LIPID MAPS ( 3.6 %) → excluidas de los negativos
+
+[5] RESUMEN
+  Fórmulas únicas totales           115,824
+  Etiquetadas como lípido             9,935
+  Etiquetadas como no-lípido         84,053
+  Descartadas                        21,836
+
+  De las fórmulas lipídicas:
+    con 1 sola categoría              9,348
+    ambiguas (>1 categoría)             587
+    → ambigüedad a nivel categoría     5.91 %
+
+  Compresión por deduplicación:
+    entradas LMSD (sept. 2026)       49,966
+    fórmulas únicas                   9,935
+    → factor                            5.0x
+
+  Guardado: data/maestro.parquet (115,824 filas)

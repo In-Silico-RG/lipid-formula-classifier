@@ -1,0 +1,14 @@
+========================================================================================
+CLASE Y SUBCLASE POR MOLÉCULA — límite, sólo fórmula y oráculo de estructura
+========================================================================================
+  moléculas con estructura, clase, subclase y fórmula válida: 49,966
+  tras construir R2: 49,966 moléculas, 9,935 fórmulas
+
+--- Clase: 86 etiquetas · fórmulas ambiguas 1,270 (12.78 %) · límite del catálogo 91.18 % ---
+  semilla 0: prueba 10,130 (ambiguas 3,692) · límite 90.90 % · fórmula 82.67 % · oráculo 97.23 %
+  semilla 1: prueba 8,714 (ambiguas 2,404) · límite 91.54 % · fórmula 82.35 % · oráculo 96.57 %
+  semilla 2: prueba 9,616 (ambiguas 3,149) · límite 90.95 % · fórmula 82.35 % · oráculo 96.84 %
+  semilla 3: prueba 9,738 (ambiguas 3,202) · límite 90.84 % · fórmula 82.33 % · oráculo 97.66 %
+  semilla 4: prueba 10,817 (ambiguas 4,255) · límite 90.43 % · fórmula 81.91 % · oráculo 97.39 %
+
+--- Subclase: 299 etiquetas · fórmulas ambiguas 2,232 (22.47 %) · límite del catálogo 82.96 % ---

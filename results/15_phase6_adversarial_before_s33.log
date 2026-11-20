@@ -1,0 +1,46 @@
+====================================================================================
+FASE 6 — negativos adversariales (N4) y control +21 m/z
+====================================================================================
+  control de masa: C18H32O2 = 280.240230 Da (esperado 280.240230) → OK
+  fórmulas conocidas (a excluir de N4): 116,356 · lípidos reales: 9,789
+
+  N4a perturbación: 28,622 fórmulas válidas e inexistentes
+    por perturbación: N+1+H+1 4474, O+2 2673, H+4 2265, H-4 2188, H-2+O-1 2157, C+1+H+2+O+1 2057
+  N4b desplazamiento +21 Da, ±3.0 ppm: 2,000 lípidos objetivo → 5,063 fórmulas; candidatas por objetivo mediana 12, sin candidata 185
+
+====================================================================================
+ESCENARIO N1-N3: modelo desplegado (Fase 3)
+====================================================================================
+  lípidos reales (internos) detectados           78.58 %  (± 0.76)
+  no-lípidos curados rechazados (internos)       98.69 %
+  N4a perturbación llamados «lípido»             69.06 %  (± 0.18)
+  N4b desplazadas +21 llamadas «lípido»           6.10 %  (± 1.06)
+  RAZÓN desplazadas / íntegras (Mitchell: 1,06)  0.078
+  sensibilidad externa: PNNL  94.65 %  · MassBank  67.14 %  · especificidad MassBank  97.57 %
+
+====================================================================================
+ESCENARIO N1-N4: reentrenado con N4a+N4b como negativos
+====================================================================================
+  lípidos reales (internos) detectados           51.56 %  (± 1.07)
+  no-lípidos curados rechazados (internos)       99.23 %
+  N4a perturbación llamados «lípido»              2.01 %  (± 0.09)
+  N4b desplazadas +21 llamadas «lípido»           0.00 %  (± 0.00)
+  RAZÓN desplazadas / íntegras (Mitchell: 1,06)  0.000
+  sensibilidad externa: PNNL  82.98 %  · MassBank  59.84 %  · especificidad MassBank  98.04 %
+
+====================================================================================
+ESCENARIO N1-N3+N4b: reentrenado sólo con N4b (+21 Da) como negativos
+====================================================================================
+  lípidos reales (internos) detectados           78.31 %  (± 1.08)
+  no-lípidos curados rechazados (internos)       98.70 %
+  N4a perturbación llamados «lípido»             65.45 %  (± 0.48)
+  N4b desplazadas +21 llamadas «lípido»           0.24 %  (± 0.17)
+  RAZÓN desplazadas / íntegras (Mitchell: 1,06)  0.003
+  sensibilidad externa: PNNL  95.02 %  · MassBank  67.62 %  · especificidad MassBank  97.65 %
+
+====================================================================================
+  escenario     razón +21  N4a→lípido  sens.int    PNNL  MassBank  esp.MB
+  N1-N3             0.078      69.06%    78.58%  94.65%    67.14%  97.58%
+  N1-N4             0.000       2.01%    51.56%  82.98%    59.84%  98.04%
+  N1-N3+N4b         0.003      65.45%    78.31%  95.02%    67.62%  97.65%
+Guardado: resultados/15_fase6_adversarial.csv · datos/n4_adversariales.csv

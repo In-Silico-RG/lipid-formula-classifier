@@ -1,0 +1,5 @@
+tarea,escenario,estricta,permisiva,estricta_pond_espectros,f1_macro,bal_acc,Fatty Acyls,Glycerolipids,Glycerophospholipids,Polyketides,Prenol Lipids,Saccharolipids,Sphingolipids,Sterol Lipids,sensibilidad,especificidad,exactitud
+A,SIN FUGA — entrenado excluyendo las fórmulas de MassBank,86.53,90.72,82.55,73.49,71.52,97.74,81.48,100.0,93.0,40.51,0.0,87.52,71.88,,,
+A,CON FUGA — entrenado con todo el catálogo,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,,,
+B,SIN FUGA — entrenado excluyendo las fórmulas de MassBank,,,,86.44,84.06,,,,,,,,,70.62,97.5,89.47
+B,CON FUGA — entrenado con todo,,,,99.65,99.67,,,,,,,,,99.59,99.75,99.71

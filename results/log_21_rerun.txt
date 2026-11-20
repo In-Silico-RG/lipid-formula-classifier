@@ -1,0 +1,36 @@
+====================================================================================
+R1 EXACTO DE MITCHELL (figura 2) — mismas particiones, semillas y modelos que 05_modelos.py
+====================================================================================
+  control: insaturación de C16H32O2 = 2 (Mitchell, figura 2: 2) → OK
+  control: dígitos de 256.240230266: decenas 5, unidades 6, décimas 2 (Mitchell: 5, 6, 2)
+  vector: 13 variables, 93,988 fórmulas
+
+TAREA A — Categoría (8 clases)
+  Representación Modelo      Exact.    Bal.acc   F1 macro
+  R1 exacto      RF          91.35%     87.23%     88.27% (±0.34)     2.0s
+  R1 exacto      RF-bal      91.34%     87.44%     88.49% (±0.46)     2.0s
+  R1 exacto      XGB         91.36%     87.77%     88.53% (±0.34)    17.7s
+  R1 exacto      XGB-bal     91.40%     88.07%     88.53% (±0.38)    16.9s
+
+TAREA B — Detección lípido / no-lípido
+  Representación Modelo      Exact.    Bal.acc   F1 macro
+  R1 exacto      RF          96.08%     88.60%     89.34% (±0.20)    10.1s
+  R1 exacto      RF-bal      96.20%     88.52%     89.56% (±0.19)    12.2s
+  R1 exacto      XGB         96.76%     90.61%     91.21% (±0.22)     9.8s
+  R1 exacto      XGB-bal     96.06%     93.49%     90.25% (±0.25)     2.1s
+
+TAREA C — Clase principal
+  Representación Modelo      Exact.    Bal.acc   F1 macro
+  R1 exacto      RF          82.09%     68.33%     69.41% (±1.33)     2.3s
+  R1 exacto      RF-bal      81.71%     68.20%     69.61% (±1.00)     2.3s
+  R1 exacto      XGB         83.18%     69.03%     70.13% (±2.00)    45.2s
+  R1 exacto      XGB-bal     82.59%     71.85%     70.60% (±1.79)    40.3s
+
+====================================================================================
+COMPARACIÓN (F1 macro, mejor configuración de cada representación)
+====================================================================================
+  A categoría  R1 Mitchell: 86.77 (XGB-bal)  R1 exacto: 88.53 (XGB-bal)  R2 Ampliada: 89.09 (RF-bal)
+  B detección  R1 Mitchell: 89.18 (XGB)  R1 exacto: 91.21 (XGB)  R2 Ampliada: 90.83 (XGB)
+  C clase      R1 Mitchell: 65.39 (XGB-bal)  R1 exacto: 70.60 (XGB-bal)  R2 Ampliada: 71.52 (RF-bal)
+
+  Guardado: resultados/21_r1_mitchell_exacto.csv

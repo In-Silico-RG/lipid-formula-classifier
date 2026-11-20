@@ -1,0 +1,3 @@
+52 — HOMOLOGOUS RELATIVES ON BOTH SIDES OF THE SPLIT · R2C · RF-weighted · seed 0
+  task A: 96.1 % of test entries have a homologue (±CH2, ±C2H4, ±H2) in training; accuracy 94.67 % with vs 83.61 % without
+  task C: 96.4 % of test entries have a homologue (±CH2, ±C2H4, ±H2) in training; accuracy 85.06 % with vs 71.45 % without

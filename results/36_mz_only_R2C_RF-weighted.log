@@ -1,0 +1,17 @@
+36 — CLASSIFICATION FROM THE MASS ONLY · R2C · RF-weighted (supplement)
+test lipids: 1,000 (CHNOPS, fold 0 test part); mass check C18H32O2 = 280.240230 Da
+library: 68,822 CHNOPS formulas (LIPID MAPS + N1-N3); in the test part: 1,871
+
+  formula known: accuracy 96.00 %
+   1 ppm  all valid formulas   accuracy  33.20 %   candidates (median)     12   true formula among them  90.00 %   no candidate  1.10 %
+   1 ppm  library, known       accuracy  94.20 %   candidates (median)      1   true formula among them  99.80 %   no candidate  0.20 %
+   1 ppm  library, novel       accuracy   7.10 %   candidates (median)      0   true formula among them   0.00 %   no candidate 82.20 %
+   2 ppm  all valid formulas   accuracy  29.00 %   candidates (median)     25   true formula among them  90.10 %   no candidate  1.10 %
+   2 ppm  library, known       accuracy  91.80 %   candidates (median)      1   true formula among them  99.90 %   no candidate  0.10 %
+   2 ppm  library, novel       accuracy  14.50 %   candidates (median)      0   true formula among them   0.00 %   no candidate 68.50 %
+   5 ppm  all valid formulas   accuracy  26.20 %   candidates (median)     62   true formula among them  90.10 %   no candidate  1.10 %
+   5 ppm  library, known       accuracy  83.60 %   candidates (median)      2   true formula among them  99.90 %   no candidate  0.00 %
+   5 ppm  library, novel       accuracy  21.20 %   candidates (median)      1   true formula among them   0.00 %   no candidate 49.70 %
+  10 ppm  all valid formulas   accuracy  26.00 %   candidates (median)    124   true formula among them  90.10 %   no candidate  1.10 %
+  10 ppm  library, known       accuracy  78.30 %   candidates (median)      2   true formula among them  99.90 %   no candidate  0.00 %
+  10 ppm  library, novel       accuracy  28.40 %   candidates (median)      1   true formula among them   0.00 %   no candidate 35.10 %

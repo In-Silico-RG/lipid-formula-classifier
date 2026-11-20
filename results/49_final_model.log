@@ -1,0 +1,7 @@
+49 — FINAL MODEL · input list R2C · model RF-weighted
+  N4b shifted-mass formulas added to the non-lipids of LIPID: 4,988
+  CATEGORY   49,966 units, 8 labels; default mondrian; 95 % thresholds: marginal 0.5923, per label 0.0333-0.9219
+  MAIN_CLASS 49,966 units, 86 labels; default marginal; 95 % thresholds: marginal 0.8570, per label 0.0200-1.0000
+  LIPID out-of-fold with N4b: sensitivity (p >= 0.5) 78.78 %
+  LIPID      93,675 units, 2 labels; default mondrian; 95 % thresholds: marginal 0.3940, per label 0.1940-0.8660
+  saved ~/lipid-formula-classification/classifier/lipid_classifier.joblib

@@ -1,0 +1,10 @@
+tarea,baseline,exactitud,exactitud_pond,balanced_acc,f1_macro
+TAREA A — Categoría de lípido (8 clases),1. Mayoritaria,23.412,25.095,12.5,4.742
+TAREA A — Categoría de lípido (8 clases),2. Reglas químicas,52.441,56.112,36.737,32.653
+TAREA A — Categoría de lípido (8 clases),3. Búsqueda en base,23.412,25.095,12.5,4.742
+TAREA A — Categoría de lípido (8 clases),4. k-NN (k=1),89.472,91.488,87.235,86.78
+TAREA A — Categoría de lípido (8 clases),4. k-NN (k=5),89.089,92.584,85.59,86.055
+TAREA B — Detección lípido / no-lípido,1. Mayoritaria,89.541,63.092,50.0,47.241
+TAREA B — Detección lípido / no-lípido,3. Búsqueda en base,89.541,63.092,50.0,47.241
+TAREA B — Detección lípido / no-lípido,4. k-NN (k=1),94.286,89.968,85.204,84.878
+TAREA B — Detección lípido / no-lípido,4. k-NN (k=5),95.237,92.257,86.96,87.195

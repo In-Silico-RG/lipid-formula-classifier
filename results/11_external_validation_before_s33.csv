@@ -1,0 +1,6 @@
+tarea,escenario,estricta,permisiva,Fatty Acyls,Glycerolipids,Glycerophospholipids,Sphingolipids,Sterol Lipids,sens_lipido,bal_acc
+A,SIN FUGA — entrenado excluyendo las fórmulas externas,96.41,96.76,100.0,90.9,99.53,99.05,100.0,,
+A,CON FUGA — entrenado con todo el catálogo (780 ya vistas),98.58,99.41,100.0,98.01,99.76,95.24,100.0,,
+B,"INTERNA — partición agrupada 80/20, referencia",,,,,,,,79.84,89.14
+B,EXTERNA SIN FUGA — entrenado excluyendo las 867,,,,,,,,95.87,
+B,EXTERNA CON FUGA — entrenado con todo (780 ya vistas),,,,,,,,95.63,

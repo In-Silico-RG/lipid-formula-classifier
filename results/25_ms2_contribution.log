@@ -1,0 +1,17 @@
+APORTE DE MS/MS, ADUCTO Y MODO DE IONIZACIÓN AL CLASIFICADOR DE FÓRMULAS
+espectros: 20,074 · moléculas 2,080 · fórmulas 1,259 · partición 80/20 por fórmula · 5 semillas
+
+CATEGORÍA  (8 clases)   [301 s]
+  modelo                     exact. total     ambiguas  no ambiguas  F1 macro
+  F solo fórmula            86.66 ± 2.16   72.23±8.45     90.86     76.70
+  FI fórmula + contexto     87.53 ± 2.21   74.60±5.69     91.26     76.65
+  FM fórmula + MS/MS        88.16 ± 2.85   75.65±4.96     91.77     78.69
+  Δ (fórmula + MS/MS) − (solo fórmula): total +1.51 · ambiguas +3.42 puntos · mejora en 4 de 5 semillas
+
+CLASE PRINCIPAL  (50 clases)   [1038 s]
+  modelo                     exact. total     ambiguas  no ambiguas  F1 macro
+  F solo fórmula            75.84 ± 2.63   66.20±3.36     82.96     44.82
+  FI fórmula + contexto     77.42 ± 2.18   69.12±2.33     83.53     48.33
+  FM fórmula + MS/MS        79.20 ± 3.55   74.04±4.83     83.19     47.45
+  Δ (fórmula + MS/MS) − (solo fórmula): total +3.37 · ambiguas +7.84 puntos · mejora en 4 de 5 semillas
+

@@ -1,0 +1,6 @@
+# STAGE 3 — light, after stage 2; minutes on a workstation (no SLURM needed). Run from scripts/:
+#   cd scripts && SET=R2C MODEL=XGB bash -c 'grep -v "^#" ../reproducibility/cluster/jobs_stage3.txt | while read -r c; do eval "$c"; done'
+python 30_summary.py
+python 51_error_analysis.py --set=$SET --model=$MODEL
+python 52_relatives.py --set=$SET --model=$MODEL
+python 53_figures_tables.py --set=$SET --model=$MODEL

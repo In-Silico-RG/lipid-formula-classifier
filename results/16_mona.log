@@ -1,0 +1,10 @@
+MoNA LC-MS/MS experimental: 1,317,257 espectros (1,317,257 MS2) · sin FORMULA 5,438 · rechazadas {'sintaxis': 1079, 'sin_carbono': 44, 'elemento': 1}
+  FÓRMULAS ÚNICAS: 30,418
+    ∩ LIPID MAPS (lípidos medidos):           2,276
+    ∩ negativos curados (no-lípidos medidos): 13,526
+    ∩ descartadas (lipídicas RefMet):         213
+    en ninguna tabla:                         14,403
+  categorías de los lípidos medidos: Fatty Acyls 780 (29%), Polyketides 650 (24%), Sterol Lipids 385 (14%), Prenol Lipids 380 (14%), Glycerophospholipids 334 (12%), Sphingolipids 119 (4%), Glycerolipids 62 (2%), Saccharolipids 7 (0%)
+  instrumentos: {'Q-TOF': 1158413, 'LC-ESI-QTOF': 44610, 'ESI-QFT': 28260, '': 19775, 'LC-ESI-QFT': 19466, 'LC-ESI-ITFT': 16060}
+  prefijos de identificador (≈ librería): {'Enveda': 1158293, 'VF-NPL-QEHF': 28260, 'CCMSLIB': 19375, 'MoNA': 13030, 'VF-NPL-QTOF': 9997, 'VF-NPL-LTQ': 9775, 'RIKENPlaSMA': 8655, 'LU': 7299, 'EA': 6076, 'AC_CAC': 5328, 'AU': 5158, 'EQ': 5115}
+  guardado datos/espectros/formulas_mona.csv

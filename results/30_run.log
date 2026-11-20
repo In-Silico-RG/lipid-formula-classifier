@@ -1,0 +1,10 @@
+[17:44:03] start rf
+[18:19:19] OK rf
+[18:19:19] start knn
+[10:03:56] OK knn
+[10:03:56] start xgb --task=category
+[10:14:47] OK xgb --task=category
+[10:14:47] start mlp --task=category
+[12:11:23] mlp category STOPPED by decision (MLP left out of the feature selection; see docs/LOG.md)
+[12:11:23] start xgb --task=main_class (8 jobs)
+[13:07:32] OK xgb --task=main_class

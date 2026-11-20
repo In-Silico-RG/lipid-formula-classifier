@@ -1,0 +1,17 @@
+====================================================================================
+30 — FEATURE SELECTION FOR THE MERGED PIPELINE (decision D4) — model xgb
+====================================================================================
+LIPID MAPS entries: 49,966; parsed with category and main class: 49,966; formulas: 9,935
+model = xgb · unit = entry · 5-fold StratifiedGroupKFold by formula · seeds [0, 1, 2]
+rule (fixed before running): smallest set with macro F1 within 1 SD of the best, both tasks
+
+--- task: category (8 labels)
+  R1   (13 feat.)  acc  94.58 ± 0.58   macro F1  92.59 ± 0.52   bal. acc  92.23 ± 0.37   [97 s]
+  T10  (10 feat.)  acc  94.35 ± 0.30   macro F1  92.34 ± 0.32   bal. acc  92.08 ± 0.17   [61 s]
+  T12  (12 feat.)  acc  94.76 ± 0.43   macro F1  92.76 ± 0.45   bal. acc  92.49 ± 0.13   [53 s]
+  R2   (22 feat.)  acc  94.76 ± 0.11   macro F1  92.59 ± 0.15   bal. acc  92.00 ± 0.06   [69 s]
+  R2C  (24 feat.)  acc  95.09 ± 0.13   macro F1  93.09 ± 0.16   bal. acc  92.53 ± 0.11   [91 s]
+  R5   (45 feat.)  acc  94.89 ± 0.23   macro F1  92.76 ± 0.24   bal. acc  92.13 ± 0.21   [142 s]
+
+
+  partial run (xgb_category); the rule is applied by 30_summary.py. Saved: results/30_feature_selection_xgb_category.csv

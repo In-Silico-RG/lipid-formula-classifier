@@ -1,0 +1,4 @@
+task,share_of_units_on_shared_formulas,share_of_errors_on_shared_formulas,error_rate_shared,error_rate_rest,errors,units,sensitivity,specificity,lipids_missed,nonlipids_called_lipid,sensitivity_shared,sensitivity_rest,strict_accuracy,permissive_accuracy,errors_that_are_accepted_labels
+B,4.18788364024553,45.96698847710993,37.62426714249299,1.933104554773153,3211,93675.0,78.94313034725717,98.66372104131837,2092.0,1119.0,62.375732857507,89.75382568196939,,,
+A,,,,,2879,,,,,,,,94.23808189568906,97.09202257535124,49.53108718304967
+C,,,,,7708,,,,,,,,84.57350998679102,95.39686987151262,70.16087182148418

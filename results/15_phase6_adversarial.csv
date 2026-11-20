@@ -1,0 +1,5 @@
+escenario,sens_interna,espec_interna,N4a_llamados_lipido,N4b_llamados_lipido,razon_desplazadas_integras,sens_PNNL,sens_MassBank,espec_MassBank
+N1-N3,79.323,98.638,70.26,6.05,0.076,95.225,69.28,97.525
+N1-N4,51.419,99.197,2.472,0.0,0.0,82.491,62.683,98.065
+N1-N3+N4b,78.636,98.604,66.87,0.238,0.003,95.663,69.57,97.58
+N1-N3+N4a_red+N4b,67.531,98.926,18.145,0.04,0.001,89.089,65.587,97.897

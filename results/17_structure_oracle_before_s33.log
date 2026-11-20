@@ -1,0 +1,20 @@
+====================================================================================
+ORÁCULO ESTRUCTURAL (E3) — el coste de no conocer la estructura
+====================================================================================
+  moléculas con estructura, categoría y fórmula válida: 49,966  (sin estructura 0 · sin categoría 0 · fórmula inválida 606)
+  fórmulas únicas: 9,935 · ambiguas: 587 (5.91 %) · moléculas con fórmula ambigua: 15 % aprox.
+
+  conjunto de prueba: 9,803 moléculas por semilla, de las que 1,605 tienen fórmula ambigua
+
+                                exactitud/molécula   F1 macro   bal.acc  no ambiguas   ambiguas
+  ORÁCULO (estructura)                      99.45%     99.26%    99.11%       99.65%     98.42%
+  SÓLO FÓRMULA (R2)                         91.73%     89.73%    89.51%       97.60%     63.18%
+
+  COSTE DE NO CONOCER LA ESTRUCTURA (exactitud por molécula): +7.72 puntos en total; +2.05 en fórmulas no ambiguas; +35.25 en fórmulas AMBIGUAS
+  (σ entre semillas, exactitud: oráculo 0.09, fórmula 3.25)
+
+  Lectura: el techo estricto de sólo-fórmula (97,46 %) es la exactitud por molécula del mejor
+  clasificador de fórmula; el oráculo no está sujeto a él. La diferencia en las fórmulas
+  ambiguas es el valor, en puntos, de la elucidación estructural que MS1 no da.
+
+Guardado: resultados/17_oraculo_estructura.csv

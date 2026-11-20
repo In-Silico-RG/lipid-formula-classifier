@@ -1,0 +1,19 @@
+set,task,scenario,n,score,score_sd
+GNPS,category,no leakage,866,95.22709776751348,0.24037713619702025
+GNPS,category: 95 % set coverage,no leakage,866,80.4464973056197,0.48075427239403257
+GNPS,category: 95 % set size,no leakage,866,0.9141647421093149,0.00405529397723351
+GNPS,category,leakage (all trained),866,98.38337182448038,0.11547344110855562
+MassBank,category,no leakage,1719,87.55090168702732,0.058173356602672754
+MassBank,category: 95 % set coverage,no leakage,1719,90.32383168508824,0.03358640309422131
+MassBank,category: 95 % set size,no leakage,1719,1.1673453558270313,0.001463997369647213
+MassBank,category,leakage (all trained),1719,96.95559433779329,0.06717280618844262
+NIST,category,no leakage,329,98.58156028368795,0.3509728080180069
+NIST,category: 95 % set coverage,no leakage,329,95.84599797365753,0.701945616036022
+NIST,category: 95 % set size,no leakage,329,1.0091185410334347,0.00526459212027016
+NIST,main_class,no leakage,329,86.52482269503547,0.4642933834808314
+NIST,main_class: 95 % set coverage,no leakage,329,99.49341438703141,0.17548640400900345
+NIST,main_class: 95 % set size,no leakage,329,1.4832826747720365,0.00526459212027016
+GNPS,detection: lipids found,no leakage,867,96.4244521337947,0.23068050749711944
+MassBank,detection: lipids found,no leakage,1719,57.80492534419236,0.274916557664491
+MassBank,detection: non-lipids rejected,no leakage,4041,97.07993071022025,0.06547268772741154
+HMDB,detection: non-lipids rejected,no leakage,1917,98.24378368979308,0.06023476986850403

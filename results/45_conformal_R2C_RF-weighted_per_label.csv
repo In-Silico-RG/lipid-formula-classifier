@@ -1,0 +1,577 @@
+task,alpha,variant,label,n,coverage
+A,0.1,marginal,Fatty Acyls,11691,82.41610751866976
+A,0.1,marginal,Glycerolipids,7795,96.84713911140906
+A,0.1,marginal,Glycerophospholipids,10544,99.90765009714445
+A,0.1,marginal,Polyketides,7218,93.62397893943925
+A,0.1,marginal,Prenol Lipids,2639,53.50853965386824
+A,0.1,marginal,Saccharolipids,1351,96.84793137289091
+A,0.1,marginal,Sphingolipids,4631,97.40699477127049
+A,0.1,marginal,Sterol Lipids,4097,79.49540226426657
+A,0.1,mondrian,Fatty Acyls,11691,89.19436181770475
+A,0.1,mondrian,Glycerolipids,7795,89.14547082454439
+A,0.1,mondrian,Glycerophospholipids,10544,90.21607725294369
+A,0.1,mondrian,Polyketides,7218,89.67273784686046
+A,0.1,mondrian,Prenol Lipids,2639,90.0157321659697
+A,0.1,mondrian,Saccharolipids,1351,88.2196984266555
+A,0.1,mondrian,Sphingolipids,4631,90.18872128447063
+A,0.1,mondrian,Sterol Lipids,4097,89.89659084151852
+A,0.05,marginal,Fatty Acyls,11691,91.96009552016685
+A,0.05,marginal,Glycerolipids,7795,97.47465008440412
+A,0.05,marginal,Glycerophospholipids,10544,99.97120977563222
+A,0.05,marginal,Polyketides,7218,94.77064526762629
+A,0.05,marginal,Prenol Lipids,2639,68.46508335401968
+A,0.05,marginal,Saccharolipids,1351,97.70501171487521
+A,0.05,marginal,Sphingolipids,4631,98.61332132418333
+A,0.05,marginal,Sterol Lipids,4097,90.65600502036206
+A,0.05,mondrian,Fatty Acyls,11691,93.00605858077697
+A,0.05,mondrian,Glycerolipids,7795,94.6211040444649
+A,0.05,mondrian,Glycerophospholipids,10544,95.1753952439206
+A,0.05,mondrian,Polyketides,7218,94.91596709384896
+A,0.05,mondrian,Prenol Lipids,2639,95.10405846258669
+A,0.05,mondrian,Saccharolipids,1351,95.05676850469192
+A,0.05,mondrian,Sphingolipids,4631,95.01052548372934
+A,0.05,mondrian,Sterol Lipids,4097,95.05709021208342
+A,0.01,marginal,Fatty Acyls,11691,99.42057097003003
+A,0.01,marginal,Glycerolipids,7795,99.29681290702702
+A,0.01,marginal,Glycerophospholipids,10544,100.0
+A,0.01,marginal,Polyketides,7218,97.85178296619
+A,0.01,marginal,Prenol Lipids,2639,93.5998153797975
+A,0.01,marginal,Saccharolipids,1351,98.76719867862352
+A,0.01,marginal,Sphingolipids,4631,99.7102583102123
+A,0.01,marginal,Sterol Lipids,4097,99.38625131553532
+A,0.01,mondrian,Fatty Acyls,11691,98.99898443073376
+A,0.01,mondrian,Glycerolipids,7795,98.9171304518188
+A,0.01,mondrian,Glycerophospholipids,10544,99.02583231590131
+A,0.01,mondrian,Polyketides,7218,99.01205066870351
+A,0.01,mondrian,Prenol Lipids,2639,99.0335086461559
+A,0.01,mondrian,Saccharolipids,1351,99.03031005357943
+A,0.01,mondrian,Sphingolipids,4631,99.0042796681254
+A,0.01,mondrian,Sterol Lipids,4097,98.83506501545234
+C,0.1,marginal,Acidic glycosphingolipids [SP06],1393,99.47279771997775
+C,0.1,marginal,Acylaminosugar glycans [SL02],3,56.88405797101448
+C,0.1,marginal,Acylaminosugars [SL01],18,77.32402597402599
+C,0.1,marginal,Acyltrehaloses [SL03],1305,100.0
+C,0.1,marginal,Aflatoxins and related substances [PK10],6,16.93877551020408
+C,0.1,marginal,Amphoteric glycosphingolipids [SP08],1,0.0
+C,0.1,marginal,Angucyclines [PK08],4,0.0
+C,0.1,marginal,Annonaceae acetogenins [PK03],100,71.96152154581074
+C,0.1,marginal,Ansamycins and related polyketides [PK05],8,70.8
+C,0.1,marginal,Aromatic polyketides [PK13],199,34.85465074678172
+C,0.1,marginal,Basic glycosphingolipids [SP07],1,0.0
+C,0.1,marginal,Betaine diradylglycerols [GL07],16,75.85164280164281
+C,0.1,marginal,Betaine monoradylglycerols [GL06],7,25.5047619047619
+C,0.1,marginal,Bile acids and derivatives [ST04],795,81.24473893887846
+C,0.1,marginal,CDP-Glycerols [GP13],37,99.86666666666666
+C,0.1,marginal,Ceramides [SP02],612,98.98777796893377
+C,0.1,marginal,Cyclic glycerophosphatidic acids [GP25],6,58.46938775510204
+C,0.1,marginal,Cytochalasins [PK11],38,85.69880219345423
+C,0.1,marginal,Di-glycerol tetraether phospholipids (caldarchaeols) [GP18],1,0.0
+C,0.1,marginal,Dihydroxyacetonephosphates [GP22],16,75.3963924963925
+C,0.1,marginal,Diradylglycerols [GL02],604,97.40243509594131
+C,0.1,marginal,Docosanoids [FA04],1191,64.31195357798384
+C,0.1,marginal,Eicosanoids [FA03],1382,84.1121201642281
+C,0.1,marginal,Fatty Acids and Conjugates [FA01],3102,84.60206744543252
+C,0.1,marginal,Fatty acyl glycosides [FA13],257,88.40170194735168
+C,0.1,marginal,Fatty alcohols [FA05],512,62.742038440839586
+C,0.1,marginal,Fatty aldehydes [FA06],270,78.16425799609529
+C,0.1,marginal,Fatty amides [FA08],599,92.69648492897205
+C,0.1,marginal,Fatty esters [FA07],2456,77.27854442862444
+C,0.1,marginal,Fatty ethers [FA10],18,16.277561327561326
+C,0.1,marginal,Fatty nitriles [FA09],28,96.6799150913399
+C,0.1,marginal,Flavonoids [PK12],6604,99.65047832958902
+C,0.1,marginal,Glycerol-nonitol tetraether phospholipids [GP19],1,0.0
+C,0.1,marginal,Glycerophosphates [GP10],1205,99.70269197511126
+C,0.1,marginal,Glycerophosphocholines [GP01],1905,96.07073043122136
+C,0.1,marginal,Glycerophosphoethanolamine glycans [GP21],44,95.4179101478293
+C,0.1,marginal,Glycerophosphoethanolamines [GP02],1565,97.84884558935792
+C,0.1,marginal,Glycerophosphoethanols [GP23],8,64.85119047619048
+C,0.1,marginal,Glycerophosphoglycerols [GP04],1351,99.51563733441493
+C,0.1,marginal,Glycerophosphoglycerophosphates [GP05],3,0.0
+C,0.1,marginal,Glycerophosphoglycerophosphoglycerols [GP12],1306,99.91466950656593
+C,0.1,marginal,Glycerophosphoinositol bisphosphates [GP08],4,0.0
+C,0.1,marginal,Glycerophosphoinositol monophosphates [GP07],4,57.23684210526316
+C,0.1,marginal,Glycerophosphoinositol trisphosphates [GP09],1,0.0
+C,0.1,marginal,Glycerophosphoinositolglycans [GP15],338,99.36996339176028
+C,0.1,marginal,Glycerophosphoinositols [GP06],1199,99.6826835445421
+C,0.1,marginal,Glycerophosphonocholines [GP16],1,0.0
+C,0.1,marginal,Glycerophosphonoethanolamines [GP17],1,0.0
+C,0.1,marginal,Glycerophosphoserines [GP03],1231,99.52980948060387
+C,0.1,marginal,Glycerophosphothreonines [GP24],3,0.0
+C,0.1,marginal,Glyceropyrophosphates [GP11],2,38.46153846153846
+C,0.1,marginal,Glycosyldiradylglycerols [GL05],104,83.15721945888117
+C,0.1,marginal,Glycosylglycerophospholipids [GP14],24,76.49199721846782
+C,0.1,marginal,Glycosylmonoradylglycerols [GL04],25,64.61089538256721
+C,0.1,marginal,Halogenated acetogenins [PK02],15,92.19779109779111
+C,0.1,marginal,Hopanoids [PR04],49,42.395813416194166
+C,0.1,marginal,Hydrocarbons [FA11],701,98.57816483691457
+C,0.1,marginal,Isoprenoids [PR01],2472,68.4637400277452
+C,0.1,marginal,Linear polyketides [PK01],10,26.45238095238095
+C,0.1,marginal,Linear tetracyclines [PK07],8,83.9
+C,0.1,marginal,Macrolides and lactone polyketides [PK04],46,39.41549114851926
+C,0.1,marginal,Monoradylglycerols [GL01],93,54.53664248706187
+C,0.1,marginal,Neutral glycosphingolipids [SP05],2117,99.89027297597302
+C,0.1,marginal,Non-ribosomal peptide/polyketide hybrids [PK14],6,65.53333333333332
+C,0.1,marginal,Octadecanoids [FA02],762,62.448605009885476
+C,0.1,marginal,Other Fatty Acyls [FA00],50,47.512784557810555
+C,0.1,marginal,Other Glycerolipids [GL00],10,65.03730158730158
+C,0.1,marginal,Other Glycerophospholipids [GP00],15,81.17020202020203
+C,0.1,marginal,Other Polyketides [PK00],1,0.0
+C,0.1,marginal,Other Sphingolipids [SP00],11,82.00396825396827
+C,0.1,marginal,Other acyl sugars [SL05],25,25.85806954483425
+C,0.1,marginal,Oxidized glycerophospholipids [GP20],273,85.25182668483602
+C,0.1,marginal,Oxygenated hydrocarbons [FA12],363,71.97028507823948
+C,0.1,marginal,Phenolic lipids [PK15],127,38.472413515392105
+C,0.1,marginal,Phosphonosphingolipids [SP04],9,77.8047619047619
+C,0.1,marginal,Phosphosphingolipids [SP03],353,99.55255714405736
+C,0.1,marginal,Polyenes [PK06],5,51.66666666666667
+C,0.1,marginal,Polyether antibiotics [PK09],41,35.36294093333567
+C,0.1,marginal,Polyprenols [PR03],37,56.30414996850116
+C,0.1,marginal,Quinones and hydroquinones [PR02],81,29.06681057362349
+C,0.1,marginal,Secosteroids [ST03],761,82.55710576530588
+C,0.1,marginal,Sphingoid bases [SP01],134,74.28692145011591
+C,0.1,marginal,Steroid conjugates [ST05],232,75.7968445139149
+C,0.1,marginal,Steroids [ST02],399,77.58332389123287
+C,0.1,marginal,Sterols [ST01],1910,84.9540408111815
+C,0.1,marginal,Triradylglycerols [GL03],6936,99.87066854675258
+C,0.1,mondrian,Acidic glycosphingolipids [SP06],1393,89.96195100615634
+C,0.1,mondrian,Acylaminosugar glycans [SL02],3,56.88405797101448
+C,0.1,mondrian,Acylaminosugars [SL01],18,77.32402597402599
+C,0.1,mondrian,Acyltrehaloses [SL03],1305,89.2870012543947
+C,0.1,mondrian,Aflatoxins and related substances [PK10],6,16.93877551020408
+C,0.1,mondrian,Amphoteric glycosphingolipids [SP08],1,0.0
+C,0.1,mondrian,Angucyclines [PK08],4,0.0
+C,0.1,mondrian,Annonaceae acetogenins [PK03],100,84.79205432147768
+C,0.1,mondrian,Ansamycins and related polyketides [PK05],8,70.8
+C,0.1,mondrian,Aromatic polyketides [PK13],199,89.07468368891608
+C,0.1,mondrian,Basic glycosphingolipids [SP07],1,0.0
+C,0.1,mondrian,Betaine diradylglycerols [GL07],16,75.85164280164281
+C,0.1,mondrian,Betaine monoradylglycerols [GL06],7,25.5047619047619
+C,0.1,mondrian,Bile acids and derivatives [ST04],795,87.84390756514593
+C,0.1,mondrian,CDP-Glycerols [GP13],37,99.86666666666666
+C,0.1,mondrian,Ceramides [SP02],612,89.76125825505088
+C,0.1,mondrian,Cyclic glycerophosphatidic acids [GP25],6,58.46938775510204
+C,0.1,mondrian,Cytochalasins [PK11],38,85.69880219345423
+C,0.1,mondrian,Di-glycerol tetraether phospholipids (caldarchaeols) [GP18],1,0.0
+C,0.1,mondrian,Dihydroxyacetonephosphates [GP22],16,75.3963924963925
+C,0.1,mondrian,Diradylglycerols [GL02],604,89.59951077930728
+C,0.1,mondrian,Docosanoids [FA04],1191,73.00977759365907
+C,0.1,mondrian,Eicosanoids [FA03],1382,89.30041321003041
+C,0.1,mondrian,Fatty Acids and Conjugates [FA01],3102,89.64924303489462
+C,0.1,mondrian,Fatty acyl glycosides [FA13],257,90.37283801107795
+C,0.1,mondrian,Fatty alcohols [FA05],512,89.98437889376073
+C,0.1,mondrian,Fatty aldehydes [FA06],270,89.70808698554458
+C,0.1,mondrian,Fatty amides [FA08],599,90.06818481801858
+C,0.1,mondrian,Fatty esters [FA07],2456,89.83246037979161
+C,0.1,mondrian,Fatty ethers [FA10],18,16.277561327561326
+C,0.1,mondrian,Fatty nitriles [FA09],28,96.6799150913399
+C,0.1,mondrian,Flavonoids [PK12],6604,89.00791123836099
+C,0.1,mondrian,Glycerol-nonitol tetraether phospholipids [GP19],1,0.0
+C,0.1,mondrian,Glycerophosphates [GP10],1205,89.12535451656841
+C,0.1,mondrian,Glycerophosphocholines [GP01],1905,90.33915531361832
+C,0.1,mondrian,Glycerophosphoethanolamine glycans [GP21],44,95.4179101478293
+C,0.1,mondrian,Glycerophosphoethanolamines [GP02],1565,88.74532879117973
+C,0.1,mondrian,Glycerophosphoethanols [GP23],8,64.85119047619048
+C,0.1,mondrian,Glycerophosphoglycerols [GP04],1351,89.76630120455158
+C,0.1,mondrian,Glycerophosphoglycerophosphates [GP05],3,0.0
+C,0.1,mondrian,Glycerophosphoglycerophosphoglycerols [GP12],1306,89.50500866918202
+C,0.1,mondrian,Glycerophosphoinositol bisphosphates [GP08],4,0.0
+C,0.1,mondrian,Glycerophosphoinositol monophosphates [GP07],4,57.23684210526316
+C,0.1,mondrian,Glycerophosphoinositol trisphosphates [GP09],1,0.0
+C,0.1,mondrian,Glycerophosphoinositolglycans [GP15],338,91.03541108766842
+C,0.1,mondrian,Glycerophosphoinositols [GP06],1199,89.85160417759835
+C,0.1,mondrian,Glycerophosphonocholines [GP16],1,0.0
+C,0.1,mondrian,Glycerophosphonoethanolamines [GP17],1,0.0
+C,0.1,mondrian,Glycerophosphoserines [GP03],1231,90.15978740462891
+C,0.1,mondrian,Glycerophosphothreonines [GP24],3,0.0
+C,0.1,mondrian,Glyceropyrophosphates [GP11],2,38.46153846153846
+C,0.1,mondrian,Glycosyldiradylglycerols [GL05],104,89.5541857267497
+C,0.1,mondrian,Glycosylglycerophospholipids [GP14],24,76.49199721846782
+C,0.1,mondrian,Glycosylmonoradylglycerols [GL04],25,64.61089538256721
+C,0.1,mondrian,Halogenated acetogenins [PK02],15,92.19779109779111
+C,0.1,mondrian,Hopanoids [PR04],49,47.923591193971944
+C,0.1,mondrian,Hydrocarbons [FA11],701,89.56012263370802
+C,0.1,mondrian,Isoprenoids [PR01],2472,89.5394091074308
+C,0.1,mondrian,Linear polyketides [PK01],10,26.45238095238095
+C,0.1,mondrian,Linear tetracyclines [PK07],8,83.9
+C,0.1,mondrian,Macrolides and lactone polyketides [PK04],46,39.41549114851926
+C,0.1,mondrian,Monoradylglycerols [GL01],93,90.88350335570777
+C,0.1,mondrian,Neutral glycosphingolipids [SP05],2117,89.5140749296816
+C,0.1,mondrian,Non-ribosomal peptide/polyketide hybrids [PK14],6,65.53333333333332
+C,0.1,mondrian,Octadecanoids [FA02],762,83.13137458025236
+C,0.1,mondrian,Other Fatty Acyls [FA00],50,51.22872883025638
+C,0.1,mondrian,Other Glycerolipids [GL00],10,65.03730158730158
+C,0.1,mondrian,Other Glycerophospholipids [GP00],15,81.17020202020203
+C,0.1,mondrian,Other Polyketides [PK00],1,0.0
+C,0.1,mondrian,Other Sphingolipids [SP00],11,82.00396825396827
+C,0.1,mondrian,Other acyl sugars [SL05],25,25.85806954483425
+C,0.1,mondrian,Oxidized glycerophospholipids [GP20],273,89.93437633264324
+C,0.1,mondrian,Oxygenated hydrocarbons [FA12],363,89.63309642044314
+C,0.1,mondrian,Phenolic lipids [PK15],127,91.22149141013972
+C,0.1,mondrian,Phosphonosphingolipids [SP04],9,77.8047619047619
+C,0.1,mondrian,Phosphosphingolipids [SP03],353,88.70054745392146
+C,0.1,mondrian,Polyenes [PK06],5,51.66666666666667
+C,0.1,mondrian,Polyether antibiotics [PK09],41,43.12960760000233
+C,0.1,mondrian,Polyprenols [PR03],37,56.30414996850116
+C,0.1,mondrian,Quinones and hydroquinones [PR02],81,89.36050527988003
+C,0.1,mondrian,Secosteroids [ST03],761,89.33511736233687
+C,0.1,mondrian,Sphingoid bases [SP01],134,89.99030683375284
+C,0.1,mondrian,Steroid conjugates [ST05],232,89.08264221797734
+C,0.1,mondrian,Steroids [ST02],399,89.04986907939622
+C,0.1,mondrian,Sterols [ST01],1910,89.79376368551696
+C,0.1,mondrian,Triradylglycerols [GL03],6936,89.78225109397212
+C,0.05,marginal,Acidic glycosphingolipids [SP06],1393,99.69922325836689
+C,0.05,marginal,Acylaminosugar glycans [SL02],3,78.6231884057971
+C,0.05,marginal,Acylaminosugars [SL01],18,88.1518759018759
+C,0.05,marginal,Acyltrehaloses [SL03],1305,100.0
+C,0.05,marginal,Aflatoxins and related substances [PK10],6,37.89115646258503
+C,0.05,marginal,Amphoteric glycosphingolipids [SP08],1,0.0
+C,0.05,marginal,Angucyclines [PK08],4,0.0
+C,0.05,marginal,Annonaceae acetogenins [PK03],100,79.58192697773025
+C,0.05,marginal,Ansamycins and related polyketides [PK05],8,70.8
+C,0.05,marginal,Aromatic polyketides [PK13],199,51.116404904561385
+C,0.05,marginal,Basic glycosphingolipids [SP07],1,0.0
+C,0.05,marginal,Betaine diradylglycerols [GL07],16,75.85164280164281
+C,0.05,marginal,Betaine monoradylglycerols [GL06],7,37.87142857142857
+C,0.05,marginal,Bile acids and derivatives [ST04],795,87.72303584598318
+C,0.05,marginal,CDP-Glycerols [GP13],37,100.0
+C,0.05,marginal,Ceramides [SP02],612,99.36569005263691
+C,0.05,marginal,Cyclic glycerophosphatidic acids [GP25],6,93.9795918367347
+C,0.05,marginal,Cytochalasins [PK11],38,98.87012987012986
+C,0.05,marginal,Di-glycerol tetraether phospholipids (caldarchaeols) [GP18],1,0.0
+C,0.05,marginal,Dihydroxyacetonephosphates [GP22],16,90.55028860028858
+C,0.05,marginal,Diradylglycerols [GL02],604,97.99691425089472
+C,0.05,marginal,Docosanoids [FA04],1191,91.4469153723208
+C,0.05,marginal,Eicosanoids [FA03],1382,89.42914506105663
+C,0.05,marginal,Fatty Acids and Conjugates [FA01],3102,92.44613351923556
+C,0.05,marginal,Fatty acyl glycosides [FA13],257,91.58398534925755
+C,0.05,marginal,Fatty alcohols [FA05],512,78.86035241028385
+C,0.05,marginal,Fatty aldehydes [FA06],270,87.5330443527832
+C,0.05,marginal,Fatty amides [FA08],599,96.52606446356906
+C,0.05,marginal,Fatty esters [FA07],2456,90.83407801698716
+C,0.05,marginal,Fatty ethers [FA10],18,48.818675768675774
+C,0.05,marginal,Fatty nitriles [FA09],28,96.6799150913399
+C,0.05,marginal,Flavonoids [PK12],6604,99.8832461451234
+C,0.05,marginal,Glycerol-nonitol tetraether phospholipids [GP19],1,0.0
+C,0.05,marginal,Glycerophosphates [GP10],1205,99.9937294215932
+C,0.05,marginal,Glycerophosphocholines [GP01],1905,98.91350954705364
+C,0.05,marginal,Glycerophosphoethanolamine glycans [GP21],44,96.67545048993489
+C,0.05,marginal,Glycerophosphoethanolamines [GP02],1565,99.29148565319609
+C,0.05,marginal,Glycerophosphoethanols [GP23],8,91.64682539682538
+C,0.05,marginal,Glycerophosphoglycerols [GP04],1351,99.62734750730596
+C,0.05,marginal,Glycerophosphoglycerophosphates [GP05],3,0.0
+C,0.05,marginal,Glycerophosphoglycerophosphoglycerols [GP12],1306,99.91466950656593
+C,0.05,marginal,Glycerophosphoinositol bisphosphates [GP08],4,12.5
+C,0.05,marginal,Glycerophosphoinositol monophosphates [GP07],4,100.0
+C,0.05,marginal,Glycerophosphoinositol trisphosphates [GP09],1,0.0
+C,0.05,marginal,Glycerophosphoinositolglycans [GP15],338,99.48852667889304
+C,0.05,marginal,Glycerophosphoinositols [GP06],1199,99.84485394130442
+C,0.05,marginal,Glycerophosphonocholines [GP16],1,0.0
+C,0.05,marginal,Glycerophosphonoethanolamines [GP17],1,0.0
+C,0.05,marginal,Glycerophosphoserines [GP03],1231,99.81240950821652
+C,0.05,marginal,Glycerophosphothreonines [GP24],3,14.772727272727273
+C,0.05,marginal,Glyceropyrophosphates [GP11],2,100.0
+C,0.05,marginal,Glycosyldiradylglycerols [GL05],104,88.38205284180573
+C,0.05,marginal,Glycosylglycerophospholipids [GP14],24,84.02667642814703
+C,0.05,marginal,Glycosylmonoradylglycerols [GL04],25,83.58356566893718
+C,0.05,marginal,Halogenated acetogenins [PK02],15,92.19779109779111
+C,0.05,marginal,Hopanoids [PR04],49,50.75759295849464
+C,0.05,marginal,Hydrocarbons [FA11],701,99.33734199020414
+C,0.05,marginal,Isoprenoids [PR01],2472,79.1050994041352
+C,0.05,marginal,Linear polyketides [PK01],10,38.042857142857144
+C,0.05,marginal,Linear tetracyclines [PK07],8,85.46666666666665
+C,0.05,marginal,Macrolides and lactone polyketides [PK04],46,55.71765616485206
+C,0.05,marginal,Monoradylglycerols [GL01],93,67.47559415802966
+C,0.05,marginal,Neutral glycosphingolipids [SP05],2117,99.95500799358996
+C,0.05,marginal,Non-ribosomal peptide/polyketide hybrids [PK14],6,80.93333333333334
+C,0.05,marginal,Octadecanoids [FA02],762,76.81166666641741
+C,0.05,marginal,Other Fatty Acyls [FA00],50,57.70465756862026
+C,0.05,marginal,Other Glycerolipids [GL00],10,65.03730158730158
+C,0.05,marginal,Other Glycerophospholipids [GP00],15,81.17020202020203
+C,0.05,marginal,Other Polyketides [PK00],1,0.0
+C,0.05,marginal,Other Sphingolipids [SP00],11,88.89126984126985
+C,0.05,marginal,Other acyl sugars [SL05],25,39.31533499180558
+C,0.05,marginal,Oxidized glycerophospholipids [GP20],273,90.76621621926085
+C,0.05,marginal,Oxygenated hydrocarbons [FA12],363,87.7338554918904
+C,0.05,marginal,Phenolic lipids [PK15],127,56.12116126168932
+C,0.05,marginal,Phosphonosphingolipids [SP04],9,100.0
+C,0.05,marginal,Phosphosphingolipids [SP03],353,100.0
+C,0.05,marginal,Polyenes [PK06],5,53.29710144927537
+C,0.05,marginal,Polyether antibiotics [PK09],41,56.47498336120147
+C,0.05,marginal,Polyprenols [PR03],37,67.39909380534363
+C,0.05,marginal,Quinones and hydroquinones [PR02],81,40.28329533308674
+C,0.05,marginal,Secosteroids [ST03],761,90.72437254625187
+C,0.05,marginal,Sphingoid bases [SP01],134,81.29246063962296
+C,0.05,marginal,Steroid conjugates [ST05],232,82.74055460468995
+C,0.05,marginal,Steroids [ST02],399,88.02238194859605
+C,0.05,marginal,Sterols [ST01],1910,94.92896952217706
+C,0.05,marginal,Triradylglycerols [GL03],6936,99.89928926457551
+C,0.05,mondrian,Acidic glycosphingolipids [SP06],1393,95.30445376657454
+C,0.05,mondrian,Acylaminosugar glycans [SL02],3,78.6231884057971
+C,0.05,mondrian,Acylaminosugars [SL01],18,88.1518759018759
+C,0.05,mondrian,Acyltrehaloses [SL03],1305,94.68456909757104
+C,0.05,mondrian,Aflatoxins and related substances [PK10],6,37.89115646258503
+C,0.05,mondrian,Amphoteric glycosphingolipids [SP08],1,0.0
+C,0.05,mondrian,Angucyclines [PK08],4,0.0
+C,0.05,mondrian,Annonaceae acetogenins [PK03],100,91.43471777413305
+C,0.05,mondrian,Ansamycins and related polyketides [PK05],8,70.8
+C,0.05,mondrian,Aromatic polyketides [PK13],199,95.0541870494908
+C,0.05,mondrian,Basic glycosphingolipids [SP07],1,0.0
+C,0.05,mondrian,Betaine diradylglycerols [GL07],16,75.85164280164281
+C,0.05,mondrian,Betaine monoradylglycerols [GL06],7,37.87142857142857
+C,0.05,mondrian,Bile acids and derivatives [ST04],795,93.51545901913725
+C,0.05,mondrian,CDP-Glycerols [GP13],37,100.0
+C,0.05,mondrian,Ceramides [SP02],612,94.74411420458954
+C,0.05,mondrian,Cyclic glycerophosphatidic acids [GP25],6,93.9795918367347
+C,0.05,mondrian,Cytochalasins [PK11],38,98.87012987012986
+C,0.05,mondrian,Di-glycerol tetraether phospholipids (caldarchaeols) [GP18],1,0.0
+C,0.05,mondrian,Dihydroxyacetonephosphates [GP22],16,90.55028860028858
+C,0.05,mondrian,Diradylglycerols [GL02],604,95.05672766502694
+C,0.05,mondrian,Docosanoids [FA04],1191,89.57723633596247
+C,0.05,mondrian,Eicosanoids [FA03],1382,91.88937855532409
+C,0.05,mondrian,Fatty Acids and Conjugates [FA01],3102,94.64918962751253
+C,0.05,mondrian,Fatty acyl glycosides [FA13],257,95.8144326602523
+C,0.05,mondrian,Fatty alcohols [FA05],512,95.4534880916944
+C,0.05,mondrian,Fatty aldehydes [FA06],270,95.46398230262218
+C,0.05,mondrian,Fatty amides [FA08],599,95.36188966849664
+C,0.05,mondrian,Fatty esters [FA07],2456,94.70761370053162
+C,0.05,mondrian,Fatty ethers [FA10],18,48.818675768675774
+C,0.05,mondrian,Fatty nitriles [FA09],28,96.6799150913399
+C,0.05,mondrian,Flavonoids [PK12],6604,94.60875888572355
+C,0.05,mondrian,Glycerol-nonitol tetraether phospholipids [GP19],1,0.0
+C,0.05,mondrian,Glycerophosphates [GP10],1205,94.13468905146168
+C,0.05,mondrian,Glycerophosphocholines [GP01],1905,95.1733693667038
+C,0.05,mondrian,Glycerophosphoethanolamine glycans [GP21],44,96.67545048993489
+C,0.05,mondrian,Glycerophosphoethanolamines [GP02],1565,94.01567523109901
+C,0.05,mondrian,Glycerophosphoethanols [GP23],8,91.64682539682538
+C,0.05,mondrian,Glycerophosphoglycerols [GP04],1351,94.97678825597467
+C,0.05,mondrian,Glycerophosphoglycerophosphates [GP05],3,0.0
+C,0.05,mondrian,Glycerophosphoglycerophosphoglycerols [GP12],1306,94.47738673003194
+C,0.05,mondrian,Glycerophosphoinositol bisphosphates [GP08],4,12.5
+C,0.05,mondrian,Glycerophosphoinositol monophosphates [GP07],4,100.0
+C,0.05,mondrian,Glycerophosphoinositol trisphosphates [GP09],1,0.0
+C,0.05,mondrian,Glycerophosphoinositolglycans [GP15],338,95.38500707707598
+C,0.05,mondrian,Glycerophosphoinositols [GP06],1199,94.80170379779882
+C,0.05,mondrian,Glycerophosphonocholines [GP16],1,0.0
+C,0.05,mondrian,Glycerophosphonoethanolamines [GP17],1,0.0
+C,0.05,mondrian,Glycerophosphoserines [GP03],1231,95.20656371369171
+C,0.05,mondrian,Glycerophosphothreonines [GP24],3,14.772727272727273
+C,0.05,mondrian,Glyceropyrophosphates [GP11],2,100.0
+C,0.05,mondrian,Glycosyldiradylglycerols [GL05],104,95.64638909522188
+C,0.05,mondrian,Glycosylglycerophospholipids [GP14],24,84.02667642814703
+C,0.05,mondrian,Glycosylmonoradylglycerols [GL04],25,83.58356566893718
+C,0.05,mondrian,Halogenated acetogenins [PK02],15,92.19779109779111
+C,0.05,mondrian,Hopanoids [PR04],49,55.57785439640315
+C,0.05,mondrian,Hydrocarbons [FA11],701,94.69763017999466
+C,0.05,mondrian,Isoprenoids [PR01],2472,94.78837773019819
+C,0.05,mondrian,Linear polyketides [PK01],10,38.042857142857144
+C,0.05,mondrian,Linear tetracyclines [PK07],8,85.46666666666665
+C,0.05,mondrian,Macrolides and lactone polyketides [PK04],46,55.71765616485206
+C,0.05,mondrian,Monoradylglycerols [GL01],93,95.65458274313227
+C,0.05,mondrian,Neutral glycosphingolipids [SP05],2117,94.92941859824631
+C,0.05,mondrian,Non-ribosomal peptide/polyketide hybrids [PK14],6,80.93333333333334
+C,0.05,mondrian,Octadecanoids [FA02],762,93.38537621359137
+C,0.05,mondrian,Other Fatty Acyls [FA00],50,60.98716530855834
+C,0.05,mondrian,Other Glycerolipids [GL00],10,65.03730158730158
+C,0.05,mondrian,Other Glycerophospholipids [GP00],15,81.17020202020203
+C,0.05,mondrian,Other Polyketides [PK00],1,0.0
+C,0.05,mondrian,Other Sphingolipids [SP00],11,88.89126984126985
+C,0.05,mondrian,Other acyl sugars [SL05],25,39.31533499180558
+C,0.05,mondrian,Oxidized glycerophospholipids [GP20],273,94.7458128136413
+C,0.05,mondrian,Oxygenated hydrocarbons [FA12],363,94.92485821498948
+C,0.05,mondrian,Phenolic lipids [PK15],127,96.3696470145509
+C,0.05,mondrian,Phosphonosphingolipids [SP04],9,100.0
+C,0.05,mondrian,Phosphosphingolipids [SP03],353,94.61814479799554
+C,0.05,mondrian,Polyenes [PK06],5,53.29710144927537
+C,0.05,mondrian,Polyether antibiotics [PK09],41,66.93609447231258
+C,0.05,mondrian,Polyprenols [PR03],37,67.39909380534363
+C,0.05,mondrian,Quinones and hydroquinones [PR02],81,95.7690299651877
+C,0.05,mondrian,Secosteroids [ST03],761,94.475091454955
+C,0.05,mondrian,Sphingoid bases [SP01],134,94.51566462060369
+C,0.05,mondrian,Steroid conjugates [ST05],232,95.0942525179999
+C,0.05,mondrian,Steroids [ST02],399,94.52334126258873
+C,0.05,mondrian,Sterols [ST01],1910,94.44241824349393
+C,0.05,mondrian,Triradylglycerols [GL03],6936,94.47350212387052
+C,0.01,marginal,Acidic glycosphingolipids [SP06],1393,99.92297126987465
+C,0.01,marginal,Acylaminosugar glycans [SL02],3,100.0
+C,0.01,marginal,Acylaminosugars [SL01],18,93.76637806637805
+C,0.01,marginal,Acyltrehaloses [SL03],1305,100.0
+C,0.01,marginal,Aflatoxins and related substances [PK10],6,55.238095238095234
+C,0.01,marginal,Amphoteric glycosphingolipids [SP08],1,0.0
+C,0.01,marginal,Angucyclines [PK08],4,49.24242424242424
+C,0.01,marginal,Annonaceae acetogenins [PK03],100,97.78420651789253
+C,0.01,marginal,Ansamycins and related polyketides [PK05],8,87.23333333333333
+C,0.01,marginal,Aromatic polyketides [PK13],199,87.48363634563209
+C,0.01,marginal,Basic glycosphingolipids [SP07],1,0.0
+C,0.01,marginal,Betaine diradylglycerols [GL07],16,93.42782772782772
+C,0.01,marginal,Betaine monoradylglycerols [GL06],7,93.28095238095237
+C,0.01,marginal,Bile acids and derivatives [ST04],795,98.70381719684774
+C,0.01,marginal,CDP-Glycerols [GP13],37,100.0
+C,0.01,marginal,Ceramides [SP02],612,99.67951974521061
+C,0.01,marginal,Cyclic glycerophosphatidic acids [GP25],6,100.0
+C,0.01,marginal,Cytochalasins [PK11],38,100.0
+C,0.01,marginal,Di-glycerol tetraether phospholipids (caldarchaeols) [GP18],1,0.0
+C,0.01,marginal,Dihydroxyacetonephosphates [GP22],16,99.77777777777777
+C,0.01,marginal,Diradylglycerols [GL02],604,99.83379822148581
+C,0.01,marginal,Docosanoids [FA04],1191,98.02614517263738
+C,0.01,marginal,Eicosanoids [FA03],1382,98.6000106817477
+C,0.01,marginal,Fatty Acids and Conjugates [FA01],3102,99.13826334067504
+C,0.01,marginal,Fatty acyl glycosides [FA13],257,98.8156397052193
+C,0.01,marginal,Fatty alcohols [FA05],512,94.52124031724009
+C,0.01,marginal,Fatty aldehydes [FA06],270,97.95731108107434
+C,0.01,marginal,Fatty amides [FA08],599,99.8044086778378
+C,0.01,marginal,Fatty esters [FA07],2456,97.33101646827164
+C,0.01,marginal,Fatty ethers [FA10],18,83.96820956820955
+C,0.01,marginal,Fatty nitriles [FA09],28,100.0
+C,0.01,marginal,Flavonoids [PK12],6604,100.0
+C,0.01,marginal,Glycerol-nonitol tetraether phospholipids [GP19],1,0.0
+C,0.01,marginal,Glycerophosphates [GP10],1205,100.0
+C,0.01,marginal,Glycerophosphocholines [GP01],1905,99.95550931441308
+C,0.01,marginal,Glycerophosphoethanolamine glycans [GP21],44,96.67545048993489
+C,0.01,marginal,Glycerophosphoethanolamines [GP02],1565,100.0
+C,0.01,marginal,Glycerophosphoethanols [GP23],8,100.0
+C,0.01,marginal,Glycerophosphoglycerols [GP04],1351,99.93300344057032
+C,0.01,marginal,Glycerophosphoglycerophosphates [GP05],3,40.17094017094016
+C,0.01,marginal,Glycerophosphoglycerophosphoglycerols [GP12],1306,100.0
+C,0.01,marginal,Glycerophosphoinositol bisphosphates [GP08],4,100.0
+C,0.01,marginal,Glycerophosphoinositol monophosphates [GP07],4,100.0
+C,0.01,marginal,Glycerophosphoinositol trisphosphates [GP09],1,0.0
+C,0.01,marginal,Glycerophosphoinositolglycans [GP15],338,100.0
+C,0.01,marginal,Glycerophosphoinositols [GP06],1199,100.0
+C,0.01,marginal,Glycerophosphonocholines [GP16],1,0.0
+C,0.01,marginal,Glycerophosphonoethanolamines [GP17],1,0.0
+C,0.01,marginal,Glycerophosphoserines [GP03],1231,99.85396718643196
+C,0.01,marginal,Glycerophosphothreonines [GP24],3,68.18181818181817
+C,0.01,marginal,Glyceropyrophosphates [GP11],2,100.0
+C,0.01,marginal,Glycosyldiradylglycerols [GL05],104,96.37669312043381
+C,0.01,marginal,Glycosylglycerophospholipids [GP14],24,87.69755081519789
+C,0.01,marginal,Glycosylmonoradylglycerols [GL04],25,95.32019043048454
+C,0.01,marginal,Halogenated acetogenins [PK02],15,92.19779109779111
+C,0.01,marginal,Hopanoids [PR04],49,86.97397579548797
+C,0.01,marginal,Hydrocarbons [FA11],701,99.84981022659663
+C,0.01,marginal,Isoprenoids [PR01],2472,96.80830915310202
+C,0.01,marginal,Linear polyketides [PK01],10,47.73333333333333
+C,0.01,marginal,Linear tetracyclines [PK07],8,100.0
+C,0.01,marginal,Macrolides and lactone polyketides [PK04],46,82.58852530542111
+C,0.01,marginal,Monoradylglycerols [GL01],93,97.27028453690289
+C,0.01,marginal,Neutral glycosphingolipids [SP05],2117,99.95500799358996
+C,0.01,marginal,Non-ribosomal peptide/polyketide hybrids [PK14],6,86.06666666666666
+C,0.01,marginal,Octadecanoids [FA02],762,98.2566543637157
+C,0.01,marginal,Other Fatty Acyls [FA00],50,80.13458753662748
+C,0.01,marginal,Other Glycerolipids [GL00],10,65.03730158730158
+C,0.01,marginal,Other Glycerophospholipids [GP00],15,100.0
+C,0.01,marginal,Other Polyketides [PK00],1,0.0
+C,0.01,marginal,Other Sphingolipids [SP00],11,91.04126984126984
+C,0.01,marginal,Other acyl sugars [SL05],25,66.51570945394475
+C,0.01,marginal,Oxidized glycerophospholipids [GP20],273,99.3586397799163
+C,0.01,marginal,Oxygenated hydrocarbons [FA12],363,95.47183827356052
+C,0.01,marginal,Phenolic lipids [PK15],127,91.77537453682007
+C,0.01,marginal,Phosphonosphingolipids [SP04],9,100.0
+C,0.01,marginal,Phosphosphingolipids [SP03],353,100.0
+C,0.01,marginal,Polyenes [PK06],5,100.0
+C,0.01,marginal,Polyether antibiotics [PK09],41,77.42731997575117
+C,0.01,marginal,Polyprenols [PR03],37,87.26819793755249
+C,0.01,marginal,Quinones and hydroquinones [PR02],81,74.34605462049723
+C,0.01,marginal,Secosteroids [ST03],761,97.13838265707604
+C,0.01,marginal,Sphingoid bases [SP01],134,95.77916697306571
+C,0.01,marginal,Steroid conjugates [ST05],232,97.10760745398446
+C,0.01,marginal,Steroids [ST02],399,95.75506022840582
+C,0.01,marginal,Sterols [ST01],1910,99.29692209245378
+C,0.01,marginal,Triradylglycerols [GL03],6936,99.93846642432023
+C,0.01,mondrian,Acidic glycosphingolipids [SP06],1393,99.21079010710037
+C,0.01,mondrian,Acylaminosugar glycans [SL02],3,100.0
+C,0.01,mondrian,Acylaminosugars [SL01],18,93.76637806637805
+C,0.01,mondrian,Acyltrehaloses [SL03],1305,99.15426965662463
+C,0.01,mondrian,Aflatoxins and related substances [PK10],6,55.238095238095234
+C,0.01,mondrian,Amphoteric glycosphingolipids [SP08],1,0.0
+C,0.01,mondrian,Angucyclines [PK08],4,49.24242424242424
+C,0.01,mondrian,Annonaceae acetogenins [PK03],100,99.83805110213561
+C,0.01,mondrian,Ansamycins and related polyketides [PK05],8,87.23333333333333
+C,0.01,mondrian,Aromatic polyketides [PK13],199,99.82222222222222
+C,0.01,mondrian,Basic glycosphingolipids [SP07],1,0.0
+C,0.01,mondrian,Betaine diradylglycerols [GL07],16,93.42782772782772
+C,0.01,mondrian,Betaine monoradylglycerols [GL06],7,93.28095238095237
+C,0.01,mondrian,Bile acids and derivatives [ST04],795,98.90461293415717
+C,0.01,mondrian,CDP-Glycerols [GP13],37,100.0
+C,0.01,mondrian,Ceramides [SP02],612,99.1949618533357
+C,0.01,mondrian,Cyclic glycerophosphatidic acids [GP25],6,100.0
+C,0.01,mondrian,Cytochalasins [PK11],38,100.0
+C,0.01,mondrian,Di-glycerol tetraether phospholipids (caldarchaeols) [GP18],1,0.0
+C,0.01,mondrian,Dihydroxyacetonephosphates [GP22],16,99.77777777777777
+C,0.01,mondrian,Diradylglycerols [GL02],604,99.07348438824626
+C,0.01,mondrian,Docosanoids [FA04],1191,98.26763487419412
+C,0.01,mondrian,Eicosanoids [FA03],1382,98.83116367545159
+C,0.01,mondrian,Fatty Acids and Conjugates [FA01],3102,99.06594972099046
+C,0.01,mondrian,Fatty acyl glycosides [FA13],257,98.75464895111628
+C,0.01,mondrian,Fatty alcohols [FA05],512,99.30636769294668
+C,0.01,mondrian,Fatty aldehydes [FA06],270,99.47992005866385
+C,0.01,mondrian,Fatty amides [FA08],599,99.13830461967459
+C,0.01,mondrian,Fatty esters [FA07],2456,99.01691341343171
+C,0.01,mondrian,Fatty ethers [FA10],18,83.96820956820955
+C,0.01,mondrian,Fatty nitriles [FA09],28,100.0
+C,0.01,mondrian,Flavonoids [PK12],6604,98.9256932760989
+C,0.01,mondrian,Glycerol-nonitol tetraether phospholipids [GP19],1,0.0
+C,0.01,mondrian,Glycerophosphates [GP10],1205,99.0789506001397
+C,0.01,mondrian,Glycerophosphocholines [GP01],1905,99.00433874792893
+C,0.01,mondrian,Glycerophosphoethanolamine glycans [GP21],44,96.67545048993489
+C,0.01,mondrian,Glycerophosphoethanolamines [GP02],1565,99.09315840806137
+C,0.01,mondrian,Glycerophosphoethanols [GP23],8,100.0
+C,0.01,mondrian,Glycerophosphoglycerols [GP04],1351,98.9773318802028
+C,0.01,mondrian,Glycerophosphoglycerophosphates [GP05],3,40.17094017094016
+C,0.01,mondrian,Glycerophosphoglycerophosphoglycerols [GP12],1306,98.54532634664743
+C,0.01,mondrian,Glycerophosphoinositol bisphosphates [GP08],4,100.0
+C,0.01,mondrian,Glycerophosphoinositol monophosphates [GP07],4,100.0
+C,0.01,mondrian,Glycerophosphoinositol trisphosphates [GP09],1,0.0
+C,0.01,mondrian,Glycerophosphoinositolglycans [GP15],338,99.2898784970664
+C,0.01,mondrian,Glycerophosphoinositols [GP06],1199,99.07543826047733
+C,0.01,mondrian,Glycerophosphonocholines [GP16],1,0.0
+C,0.01,mondrian,Glycerophosphonoethanolamines [GP17],1,0.0
+C,0.01,mondrian,Glycerophosphoserines [GP03],1231,99.18294467842362
+C,0.01,mondrian,Glycerophosphothreonines [GP24],3,68.18181818181817
+C,0.01,mondrian,Glyceropyrophosphates [GP11],2,100.0
+C,0.01,mondrian,Glycosyldiradylglycerols [GL05],104,100.0
+C,0.01,mondrian,Glycosylglycerophospholipids [GP14],24,87.69755081519789
+C,0.01,mondrian,Glycosylmonoradylglycerols [GL04],25,95.32019043048454
+C,0.01,mondrian,Halogenated acetogenins [PK02],15,92.19779109779111
+C,0.01,mondrian,Hopanoids [PR04],49,88.50502154712194
+C,0.01,mondrian,Hydrocarbons [FA11],701,99.0406180558437
+C,0.01,mondrian,Isoprenoids [PR01],2472,98.89902539269661
+C,0.01,mondrian,Linear polyketides [PK01],10,47.73333333333333
+C,0.01,mondrian,Linear tetracyclines [PK07],8,100.0
+C,0.01,mondrian,Macrolides and lactone polyketides [PK04],46,82.58852530542111
+C,0.01,mondrian,Monoradylglycerols [GL01],93,99.94202898550724
+C,0.01,mondrian,Neutral glycosphingolipids [SP05],2117,98.84015399913876
+C,0.01,mondrian,Non-ribosomal peptide/polyketide hybrids [PK14],6,86.06666666666666
+C,0.01,mondrian,Octadecanoids [FA02],762,98.92294638884492
+C,0.01,mondrian,Other Fatty Acyls [FA00],50,81.92754419297424
+C,0.01,mondrian,Other Glycerolipids [GL00],10,65.03730158730158
+C,0.01,mondrian,Other Glycerophospholipids [GP00],15,100.0
+C,0.01,mondrian,Other Polyketides [PK00],1,0.0
+C,0.01,mondrian,Other Sphingolipids [SP00],11,91.04126984126984
+C,0.01,mondrian,Other acyl sugars [SL05],25,66.51570945394475
+C,0.01,mondrian,Oxidized glycerophospholipids [GP20],273,99.4499963261417
+C,0.01,mondrian,Oxygenated hydrocarbons [FA12],363,99.0256863036325
+C,0.01,mondrian,Phenolic lipids [PK15],127,100.0
+C,0.01,mondrian,Phosphonosphingolipids [SP04],9,100.0
+C,0.01,mondrian,Phosphosphingolipids [SP03],353,99.2379997135079
+C,0.01,mondrian,Polyenes [PK06],5,100.0
+C,0.01,mondrian,Polyether antibiotics [PK09],41,82.87176442019562
+C,0.01,mondrian,Polyprenols [PR03],37,87.26819793755249
+C,0.01,mondrian,Quinones and hydroquinones [PR02],81,99.33333333333331
+C,0.01,mondrian,Secosteroids [ST03],761,99.18322087117468
+C,0.01,mondrian,Sphingoid bases [SP01],134,100.0
+C,0.01,mondrian,Steroid conjugates [ST05],232,99.6492518689722
+C,0.01,mondrian,Steroids [ST02],399,98.72026914515938
+C,0.01,mondrian,Sterols [ST01],1910,98.90875392052533
+C,0.01,mondrian,Triradylglycerols [GL03],6936,99.0027882696371
+B,0.1,marginal,0,83740,94.72106485126059
+B,0.1,marginal,1,9935,50.71523719543213
+B,0.1,mondrian,0,83740,90.06364528564595
+B,0.1,mondrian,1,9935,90.09164505011812
+B,0.05,marginal,0,83740,97.74188171853523
+B,0.05,marginal,1,9935,72.17260237506959
+B,0.05,mondrian,0,83740,94.99566786497418
+B,0.05,mondrian,1,9935,95.12594025020404
+B,0.01,marginal,0,83740,99.82350751349855
+B,0.01,marginal,1,9935,92.15805639313253
+B,0.01,mondrian,0,83740,98.9985618928227
+B,0.01,mondrian,1,9935,99.04071399272871

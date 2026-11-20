@@ -1,0 +1,13 @@
+53 — FIGURES AND TABLES · R2C · XGB
+- fig_features
+  figure: figures/m1_feature_selection.pdf
+- fig_models
+  models: skipped (no results)
+- fig_external
+  skipped (missing 44_external_R2C_XGB.csv)
+- fig_conformal
+  skipped (missing 45_conformal_R2C_XGB_per_label.csv)
+- fig_rules
+  figure: figures/m5_readable_rules.pdf
+- fig_novelty
+  figure: figures/m6_distance_check.pdf

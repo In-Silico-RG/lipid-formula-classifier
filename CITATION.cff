@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this classifier, please cite it as below."
+title: "lipid-formula-classifier: lipid classification from the molecular formula alone"
+version: 1.0.0
+date-released: 2026-11-20
+authors:
+  - family-names: Buelvas
+    given-names: Edwin R.
+    affiliation: "Departamento de Biología y Química, Universidad de Sucre, Sincelejo, Colombia"
+  - family-names: Castro
+    given-names: Wilson
+    affiliation: "Universidad Nacional de Frontera, Sullana, Piura, Perú"
+  - family-names: Ávila-George
+    given-names: Himer
+    affiliation: "Universidad de Guadalajara, Ameca, Jalisco, México"
+  - family-names: Combariza
+    given-names: Aldo F.
+    affiliation: "Departamento de Biología y Química, Universidad de Sucre, Sincelejo, Colombia; Programa de Doctorado en Ciencias Físicas, SUE Caribe, Colombia"
+license: MIT
+repository-code: "https://github.com/In-Silico-RG/lipid-formula-classifier"

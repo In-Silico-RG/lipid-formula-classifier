@@ -1,0 +1,11 @@
+file,source,url,licence,bytes,sha256,download
+structures_extended.sdf,"LIPID MAPS LMSD extended (September 2026)",https://www.lipidmaps.org/databases/lmsd/download,"LIPID MAPS terms (check before redistribution)",306341722,77b5b9d363ff4f4fee4a62e7de62dc7361464485b57cf641fec61aab8a4fa839,manual
+chemical_data.tsv.gz,"ChEBI",https://ftp.ebi.ac.uk/pub/databases/chebi/flat_files/chemical_data.tsv.gz,"CC BY 4.0",3747746,0adc94e872e16c6f0211ebcc3cae2d114a729cddfd329cdf413f54c03f643082,auto
+chebi_lite.obo.gz,"ChEBI",https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi_lite.obo.gz,"CC BY 4.0",7852321,db393b48ffca2a0a4ba0b7a3c60283c19888440b555e8a8f6b7a7d86ba879087,auto
+coconut_csv_lite-09-2026.zip,"COCONUT (September 2026 CSV lite)",https://coconut.naturalproducts.net/download,"CC0 / depends on release",199089109,75ca12f57045c7be66d63f04238a673da1595d993e092c400bf23913ae09614e,manual
+refmet.csv,"RefMet, Metabolomics Workbench",https://www.metabolomicsworkbench.org/databases/refmet/,"see source",24051529,ef152c85ded4ec5d725a98cc4611c447e84db956ad76e85775869c596e16bdda,manual
+spectra/PNNL-LIPIDS-POSITIVE.msp,"GNPS library",https://gnps-external.ucsd.edu/gnpslibrary/PNNL-LIPIDS-POSITIVE.msp,"unverified",89912079,aea378373f92e023af83975066df5a6f9762fbd1d32cccbe8a93a442749c7a27,auto
+spectra/PNNL-LIPIDS-NEGATIVE.msp,"GNPS library",https://gnps-external.ucsd.edu/gnpslibrary/PNNL-LIPIDS-NEGATIVE.msp,"unverified",33880573,34bf3b2d0b00d980a8cf876d8584a164823ef683c0ff36aca19dcec0883137e6,auto
+spectra/HCE-CELL-LYSATE-LIPIDS.msp,"GNPS library",https://gnps-external.ucsd.edu/gnpslibrary/HCE-CELL-LYSATE-LIPIDS.msp,"unverified",629491,707baa78ac3e1c86cb627fa575ca78d04b92817fdb06eca9c18ceead075469c4,auto
+spectra/MassBank_NISTformat.msp,"MassBank EU 2026.03 (NIST format)",https://github.com/MassBank/MassBank-data/releases,"CC BY-SA (verified per record)",137309196,cf49e1b293f1c8c1b4a645123638826eea70db656bd76e09ea0c47a1a56fc269,manual
+spectra/MoNA-LCMSMS-experimental.msp.zip,"MoNA experimental LC-MS/MS",https://mona.fiehnlab.ucdavis.edu/downloads,"unverified",2764311192,fa7a823143cae9b139651316fd2a25912ca51898489dd815cf8dbd9048380893,manual

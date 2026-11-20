@@ -1,0 +1,9 @@
+42 — SETTINGS SEARCH (nested) · R2C · XGB · task B · 30 trials per outer fold
+  fold 0: inner macro F1 90.73; best {'n_estimators': 700, 'max_depth': 12, 'learning_rate': 0.17407494869319667, 'subsample': 0.9784639534702303, 'colsample_bytree': 0.6101587366903992, 'min_child_weight': 9, 'reg_lambda': 0.05298449426113949, 'reg_alpha': 0.002189723751424549}
+  fold 1: inner macro F1 90.84; best {'n_estimators': 700, 'max_depth': 12, 'learning_rate': 0.0964555216163819, 'subsample': 0.9456619707221107, 'colsample_bytree': 0.6274630441023485, 'min_child_weight': 5, 'reg_lambda': 0.10221350586736004, 'reg_alpha': 0.0880166620904234}
+  fold 2: inner macro F1 90.82; best {'n_estimators': 500, 'max_depth': 11, 'learning_rate': 0.1308079561496124, 'subsample': 0.7560971138189939, 'colsample_bytree': 0.6219010850869545, 'min_child_weight': 1, 'reg_lambda': 0.10331010580807973, 'reg_alpha': 0.005396507390283925}
+  fold 3: inner macro F1 90.23; best {'n_estimators': 600, 'max_depth': 8, 'learning_rate': 0.07978335393103685, 'subsample': 0.8160933398952733, 'colsample_bytree': 0.9729968369398418, 'min_child_weight': 1, 'reg_lambda': 0.0016877727690407095, 'reg_alpha': 0.011643759031718359}
+  fold 4: inner macro F1 90.34; best {'n_estimators': 800, 'max_depth': 12, 'learning_rate': 0.14373420781191584, 'subsample': 0.9677647852988788, 'colsample_bytree': 0.6538611651831822, 'min_child_weight': 9, 'reg_lambda': 0.011178722179099317, 'reg_alpha': 0.060347103512497106}
+
+  OUTER (seed 0, pooled out of fold): acc 96.31  macro F1 90.68  bal. acc 92.49  permissive 97.25
+  Saved: results/42_hyperparameters_R2C_XGB_B.csv and _outer.csv

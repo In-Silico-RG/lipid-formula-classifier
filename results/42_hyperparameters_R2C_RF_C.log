@@ -1,0 +1,9 @@
+42 — SETTINGS SEARCH (nested) · R2C · RF · task C · 30 trials per outer fold
+  fold 0: inner macro F1 62.69; best {'n_estimators': 400, 'max_depth': 20, 'min_samples_leaf': 2, 'min_samples_split': 3, 'max_features': 0.5}
+  fold 1: inner macro F1 60.29; best {'n_estimators': 300, 'max_depth': 30, 'min_samples_leaf': 1, 'min_samples_split': 9, 'max_features': 'sqrt'}
+  fold 2: inner macro F1 61.96; best {'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 2, 'min_samples_split': 2, 'max_features': 0.5}
+  fold 3: inner macro F1 65.06; best {'n_estimators': 600, 'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 4, 'max_features': 0.5}
+  fold 4: inner macro F1 65.09; best {'n_estimators': 500, 'max_depth': 30, 'min_samples_leaf': 1, 'min_samples_split': 7, 'max_features': 'sqrt'}
+
+  OUTER (seed 0, pooled out of fold): acc 84.66  macro F1 58.50  bal. acc 60.07  permissive 95.68
+  Saved: results/42_hyperparameters_R2C_RF_C.csv and _outer.csv

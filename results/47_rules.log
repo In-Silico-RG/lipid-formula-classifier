@@ -1,0 +1,42 @@
+========================================================================================
+47 — READABLE RULES: single decision trees, merged protocol, task A (category)
+========================================================================================
+entries 49,966; without a tool mass for some element (left out): 0
+  vK        leaves 4         acc  54.98 ± 0.11   macro F1  32.36
+  vK        leaves 8         acc  66.29 ± 0.11   macro F1  50.69
+  vK        leaves 12        acc  68.57 ± 0.23   macro F1  62.41
+  vK        leaves 16        acc  68.93 ± 0.31   macro F1  65.01
+  vK        leaves 24        acc  69.42 ± 0.48   macro F1  66.16
+  vK        leaves 32        acc  69.07 ± 0.69   macro F1  66.46
+  vK        leaves 64        acc  68.88 ± 0.91   macro F1  67.41
+  vK        leaves 128       acc  69.37 ± 1.31   macro F1  68.62
+  vK        leaves unlimited acc  68.13 ± 0.75   macro F1  67.90
+  vK+DBE    leaves 4         acc  56.44 ± 0.05   macro F1  33.22
+  vK+DBE    leaves 8         acc  69.95 ± 0.20   macro F1  62.47
+  vK+DBE    leaves 12        acc  73.44 ± 0.22   macro F1  70.01
+  vK+DBE    leaves 16        acc  76.76 ± 0.12   macro F1  73.62
+  vK+DBE    leaves 24        acc  80.19 ± 0.32   macro F1  76.04
+  vK+DBE    leaves 32        acc  81.38 ± 0.35   macro F1  77.44
+  vK+DBE    leaves 64        acc  84.83 ± 0.06   macro F1  81.58
+  vK+DBE    leaves 128       acc  86.21 ± 0.24   macro F1  83.37
+  vK+DBE    leaves unlimited acc  85.68 ± 0.33   macro F1  83.07
+  elements  leaves 4         acc  64.83 ± 0.05   macro F1  41.04
+  elements  leaves 8         acc  77.64 ± 0.15   macro F1  70.14
+  elements  leaves 12        acc  83.30 ± 0.18   macro F1  74.43
+  elements  leaves 16        acc  86.48 ± 0.17   macro F1  81.25
+  elements  leaves 24        acc  88.72 ± 0.03   macro F1  84.07
+  elements  leaves 32        acc  89.45 ± 0.11   macro F1  85.12
+  elements  leaves 64        acc  90.80 ± 0.03   macro F1  86.84
+  elements  leaves 128       acc  90.92 ± 0.36   macro F1  88.17
+  elements  leaves unlimited acc  91.32 ± 0.08   macro F1  88.68
+  readable  leaves 4         acc  70.17 ± 0.07   macro F1  41.01
+  readable  leaves 8         acc  85.20 ± 0.68   macro F1  77.10
+  readable  leaves 12        acc  88.59 ± 0.22   macro F1  83.22
+  readable  leaves 16        acc  89.76 ± 0.10   macro F1  85.04
+  readable  leaves 24        acc  90.71 ± 0.09   macro F1  86.85
+  readable  leaves 32        acc  91.53 ± 0.24   macro F1  88.04
+  readable  leaves 64        acc  92.62 ± 0.00   macro F1  90.01
+  readable  leaves 128       acc  93.08 ± 0.17   macro F1  90.63
+  readable  leaves unlimited acc  92.29 ± 0.82   macro F1  89.94
+
+  Saved: results/47_rules_curve.csv and results/47_rules_category.txt

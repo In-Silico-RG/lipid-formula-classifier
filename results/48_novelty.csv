@@ -1,0 +1,13 @@
+target,set,n,flagged_pct
+0.95,held-out lipid formulas,9935,4.98238550578762
+0.95,training non-lipids (N1-N3),83408,85.86826203721466
+0.95,HMDB test non-lipids,1906,91.34312696747115
+0.95,artificial N4a (perturbations),28468,19.867921877195446
+0.95,artificial N4b (+21 Da),4988,98.17562149157979
+0.95,"random valid CHNOPS, not in any table",16361,92.88552044496058
+0.99,held-out lipid formulas,9935,0.9864116758933065
+0.99,training non-lipids (N1-N3),83408,61.15960099750624
+0.99,HMDB test non-lipids,1906,73.08499475341029
+0.99,artificial N4a (perturbations),28468,2.3816214697203875
+0.99,artificial N4b (+21 Da),4988,90.8981555733761
+0.99,"random valid CHNOPS, not in any table",16361,53.11411282928916

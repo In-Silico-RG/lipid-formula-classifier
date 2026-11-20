@@ -1,0 +1,23 @@
+VARIABLES EXTRA DERIVADAS DE LA FÓRMULA — R2 (22 variables) frente a R5 (R2 + 23 variables)
+fórmulas de lípido: 9,935 · partición 80/20 por fórmula · 5 semillas · 500 árboles
+
+A categoría   (8 clases, 9,935 fórmulas)
+  R2  RF-bal  exacta 91.75 ± 0.28   bal.acc 87.87   F1 macro 89.09 ± 0.66
+  R2  XGB-bal exacta 91.77 ± 0.33   bal.acc 88.53   F1 macro 89.04 ± 0.58
+  (26 s)
+  R5  RF-bal  exacta 92.11 ± 0.27   bal.acc 88.59   F1 macro 89.68 ± 0.79
+  R5  XGB-bal exacta 92.14 ± 0.09   bal.acc 88.98   F1 macro 89.38 ± 0.75
+  (37 s)
+  Δ exactitud R5−R2 con RF-bal: +0.36 puntos (por semilla: +0.35, +0.35, +0.40, +0.35, +0.35) · mejora en 5 de 5 semillas
+  Δ exactitud R5−R2 con XGB-bal: +0.37 puntos (por semilla: +0.15, -0.05, +0.70, +0.45, +0.60) · mejora en 4 de 5 semillas
+
+C clase principal   (57 clases, 9,851 fórmulas)
+  R2  RF-bal  exacta 83.13 ± 0.46   bal.acc 70.19   F1 macro 71.52 ± 1.35
+  R2  XGB-bal exacta 82.68 ± 0.59   bal.acc 72.42   F1 macro 71.40 ± 1.34
+  (91 s)
+  R5  RF-bal  exacta 86.43 ± 0.57   bal.acc 74.80   F1 macro 75.60 ± 1.41
+  R5  XGB-bal exacta 85.29 ± 0.49   bal.acc 74.79   F1 macro 73.85 ± 1.11
+  (112 s)
+  Δ exactitud R5−R2 con RF-bal: +3.31 puntos (por semilla: +3.60, +2.74, +3.86, +2.59, +3.75) · mejora en 5 de 5 semillas
+  Δ exactitud R5−R2 con XGB-bal: +2.61 puntos (por semilla: +2.38, +3.35, +2.74, +1.47, +3.09) · mejora en 5 de 5 semillas
+

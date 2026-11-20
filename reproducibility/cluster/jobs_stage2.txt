@@ -1,0 +1,10 @@
+# STAGE 2 — after stage 1; MODEL (RF, RF-weighted, XGB or XGB-weighted) is chosen by A. Combariza
+# from results/40_models_* and 42_*. 45 and 49 need the out-of-fold files written by 40 (results/40_oof_*).
+# bash reproducibility/cluster/submit.sh reproducibility/cluster/jobs_stage2.txt <SET> <MODEL>
+python 44_external.py --set=$SET --model=$MODEL --jobs=24
+python 45_conformal.py --set=$SET --model=$MODEL
+python 46_adversarial.py --set=$SET --model=$MODEL --jobs=24
+python 50_structure.py --set=$SET --model=$MODEL --jobs=24
+python 49_final_model.py --set=$SET --model=$MODEL --jobs=24
+python 41_per_class_two_step.py --set=$SET --model=$MODEL --jobs=24
+python 36_mz_only.py --set=$SET --model=$MODEL --jobs=24

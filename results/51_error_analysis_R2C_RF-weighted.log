@@ -1,0 +1,6 @@
+51 — WHERE THE ERRORS FALL · R2C · RF-weighted · out-of-fold, seed 0
+
+  task B: shared formulas are 4.19 % of the formulas and carry 46.0 % of the 3,211 errors; error rate 37.6 % on them vs 1.93 % on the rest
+  task B: sensitivity 78.94 %, specificity 98.66 %; errors = 2,092 lipids missed + 1,119 non-lipids called lipid; lipids found 62.4 % on shared formulas vs 89.8 % on the rest
+  task A: strict 94.24 %, permissive 97.09 %; 49.5 % of the 2,879 strict errors are labels LIPID MAPS accepts
+  task C: strict 84.57 %, permissive 95.40 %; 70.2 % of the 7,708 strict errors are labels LIPID MAPS accepts

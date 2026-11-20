@@ -1,0 +1,67 @@
+====================================================================================
+FASE 3 (CPU) — RANDOM FOREST Y XGBOOST
+====================================================================================
+500 árboles, resto por defecto. Partición 80/20 agrupada por fórmula, 5 semillas.
+Métrica de selección: F1 macro. La exactitud se muestra solo para comparar
+con la literatura; en la tarea B, responder siempre 'no-lípido' ya da 89,69 %.
+
+====================================================================================
+TAREA A — Categoría de lípido (8 clases)   ·  techo 98,22 %  ·  k-NN 90,07 %
+====================================================================================
+  Representación Modelo      Exact.    Bal.acc   F1 macro
+  R1 Mitchell    RF          88.37%     83.83%     84.92% (±0.39)     2.0s
+  R1 Mitchell    RF-bal      88.29%     83.76%     84.93% (±0.32)     2.1s
+  R1 Mitchell    XGB         89.84%     85.70%     86.48% (±0.22)     4.0s
+  R1 Mitchell    XGB-bal     89.80%     86.53%     86.77% (±0.40)     4.1s
+  R2 Ampliada    RF          91.66%     87.81%     88.90% (±0.61)     2.1s
+  R2 Ampliada    RF-bal      91.75%     87.87%     89.09% (±0.66)     2.1s
+  R2 Ampliada    XGB         91.55%     87.74%     88.59% (±0.55)     4.1s
+  R2 Ampliada    XGB-bal     91.77%     88.53%     89.04% (±0.58)     4.6s
+  R4 Isotópica   RF          88.20%     84.09%     85.16% (±0.70)     3.1s
+  R4 Isotópica   RF-bal      88.21%     84.10%     85.41% (±0.55)     3.2s
+  R4 Isotópica   XGB         89.92%     86.40%     87.17% (±0.72)     9.4s
+  R4 Isotópica   XGB-bal     89.94%     86.84%     87.15% (±0.98)     9.2s
+
+====================================================================================
+TAREA B — Detección lípido / no-lípido   ·  k-NN 94,35 %  ·  mayoritaria 89,69 %
+====================================================================================
+  Representación Modelo      Exact.    Bal.acc   F1 macro
+  R1 Mitchell    RF          95.75%     87.42%     88.36% (±0.30)    11.1s
+  R1 Mitchell    RF-bal      95.74%     87.04%     88.26% (±0.40)    10.8s
+  R1 Mitchell    XGB         96.01%     88.59%     89.18% (±0.20)     2.0s
+  R1 Mitchell    XGB-bal     95.31%     91.97%     88.50% (±0.27)     2.2s
+  R2 Ampliada    RF          96.40%     89.19%     90.15% (±0.23)    15.5s
+  R2 Ampliada    RF-bal      96.44%     88.79%     90.15% (±0.29)    14.9s
+  R2 Ampliada    XGB         96.61%     90.26%     90.83% (±0.09)     2.3s
+  R2 Ampliada    XGB-bal     96.07%     92.51%     90.10% (±0.26)     2.4s
+  R4 Isotópica   RF          94.16%     82.19%     83.67% (±0.50)    38.6s
+  R4 Isotópica   RF-bal      94.11%     82.59%     83.71% (±0.43)    38.8s
+  R4 Isotópica   XGB         94.74%     84.73%     85.60% (±0.35)    10.0s
+  R4 Isotópica   XGB-bal     93.83%     90.52%     85.50% (±0.26)     6.3s
+
+====================================================================================
+TAREA C — Clase principal (86 clases)   ·  techo 95,50 %
+====================================================================================
+  Representación Modelo      Exact.    Bal.acc   F1 macro
+  (se excluyen 22 clases con menos de 10 fórmulas; quedan 57 clases y 9,851 fórmulas)
+  R1 Mitchell    RF          75.32%     59.14%     59.87% (±1.51)     2.7s
+  R1 Mitchell    RF-bal      75.24%     60.07%     60.40% (±1.82)     2.9s
+  R1 Mitchell    XGB         78.69%     64.13%     64.65% (±0.68)    27.9s
+  R1 Mitchell    XGB-bal     77.77%     66.29%     65.39% (±1.37)    29.2s
+  R2 Ampliada    RF          83.35%     69.45%     70.40% (±1.75)     3.0s
+  R2 Ampliada    RF-bal      83.13%     70.19%     71.52% (±1.35)     3.2s
+  R2 Ampliada    XGB         83.20%     70.44%     71.48% (±0.43)    29.1s
+  R2 Ampliada    XGB-bal     82.70%     72.35%     71.32% (±1.42)    27.3s
+  R4 Isotópica   RF          75.80%     61.09%     61.71% (±1.49)     5.1s
+  R4 Isotópica   RF-bal      75.59%     60.89%     61.92% (±1.53)     5.8s
+  R4 Isotópica   XGB         78.89%     64.87%     65.65% (±1.55)    61.2s
+  R4 Isotópica   XGB-bal     78.53%     66.67%     66.15% (±1.86)    61.0s
+
+====================================================================================
+MEJOR CONFIGURACIÓN POR TAREA (según F1 macro)
+====================================================================================
+  A categoría    R2 Ampliada    RF-bal    F1  89.09%  bal.acc  87.87%  exact.  91.75%
+  B detección    R2 Ampliada    XGB       F1  90.83%  bal.acc  90.27%  exact.  96.61%
+  C clase        R2 Ampliada    RF-bal    F1  71.52%  bal.acc  70.19%  exact.  83.12%
+
+  Guardado: resultados/05_modelos.csv

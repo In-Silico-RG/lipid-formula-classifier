@@ -1,0 +1,19 @@
+====================================================================================
+33 — HMDB 5.0 AS AN EXTERNAL NON-LIPID TEST SET (never used for training)
+====================================================================================
+HMDB metabolites read: 217,920  (source: hmdb_formula_taxonomy.csv)
+  by status: {'quantified': 3385, 'detected': 20924, 'expected': 98256, 'predicted': 95355}
+  removed by super-class: Hydrocarbons 299, Lignans, neolignans and related compounds 228, Lipids and lipid-like molecules 117,350, Phenylpropanoids and polyketides 4,030
+  parser rejections by reason: {'sin_carbono': 277, 'sintaxis': 16, 'elemento': 21}
+  formulas already in the master table, by label there: {'non_lipid': 10078, 'lipid': 1354, 'discarded': 36}
+
+filter (metabolites removed at each step):
+  without ClassyFire taxonomy                71,983
+  lipid-like super-class                    121,907
+  formula rejected by the parser                314
+  formula already used (master table)        21,706
+
+TEST SET: 2,010 metabolites, 1,917 distinct formulas never seen in training
+  top super-classes (metabolites): Organic acids and derivatives 608, Organoheterocyclic compounds 458, Benzenoids 379, Organic oxygen compounds 191, Organic Polymers 116, Organic nitrogen compounds 81, Organohalogen compounds 61, Nucleosides, nucleotides, and analogues 52
+
+  Saved: data/hmdb_test.csv

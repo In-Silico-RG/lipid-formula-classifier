@@ -1,0 +1,49 @@
+====================================================================================
+VALIDACIÓN DE R5 (variables derivadas solo de la fórmula) — R2 frente a R5
+====================================================================================
+
+[1] TAREA B — detección, partición agrupada 80/20 (93.988 fórmulas), 5 semillas
+  RF  R2  F1 macro 90.12 ± 0.21  bal.acc 89.13  exactitud 96.39  sens. lípido 79.94
+  RF  R5  F1 macro 92.01 ± 0.31  bal.acc 90.71  exactitud 97.10  sens. lípido 82.63
+  Δ F1 macro R5−R2 con RF: +1.89 (por semilla: +1.97, +1.84, +2.11, +1.79, +1.73) · mejora en 5 de 5
+  XGB R2  F1 macro 90.83 ± 0.10  bal.acc 90.26  exactitud 96.61  sens. lípido 82.24
+  XGB R5  F1 macro 91.52 ± 0.30  bal.acc 90.84  exactitud 96.88  sens. lípido 83.21
+  Δ F1 macro R5−R2 con XGB: +0.69 (por semilla: +0.92, +0.91, +0.96, +0.19, +0.47) · mejora en 5 de 5
+
+[2] LABORATORIO (GNPS/PNNL/HCE) — SIN FUGA
+  R2: estricta 94.80 ± 0.37 · permisiva 95.29 ± 0.35
+  R5: estricta 95.22 ± 0.31 · permisiva 95.68 ± 0.31
+  Δ estricta R5−R2: +0.42 · mejora en 5 de 5 semillas
+  detección (sensibilidad, 867 fórmulas) R2: 96.31 ± 0.00
+  detección (sensibilidad, 867 fórmulas) R5: 95.96 ± 0.00
+
+[3] MASSBANK — SIN FUGA
+  R2: estricta 86.53 ± 0.12 · permisiva 90.72 · F1 macro 73.49 · prenol 40.5 · esteroles 71.9
+  R5: estricta 86.62 ± 0.12 · permisiva 91.02 · F1 macro 73.45 · prenol 41.5 · esteroles 70.8
+  Δ estricta R5−R2: +0.09 · mejora en 2 de 5 semillas
+  detección R2: sensibilidad 70.62 ± 0.00 · especificidad 97.50 ± 0.00
+  detección R5: sensibilidad 76.54 ± 0.00 · especificidad 97.15 ± 0.00
+
+[4] TAREA C — sensibilidad por clase, RF balanceado, 5 semillas (clases con ≥ 30 fórmulas)
+  mayores mejoras:
+    Fatty aldehydes [FA06]                     n=  35  R2  24.2 → R5  48.0  (+23.8)
+    Steroids [ST02]                            n=  62  R2  24.8 → R5  44.5  (+19.7)
+    Glycerophosphoethanolamines [GP02]         n= 199  R2  72.2 → R5  86.5  (+14.3)
+    Octadecanoids [FA02]                       n=  47  R2  30.3 → R5  42.3  (+12.0)
+    Neutral glycosphingolipids [SP05]          n= 608  R2  89.6 → R5  98.6  (+9.0)
+    Other Fatty Acyls [FA00]                   n=  43  R2  38.0 → R5  45.6  (+7.7)
+    Glycerophosphocholines [GP01]              n= 262  R2  78.2 → R5  85.4  (+7.2)
+    Acidic glycosphingolipids [SP06]           n= 527  R2  92.4 → R5  99.5  (+7.1)
+  mayores pérdidas:
+    Glycerophosphoinositols [GP06]             n= 242  R2  97.1 → R5  96.6  (-0.4)
+    Macrolides and lactone polyketides [PK04]  n=  39  R2  68.3 → R5  67.3  (-1.1)
+    Sphingoid bases [SP01]                     n=  83  R2  64.6 → R5  63.4  (-1.2)
+    Hopanoids [PR04]                           n=  30  R2  44.0 → R5  40.7  (-3.3)
+    Glycosyldiradylglycerols [GL05]            n=  74  R2  84.6 → R5  80.7  (-3.9)
+  clase débil Quinones and hydroquinones [PR02]      R2  25.3 → R5  31.4
+  clase débil Aromatic polyketides [PK13]            R2  33.5 → R5  37.7
+  clase débil Bile acids and derivatives [ST04]      R2  30.5 → R5  36.1
+  clase débil Other Fatty Acyls [FA00]               R2  38.0 → R5  45.6
+  clase débil Hopanoids [PR04]                       R2  44.0 → R5  40.7
+
+Guardado: resultados/26_r5_validacion.csv, resultados/26_r5_por_clase.csv

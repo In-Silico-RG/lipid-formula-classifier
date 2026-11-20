@@ -1,0 +1,60 @@
+====================================================================================
+FASE 3 (continuación) — RED DENSA (MLP) Y RED CONVOLUCIONAL (CNN)
+====================================================================================
+torch 2.14.0+cpu, 8 hilos, CPU.
+Adam lr=0.001, lote=256, hasta 150 épocas con parada temprana
+(paciencia 15 sobre F1 macro de un 10% de validación
+extraído del entrenamiento, nunca de la prueba).
+Partición 80/20 agrupada por fórmula, las mismas 5 semillas de la Fase 3.
+Estandarización ajustada sólo con el entrenamiento.
+
+====================================================================================
+TAREA A — Categoría de lípido (8 clases)   ·  techo 98,22 %  ·  k-NN 90,07 %  ·  mejor Fase 3: 89,32 %
+====================================================================================
+  Representación Modelo      Exact.    Bal.acc   F1 macro
+  R1 Mitchell    MLP         87.80%     82.21%     83.58% (±1.20)    17.0s
+  R1 Mitchell    MLP-bal     86.63%     83.35%     82.06% (±0.70)    13.7s
+  R2 Ampliada    MLP         87.94%     82.15%     83.41% (±1.19)    11.6s
+  R2 Ampliada    MLP-bal     86.72%     83.72%     82.19% (±0.91)    11.9s
+  R3 Posicional  MLP         89.06%     84.30%     85.27% (±1.00)    14.7s
+  R3 Posicional  MLP-bal     87.46%     86.18%     83.06% (±0.90)    12.3s
+  R4 Isotópica   CNN         70.24%     63.41%     64.46% (±1.34)    29.6s
+  R4 Isotópica   CNN-bal     67.41%     66.85%     62.76% (±0.46)    30.2s
+
+====================================================================================
+TAREA B — Detección lípido / no-lípido   ·  k-NN 94,35 %  ·  mejor Fase 3: 90,82 %
+====================================================================================
+  Representación Modelo      Exact.    Bal.acc   F1 macro
+  R1 Mitchell    MLP         95.25%     87.85%     87.45% (±0.25)    74.3s
+  R1 Mitchell    MLP-bal     92.37%     92.63%     83.69% (±0.81)    60.6s
+  R2 Ampliada    MLP         95.25%     88.09%     87.50% (±0.31)    52.8s
+  R2 Ampliada    MLP-bal     92.39%     92.30%     83.66% (±0.60)    57.0s
+  R3 Posicional  MLP         95.38%     87.89%     87.71% (±0.40)    63.1s
+  R3 Posicional  MLP-bal     92.46%     93.14%     83.96% (±0.68)    58.6s
+  R4 Isotópica   CNN         92.69%     80.15%     80.34% (±0.31)   248.1s
+  R4 Isotópica   CNN-bal     88.69%     86.89%     77.23% (±0.92)   171.8s
+
+  (tarea C: se excluyen 22 clases con menos de 10 fórmulas)
+
+====================================================================================
+TAREA C — Clase principal   ·  techo 95,50 %  ·  mejor Fase 3: 71,52 %
+====================================================================================
+  Representación Modelo      Exact.    Bal.acc   F1 macro
+  R1 Mitchell    MLP         76.67%     59.78%     60.61% (±2.23)    16.3s
+  R1 Mitchell    MLP-bal     67.27%     64.76%     55.31% (±2.22)    18.4s
+  R2 Ampliada    MLP         78.01%     61.12%     61.45% (±3.50)    14.8s
+  R2 Ampliada    MLP-bal     68.98%     67.55%     58.04% (±1.43)    13.2s
+  R3 Posicional  MLP         77.72%     61.80%     62.47% (±2.78)    18.9s
+  R3 Posicional  MLP-bal     69.07%     69.91%     58.68% (±2.19)    18.2s
+  R4 Isotópica   CNN         52.68%     30.99%     29.74% (±2.21)    31.8s
+  R4 Isotópica   CNN-bal     38.40%     44.41%     31.07% (±0.56)    31.0s
+
+====================================================================================
+MEJOR RED POR TAREA (según F1 macro)
+====================================================================================
+  TAREA A        R3 Posicional  MLP       F1  85.27%  bal.acc  84.30%  exact.  89.06%
+  TAREA B        R3 Posicional  MLP       F1  87.71%  bal.acc  87.89%  exact.  95.38%
+  TAREA C        R3 Posicional  MLP       F1  62.47%  bal.acc  61.80%  exact.  77.72%
+
+  Guardado: resultados/09_redes.csv
+  Comparar contra resultados/05_modelos.csv (RF y XGBoost).

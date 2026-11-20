@@ -1,0 +1,46 @@
+====================================================================================
+DOBLE EVALUACIÓN DE LAS TAREAS A Y B — estricta frente a permisiva
+====================================================================================
+Mismo modelo en las dos columnas. Lo que cambia es el criterio de corrección.
+Completa lo que la sesión 19 hizo sólo para la tarea C.
+
+------------------------------------------------------------------------------------
+TAREA A — Categoría de lípido (8)
+------------------------------------------------------------------------------------
+  modelo: R2 + Random Forest balanceado (ganador de la Fase 3)
+  admisibles: CATEGORY de todas sus entradas + ALT_CATEGORIES
+  fórmulas de prueba: 1,987  ·  con más de una etiqueta admisible: 6.31 %
+
+  Evaluación                Exactitud
+  ---------------------- ------------
+  ESTRICTA                     91.75%   (± 0.31)
+  PERMISIVA                    93.32%   (± 0.44)
+  diferencia                   +1.57
+
+  De los 164 fallos por semilla (media), 31 eran una etiqueta
+  oficial admisible → 19.0 % de los 'errores' eran aciertos.
+
+  Referencia con criterio estricto: F1 macro 89.09 %  ·  balanced accuracy 87.87 %
+
+------------------------------------------------------------------------------------
+TAREA B — Detección lípido / no-lípido
+------------------------------------------------------------------------------------
+  modelo: R2 + XGBoost (ganador de la Fase 3)
+  admisibles: ambas etiquetas para las 3,923 fórmulas de LIPID MAPS
+  que también figuran en una base de no-lípidos curados (el 38,60 %)
+  fórmulas de prueba: 18,798  ·  con más de una etiqueta admisible: 4.04 %
+
+  Evaluación                Exactitud
+  ---------------------- ------------
+  ESTRICTA                     96.61%   (± 0.11)
+  PERMISIVA                    97.89%   (± 0.09)
+  diferencia                   +1.27
+
+  De los 637 fallos por semilla (media), 239 eran una etiqueta
+  oficial admisible → 37.6 % de los 'errores' eran aciertos.
+
+  Referencia con criterio estricto: F1 macro 90.83 %  ·  balanced accuracy 90.26 %
+
+====================================================================================
+Guardado: resultados/10_doble_evaluacion.csv
+Comparar con resultados/07_multietiqueta.csv (tarea C: 82,14 % → 85,90 %).

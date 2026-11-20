@@ -1,0 +1,13 @@
+tarea,representacion,modelo,exactitud,balanced_acc,f1_macro,segundos
+A categoría,R1 exacto,RF,91.354,87.23,88.268,2.033
+A categoría,R1 exacto,RF-bal,91.344,87.435,88.487,2.038
+A categoría,R1 exacto,XGB,91.364,87.769,88.53,17.735
+A categoría,R1 exacto,XGB-bal,91.404,88.069,88.533,16.921
+B detección,R1 exacto,RF,96.085,88.595,89.342,10.093
+B detección,R1 exacto,RF-bal,96.195,88.524,89.562,12.25
+B detección,R1 exacto,XGB,96.756,90.612,91.207,9.848
+B detección,R1 exacto,XGB-bal,96.059,93.495,90.249,2.1
+C clase,R1 exacto,RF,82.09,68.33,69.413,2.327
+C clase,R1 exacto,RF-bal,81.715,68.204,69.611,2.269
+C clase,R1 exacto,XGB,83.176,69.031,70.133,45.249
+C clase,R1 exacto,XGB-bal,82.588,71.852,70.597,40.29

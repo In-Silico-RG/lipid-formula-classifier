@@ -1,0 +1,29 @@
+========================================================================================
+45 — PREDICTION SETS · input list R2C · model RF-weighted · 50 calibration/test halves
+========================================================================================
+
+--- task A: 49,966 units, 9,935 formulas, 8 labels
+  α=0.10 marginal  coverage  89.95 ± 2.36  any accepted  91.65  size  0.92  single  92.4 %  size unamb./amb. 0.97/0.70  lowest label Prenol Lipids 53.5 %
+  α=0.10 mondrian  coverage  89.60 ± 1.90  any accepted  91.57  size  0.99  single  89.4 %  size unamb./amb. 0.96/1.14  lowest label Saccharolipids 88.2 %
+  α=0.05 marginal  coverage  94.32 ± 1.25  any accepted  96.84  size  1.00  single  98.0 %  size unamb./amb. 1.00/1.02  lowest label Prenol Lipids 68.5 %
+  α=0.05 mondrian  coverage  94.52 ± 1.02  any accepted  96.76  size  1.13  single  84.8 %  size unamb./amb. 1.05/1.57  lowest label Fatty Acyls 93.0 %
+  α=0.01 marginal  coverage  99.00 ± 0.15  any accepted  99.74  size  1.30  single  79.0 %  size unamb./amb. 1.16/1.98  lowest label Prenol Lipids 93.6 %
+  α=0.01 mondrian  coverage  98.99 ± 0.12  any accepted  99.52  size  1.46  single  70.0 %  size unamb./amb. 1.25/2.47  lowest label Sterol Lipids 98.8 %
+
+--- task C: 49,966 units, 9,935 formulas, 86 labels
+  α=0.10 marginal  coverage  90.27 ± 2.43  any accepted  96.27  size  1.19  single  79.8 %  size unamb./amb. 1.06/1.40  lowest label Amphoteric glycosphingolipids [SP08] 0.0 %
+  α=0.10 mondrian  coverage  88.75 ± 1.29  any accepted  93.69  size  1.87  single  46.1 %  size unamb./amb. 1.42/2.64  lowest label Amphoteric glycosphingolipids [SP08] 0.0 %
+  α=0.05 marginal  coverage  94.92 ± 0.71  any accepted  98.68  size  1.45  single  64.7 %  size unamb./amb. 1.18/1.91  lowest label Amphoteric glycosphingolipids [SP08] 0.0 %
+  α=0.05 mondrian  coverage  94.31 ± 0.70  any accepted  96.88  size  3.60  single   8.2 %  size unamb./amb. 2.86/4.88  lowest label Amphoteric glycosphingolipids [SP08] 0.0 %
+  α=0.01 marginal  coverage  98.98 ± 0.16  any accepted  99.71  size  2.80  single  37.7 %  size unamb./amb. 1.90/4.35  lowest label Amphoteric glycosphingolipids [SP08] 0.0 %
+  α=0.01 mondrian  coverage  98.89 ± 0.12  any accepted  99.40  size 12.38  single   0.0 %  size unamb./amb. 11.35/14.17  lowest label Amphoteric glycosphingolipids [SP08] 0.0 %
+
+--- task B: 93,675 units, 93,675 formulas, 2 labels
+  α=0.10 marginal  coverage  90.05 ± 0.19  any accepted  90.61  size  0.91  single  90.9 %  size unamb./amb. 0.93/0.39  lowest label 1 50.7 %
+  α=0.10 mondrian  coverage  90.07 ± 0.18  any accepted  90.26  size  0.94  single  93.7 %  size unamb./amb. 0.94/0.86  lowest label 0 90.1 %
+  α=0.05 marginal  coverage  95.03 ± 0.14  any accepted  96.17  size  0.97  single  97.3 %  size unamb./amb. 0.98/0.80  lowest label 1 72.2 %
+  α=0.05 mondrian  coverage  95.01 ± 0.15  any accepted  95.42  size  1.02  single  98.5 %  size unamb./amb. 1.01/1.04  lowest label 0 95.0 %
+  α=0.01 marginal  coverage  99.01 ± 0.06  any accepted  99.65  size  1.08  single  92.0 %  size unamb./amb. 1.06/1.55  lowest label 1 92.2 %
+  α=0.01 mondrian  coverage  99.00 ± 0.07  any accepted  99.08  size  1.18  single  82.2 %  size unamb./amb. 1.17/1.41  lowest label 0 99.0 %
+
+  Saved: results/45_conformal_R2C_RF-weighted.csv and _per_label.csv
