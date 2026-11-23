@@ -24,13 +24,22 @@ import merged_common as mc  # noqa: E402
 OPT = dict(a[2:].split("=", 1) for a in sys.argv[1:] if a.startswith("--") and "=" in a)
 SET, MODEL = OPT.get("set", "R2C"), OPT.get("model", "XGB")
 FIG = mc.BASE / "figures"
-BLUE, GREY, LIGHT = "#2b6cb0", "#8c8c88", "#d4d4d0"       # one colour for what the figure is about, greys for the rest
+BLUE, GREY, LIGHT = "#3969AC", "#8c8c88", "#c8c8c8"   # same blue and greys as 56_figures_redesign.py (CARTO Bold)       # one colour for what the figure is about, greys for the rest
 PAL = [BLUE, GREY, "#555553", LIGHT]
-INK, MUTED, GRID = "#1f1f1e", "#6b6b68", "#e3e3e0"
-plt.rcParams.update({"font.size": 8, "axes.edgecolor": MUTED, "axes.labelcolor": INK, "xtick.color": MUTED,
+# CARTO "Bold" palette and category colours, identical to 56_figures_redesign.py (Figs. 1b, 4, 5, 7)
+CYAN, GREEN, YELLOW = "#008695", "#11A579", "#F2B701"
+FUCHSIA, ORANGE, RED, PURPLE = "#CF1C90", "#E68310", "#E73F74", "#7F3C8D"
+CAT = ["Glycerophospholipids", "Sphingolipids", "Glycerolipids", "Saccharolipids", "Polyketides",
+       "Fatty Acyls", "Prenol Lipids", "Sterol Lipids"]
+COL = dict(zip(CAT, [BLUE, CYAN, GREEN, YELLOW, FUCHSIA, ORANGE, RED, PURPLE]))
+INK, MUTED, GRID = "#000000", "#000000", "#ececec"   # all text black, as in the other figures
+plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8, "axes.edgecolor": MUTED, "text.color": INK,
+                     "axes.linewidth": 0.7, "xtick.major.width": 0.7, "ytick.major.width": 0.7,
+                     "xtick.labelcolor": INK, "ytick.labelcolor": INK, "axes.labelcolor": INK, "xtick.color": MUTED,
                      "ytick.color": MUTED, "axes.spines.top": False, "axes.spines.right": False,
                      "axes.grid": True, "axes.grid.axis": "y", "grid.color": GRID, "grid.linewidth": 0.6,
-                     "axes.axisbelow": True, "legend.frameon": False, "savefig.dpi": 300})
+                     "axes.axisbelow": True, "legend.frameon": False, "savefig.dpi": 300,
+                     "pdf.fonttype": 42})
 LIST_ORDER = ["R1", "T10", "T12", "R2", "R2C", "R5"]
 MODEL_COLOR = {"rf": PAL[0], "xgb": PAL[1], "knn": PAL[2], "mlp": PAL[3]}
 MODEL_NAME = {"rf": "random forest", "xgb": "boosted trees", "knn": "nearest neighbours", "mlp": "perceptron"}
@@ -62,10 +71,10 @@ def fig_leak_limit(log):
     if not (need(p20, log) and need(pA, log) and need(pC, log)):
         return
     r = pd.read_csv(p20)
-    fig, (a, b) = plt.subplots(2, 1, figsize=(3.4, 3.3), layout="constrained", height_ratios=[0.6, 1.5])
+    fig, (a, b) = plt.subplots(2, 1, figsize=(3.1, 3.1), layout="constrained", height_ratios=[0.6, 1.25])
     vals = [r.by_entry_pct.mean(), r.by_formula_pct.mean()]
     sds = [r.by_entry_pct.std(), r.by_formula_pct.std()]
-    a.barh([1, 0], vals, xerr=sds, color=[GREY, BLUE], height=0.6, error_kw={"elinewidth": 0.8, "ecolor": INK})
+    a.barh([1, 0], vals, xerr=sds, color=[ORANGE, BLUE], height=0.6, error_kw={"elinewidth": 0.8, "ecolor": INK})
     for yv, v, sd in zip([1, 0], vals, sds):
         a.text(v + sd + 2, yv, f"{v:.1f}", va="center", fontsize=7, color=INK)
     a.set_yticks([1, 0], ["Split by entry", "Split by formula"], fontsize=7)
@@ -78,31 +87,30 @@ def fig_leak_limit(log):
     letter(a, 0, x=-0.38)
     mA = pd.read_csv(pA).set_index("method").loc[MODEL]
     mC = pd.read_csv(pC).set_index("method").loc[MODEL]
-    rows = [("Category", 97.46, mA.accuracy, mA.permissive_accuracy), ("Main class", 91.18, mC.accuracy, mC.permissive_accuracy),
-            ("Subclass", 82.96, None, None)]
-    for yv, (_, lim, acc, perm) in zip([2, 1, 0], rows):
-        b.plot([lim, lim], [yv - 0.26, yv + 0.26], color=INK, lw=1.8, solid_capstyle="butt", zorder=3)
-        b.text(lim, yv + 0.32, f"{lim:.2f}", ha="center", va="bottom", fontsize=6.5, color=INK)
+    ceil = pd.read_csv(mc.RES / "08_ceiling_extended.csv").techo_estricto.tolist()   # strict upper limits
+    rows = [("Category", ceil[0], mA.accuracy, BLUE), ("Main class", ceil[1], mC.accuracy, CYAN),
+            ("Subclass", ceil[2], None, GREEN)]
+    from matplotlib.colors import to_rgba
+    h = 0.36
+    for yv, (_, lim, acc, col) in zip([2, 1, 0], rows):
+        b.barh(yv + h / 2, lim, height=h, color=to_rgba(col, 0.35), lw=0)
+        b.text(lim + 1, yv + h / 2, f"{lim:.2f}", va="center", fontsize=6.5, color=INK)
         if acc is None:
+            b.text(1, yv - h / 2, "no model trained", va="center", fontsize=6.2, style="italic", color=INK)
             continue
-        b.plot(acc, yv, "o", ms=5.5, color=BLUE, mec="white", mew=0.6, zorder=4)
-        b.text(acc - 0.7, yv, f"{acc:.2f}", ha="right", va="center", fontsize=6.5, color=INK)
-        b.plot(perm, yv, "o", ms=5.5, mfc="white", mec=BLUE, mew=1.2, zorder=4)
-        b.text(perm, yv - 0.3, f"{perm:.2f}", ha="center", va="top", fontsize=6.5, color=INK)
-    b.axvline(100, color=MUTED, lw=0.8, ls=(0, (3, 2)))
+        b.barh(yv - h / 2, acc, height=h, color=col, lw=0)
+        b.text(acc + 1, yv - h / 2, f"{acc:.2f}", va="center", fontsize=6.5, color=INK)
     b.set_yticks([2, 1, 0], [x[0] for x in rows], fontsize=7)
-    b.set_xlim(76, 101.5)
-    b.set_ylim(-0.6, 2.75)
+    b.set_xlim(0, 100)
+    b.set_ylim(-0.6, 2.6)
     b.grid(axis="x", color=GRID)
     b.grid(axis="y", visible=False)
     b.tick_params(axis="y", length=0, labelcolor=INK)
-    b.set_xlabel("accuracy per entry (%)")
-    from matplotlib.lines import Line2D
-    h = [Line2D([], [], color=INK, lw=1.8, label="upper limit, strict"),
-         Line2D([], [], marker="o", ls="", ms=5, color=BLUE, label="final model, strict"),
-         Line2D([], [], color=MUTED, lw=0.8, ls=(0, (3, 2)), label="upper limit, permissive"),
-         Line2D([], [], marker="o", ls="", ms=5, mfc="white", mec=BLUE, mew=1.2, label="final model, permissive")]
-    b.legend(handles=h, loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=6, ncol=2, handlelength=1.6,
+    b.set_xlabel("correct entries (%)")
+    from matplotlib.patches import Patch
+    hh = [Patch(color=to_rgba(GREY, 0.35), label="upper limit of the formula (light)"),
+          Patch(color=GREY, label="final model (solid)")]
+    b.legend(handles=hh, loc="lower center", bbox_to_anchor=(0.45, 1.0), fontsize=6, ncol=2, handlelength=1.2,
              columnspacing=1, handletextpad=0.4)
     letter(b, 1, x=-0.38)
     for ext in ("pdf", "png", "tiff"):
@@ -132,7 +140,7 @@ def fig_features(log):
             r = t[(t.task == task) & (t.model == m)].set_index("set").reindex(order)
             best = r.macro_f1.idxmax()
             lo, hi = r.macro_f1[best] - r.macro_f1_sd[best], r.macro_f1[best]
-            ax.axhspan(lo, hi, color="#ececea", lw=0, zorder=0)
+            ax.axhspan(lo, hi, color="#dededa", lw=0, zorder=0)
             for xi, (v, sd) in enumerate(zip(r.macro_f1, r.macro_f1_sd)):
                 ax.errorbar(xi, v, yerr=sd, fmt="o", ms=5, color=BLUE if v >= lo else GREY, mec="white", mew=0.6,
                             elinewidth=1, capsize=0, zorder=3)
@@ -151,58 +159,91 @@ def fig_features(log):
 
 
 def fig_models(log):
+    """Fig. 3. Macro F1 of every method in the three tasks: mean of three repetitions and one SD.
+    Redesign (Nov 2026): rows grouped by kind of method in the order Section 3.5 discusses them, the final
+    model as the only coloured element, and a fixed column with mean +/- SD so the variability between
+    repetitions is readable even where the SD line is shorter than the dot. Per-repetition values are not
+    stored in results/, so the three individual repetitions cannot be drawn."""
     parts = sorted(mc.RES.glob(f"40_models_{SET}*.csv")) + sorted(mc.RES.glob(f"43_networks_{SET}*.csv"))
     if not parts:
         return log("  models: skipped (no results)")
     t = pd.concat([pd.read_csv(p) for p in parts]).drop_duplicates(["task", "method"], keep="last")
     tasks = [x for x in ("A", "B", "C") if x in set(t.task)]
     names = {"A": "Category", "B": "Lipid or not", "C": "Main class"}
-    # Nine rows (same row = same method in every panel). The variants not drawn
-    # (perceptron on R3, weighted networks, the other k-NN) are in Table S3. "kNN" = the better of one
-    # or five neighbours by macro F1. The look-up table gives exactly the scores of the
-    # most common label, so it shares its row. Dots with the SD between repetitions as a horizontal
-    # line; no legend: the row names say what each method is, and the final model is in blue.
-    rows = [("RF-weighted", "Random forest, weighted (final model)"),
-            ("RF", "Random forest"),
-            ("XGB", "Boosted trees"),
-            ("XGB-weighted", "Boosted trees, weighted"),
-            ("MLP(R2C)", "Perceptron (R2C)"),
-            ("CNN(R4)", "Convolutional network (R4)"),
-            ("kNN", "Nearest neighbours"),
-            ("chemical rules", "Chemical rules"),
-            ("majority", "Most common label (= look-up table)")]
+    groups = [("Trees", [("RF-weighted", "Random forest, weighted (final)"), ("RF", "Random forest"),
+                         ("XGB", "Boosted trees"), ("XGB-weighted", "Boosted trees, weighted")]),
+              ("Neural networks", [("MLP(R2C)", "Perceptron"), ("CNN(R4)", "Convolutional network")]),
+              ("Nearest neighbours", [("kNN", "Nearest neighbours")]),
+              ("Reference methods", [("chemical rules", "Chemical rules"),
+                                     ("majority", "Most common label / look-up table")])]
     for task in tasks:                                 # the identity the shared row relies on
         s = t[t.task == task].set_index("method")
         if {"majority", "look-up table"} <= set(s.index):
             assert np.isclose(s.at["majority", "macro_f1"], s.at["look-up table", "macro_f1"]), task
-    y = np.arange(len(rows))[::-1]
-    fig, axes = plt.subplots(1, len(tasks), figsize=(2.2 * len(tasks) + 1.9, 3.2), squeeze=False,
-                             sharey=True, layout="constrained")
+    rows, heads, yy = [], [], 0.0
+    for g, ms in groups:
+        heads.append((yy, g))
+        for m, lab in ms:
+            rows.append((yy, m, lab, g))
+            yy -= 1.0
+        yy -= 0.3
+    fs = 6.5
+    from matplotlib.colors import to_rgba
+    fig = plt.figure(figsize=(6.6, 2.75), layout="constrained")
+    axes = [[]]
+    for k in range(len(tasks)):
+        axes[0].append(fig.add_subplot(1, len(tasks), k + 1, sharey=axes[0][0] if axes[0] else None))
+    plotted = []
+
+    def msd(v, sd):
+        if sd < 0.005:                                 # deterministic methods: SD is zero by construction
+            return f"{v:.1f}"
+        return f"{v:.1f} \u00b1 " + ("<0.1" if sd < 0.05 else f"{sd:.1f}")
     for k, (ax, task) in enumerate(zip(axes[0], tasks)):
         s = t[t.task == task].set_index("method")
         knn = [m for m in ("kNN-1", "kNN-5") if m in s.index]
         if knn:
             s.loc["kNN"] = s.loc[max(knn, key=lambda m: s.at[m, "macro_f1"])]
-        for yi, (m, _) in zip(y, rows):
-            if m not in s.index:                       # e.g. chemical rules exist only for the category
+        for yi, m, lab, g in rows:
+            if m not in s.index:                       # chemical rules exist only for the category
                 continue
             v, sd = s.at[m, "macro_f1"], s.at[m, "macro_f1_sd"]
-            col = PAL[0] if m == "RF-weighted" else INK
-            if sd > 0:
-                ax.plot([v - sd, v + sd], [yi, yi], color=col, lw=1.2, solid_capstyle="butt", zorder=2)
-            ax.plot(v, yi, "o", ms=4.5, color=col, mec="white", mew=0.6, zorder=3)
-            # value beside the dot: on its left (free space), on its right when too close to zero
-            left = v - sd > 15
-            ax.text(v - sd - 2.5 if left else v + sd + 2.5, yi, f"{v:.1f}", ha="right" if left else "left",
-                    va="center", fontsize=6.5, color=col)
-        ax.set_xlim(0, 100)
-        ax.grid(axis="x", color=GRID)
-        ax.grid(axis="y", color=GRID, lw=0.4)
-        ax.set_xlabel("macro F1 (%)")
-        ax.set_yticks(y, [r[1] for r in rows])
-        ax.set_ylim(-0.6, len(rows) - 0.4)
-        ax.tick_params(axis="y", length=0, labelcolor=INK)
-        letter(ax, k)
+            col = {"Trees": BLUE, "Neural networks": FUCHSIA, "Nearest neighbours": GREEN,
+                   "Reference methods": GREY}[g]
+            if m == "RF-weighted":                     # final model: light band behind the row, dot ringed in black
+                ax.axhspan(yi - 0.45, yi + 0.45, color=to_rgba(BLUE, 0.10), lw=0, zorder=0)
+            if sd >= 0.005:
+                ax.plot([v - sd, v + sd], [yi, yi], color=col, lw=1.1, solid_capstyle="butt", zorder=2)
+            ax.plot(v, yi, "o", ms=5.0 if m == "RF-weighted" else 4.4, color=col,
+                    mec=INK if m == "RF-weighted" else "white", mew=0.8 if m == "RF-weighted" else 0.5, zorder=3,
+                    clip_on=False)
+            ax.annotate(f"{v:.1f}", (v + sd, yi), xytext=(4, 0), textcoords="offset points", ha="left",
+                        va="center", fontsize=fs - 0.3, color="#000000")
+            plotted.append((task, m, v, sd))
+        ax.set_xlim(0, 113)                            # room for the values beside the dots
+        ax.set_xticks([0, 25, 50, 75, 100])
+        ax.spines["bottom"].set_bounds(0, 100)
+        for xg in (25, 50, 75, 100):
+            ax.axvline(xg, color=GRID, lw=0.5, zorder=0)
+        ax.grid(False)
+        ax.spines["left"].set_visible(False)
+        ax.tick_params(axis="y", length=0, labelcolor="#000000", labelsize=fs + 0.5, labelleft=(k == 0))
+        ax.tick_params(axis="x", labelsize=fs, labelcolor="#000000")
+        ax.set_xlabel("macro F1 (%)", fontsize=fs + 0.5, color="#000000")
+        letter(ax, k)                                  # panel letters as in the other figures
+    first = axes[0][0]
+    first.set_yticks([r[0] for r in rows], [r[2] for r in rows])
+    first.set_ylim(yy + 0.6, rows[0][0] + 0.6)
+    from matplotlib.lines import Line2D
+    fig.legend(handles=[Line2D([], [], marker="o", ls="", ms=4.4, color=c, mec="white", label=l) for l, c in
+                        (("trees", BLUE), ("neural networks", FUCHSIA), ("nearest neighbours", GREEN),
+                         ("reference methods", GREY))]
+               + [Line2D([], [], marker="o", ls="", ms=5.0, color=BLUE, mec=INK, mew=0.8, label="final model")],
+               loc="outside upper center", ncol=5, fontsize=6.3, handletextpad=0.1, columnspacing=1.2)
+    pd.DataFrame(plotted, columns=["task", "method", "macro_f1", "macro_f1_sd"]).to_csv(
+        FIG / "m2_models_plotted_values.csv", index=False)
+    for ext in ("svg",):
+        fig.savefig(FIG / f"m2_models.{ext}", bbox_inches="tight")
     save(fig, "m2_models", log)
     rows = []
     for task in tasks:
@@ -236,9 +277,20 @@ def fig_confusion(log):
             v = c.iat[i, j]
             if v >= 0.45:
                 ax.text(j, i, f"{v:.0f}" if v >= 99.95 else f"{v:.1f}", ha="center", va="center", fontsize=6,
-                        color="white" if v > 55 else INK)
+                        color="white" if v > 70 else INK)
     ax.set_xticks(range(n), [code[k] for k in order], fontsize=7)
     ax.set_yticks(range(n), [f"{k.replace(' Lipids', ' lipids').replace(' Acyls', ' acyls')} ({code[k]})" for k in order], fontsize=7)
+    # precision of each predicted category in this repetition: counts rebuilt from the row
+    # percentages and the number of entries of each category (no new computation of the model)
+    pn = mc.RES / f"41_per_class_{SET}_{MODEL}_categories.csv"
+    if pn.exists():
+        nent = pd.read_csv(pn).set_index("category").n_mean.reindex(order).to_numpy()
+        cnt = c.to_numpy() / 100 * nent[:, None]
+        prec = 100 * np.diag(cnt) / cnt.sum(axis=0)
+        for j, v in enumerate(prec):
+            ax.text(j, n + 0.15, f"{v:.1f}", ha="center", va="center", fontsize=6, color=INK)
+        ax.text(-0.62, n + 0.15, "precision (%)", ha="right", va="center", fontsize=7, color=INK)
+        ax.set_ylim(n + 0.6, -0.5)
     ax.xaxis.tick_top()
     ax.xaxis.set_label_position("top")
     ax.set_xlabel("predicted category", labelpad=4)
@@ -338,27 +390,31 @@ def fig_conformal(log):
     s = t[(t.task == "A") & (t.alpha == 0.05)]
     mg = s[s.variant == "marginal"].set_index("label").coverage.sort_values()
     md = s[s.variant == "mondrian"].set_index("label").coverage.reindex(mg.index)
-    fig, ax = plt.subplots(figsize=(3.4, 2.7), layout="constrained")
+    fig, ax = plt.subplots(figsize=(3.12, 2.7), layout="constrained")
     y = np.arange(len(mg))
-    ax.axvline(95, color=INK, lw=0.8, ls=(0, (3, 2)), zorder=1)
+    ax.axvline(95, color=INK, lw=0.7, ls=(0, (3, 2)), zorder=1)
     for yi, lab in zip(y, mg.index):
-        ax.plot([mg[lab], md[lab]], [yi, yi], color=LIGHT, lw=1, zorder=2)
-        ax.plot(mg[lab], yi, "o", ms=5.5, mfc="white", mec=INK, mew=1, zorder=3)
-        ax.plot(md[lab], yi, "o", ms=5.5, color=BLUE, mec="white", mew=0.6, zorder=4)
-        if abs(mg[lab] - md[lab]) > 3:
-            ax.text(mg[lab] + (-1.2 if mg[lab] < md[lab] else 1.2), yi, f"{mg[lab]:.1f}", va="center",
-                    ha="right" if mg[lab] < md[lab] else "left", fontsize=6.5, color=INK)
+        col = COL[lab]
+        lo, hi = sorted((mg[lab], md[lab]))
+        ax.plot([lo, hi], [yi, yi], color=col, lw=1.6, alpha=0.3, solid_capstyle="round", zorder=2)
+        ax.plot(mg[lab], yi, "o", ms=5.2, mfc="white", mec=col, mew=1.2, zorder=3)
+        ax.plot(md[lab], yi, "o", ms=5.2, color=col, mec="white", mew=0.5, zorder=4)
+        ax.annotate(f"{lo:.1f}", (lo, yi), xytext=(-5, 0), textcoords="offset points", ha="right", va="center",
+                    fontsize=6.2, color=INK)
+        ax.annotate(f"{hi:.1f}", (hi, yi), xytext=(5, 0), textcoords="offset points", ha="left", va="center",
+                    fontsize=6.2, color=INK)
     ax.set_yticks(y, [lab.replace(" Lipids", " lipids").replace(" Acyls", " acyls") for lab in mg.index], fontsize=7)
-    ax.set_xlim(62, 104)
-    ax.set_xticks([70, 80, 90, 95, 100])
+    ax.set_xlim(58, 108)
+    ax.set_xticks([60, 70, 80, 90, 100])
+    ax.spines["bottom"].set_bounds(58, 100)
     ax.set_ylim(-0.6, len(mg) - 0.4)
     ax.grid(axis="x", color=GRID)
     ax.grid(axis="y", visible=False)
     ax.tick_params(axis="y", length=0, labelcolor=INK)
     ax.set_xlabel("coverage of the 95 % sets (%)")
     from matplotlib.lines import Line2D
-    fig.legend(handles=[Line2D([], [], marker="o", ls="", ms=5, mfc="white", mec=INK, mew=1, label="one threshold for all"),
-                        Line2D([], [], marker="o", ls="", ms=5, color=BLUE, label="one threshold per category")],
+    fig.legend(handles=[Line2D([], [], marker="o", ls="", ms=5, mfc="white", mec=INK, mew=1.1, label="one threshold for all"),
+                        Line2D([], [], marker="o", ls="", ms=5, color=INK, label="one threshold per category")],
                loc="outside upper center", ncol=2, fontsize=6.5, handletextpad=0.1, columnspacing=1)
     save(fig, "m4_prediction_sets", log)
 
@@ -396,37 +452,67 @@ def fig_rules(log):
 
 
 def fig_novelty(log):
+    """Fig. 8. Share of each set flagged by the distance check (mean distance to the five nearest LIPID MAPS
+    formulas above the threshold) at the two thresholds. Redesign (Nov 2026): sets grouped by what they are,
+    held-out lipid formulas shown as the calibration reference, both values in fixed columns, and the axis
+    worded as 'flagged as unusual', because a flag means the label should not be trusted, not that the
+    formula is not a lipid (Section 2.10)."""
     p = mc.RES / "48_novelty.csv"
     if not need(p, log):
         return
     t = pd.read_csv(p)
-    names = {"held-out lipid formulas": "Lipids, held out",
-             "artificial N4a (perturbations)": "Artificial: small change\nto a lipid formula",
-             "training non-lipids (N1-N3)": "Non-lipids used in training",
-             "HMDB test non-lipids": "Non-lipids, HMDB test",
-             "random valid CHNOPS, not in any table": "Random valid formulas",
-             "artificial N4b (+21 Da)": "Artificial: +21 Da shift"}
-    a95 = t[t.target == 0.95].set_index("set").flagged_pct
-    a99 = t[t.target == 0.99].set_index("set").flagged_pct
-    order = a95.reindex(list(names)).sort_values().index
-    fig, ax = plt.subplots(figsize=(3.4, 2.7), layout="constrained")
-    for yi, k in enumerate(order):
-        ax.plot([a99[k], a95[k]], [yi, yi], color=LIGHT, lw=1, zorder=2)
-        ax.plot(a99[k], yi, "o", ms=5.5, mfc="white", mec=BLUE, mew=1.2, zorder=3)
-        ax.plot(a95[k], yi, "o", ms=5.5, color=BLUE, mec="white", mew=0.6, zorder=4)
-        ax.text(a95[k] + 2.5, yi, f"{a95[k]:.1f}", va="center", fontsize=6.5, color=INK)
-    ax.set_yticks(range(len(order)), [names[k] for k in order], fontsize=7)
-    ax.set_xlim(-3, 112)
-    ax.set_xticks([0, 20, 40, 60, 80, 100])
-    ax.set_ylim(-0.6, len(order) - 0.4)
-    ax.grid(axis="x", color=GRID)
-    ax.grid(axis="y", visible=False)
-    ax.tick_params(axis="y", length=0, labelcolor=INK)
-    ax.set_xlabel("flagged as unlike any known lipid (%)")
+    a95 = t[np.isclose(t.target, 0.95)].set_index("set")
+    a99 = t[np.isclose(t.target, 0.99)].set_index("set")
+    groups = [("ref", [("held-out lipid formulas", "Lipids, held out")]),
+              ("altered", [("artificial N4a (perturbations)", "Small change to a lipid"),
+                           ("artificial N4b (+21 Da)", "Lipid shifted by 21 Da")]),
+              ("non-lipids", [("training non-lipids (N1-N3)", "Non-lipids, training"),
+                              ("HMDB test non-lipids", "Non-lipids, HMDB test")]),
+              ("random", [("random valid CHNOPS, not in any table", "Random valid formulas")])]
+    rows, heads, yy = [], [], 0.0
+    for g, ks in groups:
+        heads.append((yy, g))
+        for k, lab in ks:
+            rows.append((yy, k, lab, g))
+            yy -= 1.0
+        yy -= 0.3
+    fs = 6.5
+    fig = plt.figure(figsize=(3.16, 2.45), layout="constrained")
+    ax = fig.add_subplot(1, 1, 1)
+    plotted = []
+    for yi, k, lab, g in rows:
+        v95, v99, n = a95.at[k, "flagged_pct"], a99.at[k, "flagged_pct"], int(a95.at[k, "n"])
+        col = {"ref": BLUE, "altered": ORANGE, "non-lipids": GREEN, "random": FUCHSIA}[g]
+        ax.plot([v99, v95], [yi, yi], color=col, lw=1.8, alpha=0.3, solid_capstyle="round", zorder=1)
+        ax.plot(v99, yi, "o", ms=4.4, mfc="white", mec=col, mew=1.0, zorder=3, clip_on=False)
+        ax.plot(v95, yi, "o", ms=4.4, color=col, mec="white", mew=0.5, zorder=4, clip_on=False)
+        ax.annotate(f"{v95:.1f}", (v95, yi), xytext=(5, 0), textcoords="offset points", ha="left", va="center",
+                    fontsize=fs - 0.3, color="#000000")
+        ax.annotate(f"{v99:.1f}", (v99, yi), xytext=(-5, 0), textcoords="offset points", ha="right", va="center",
+                    fontsize=fs - 0.3, color="#000000")
+        plotted.append((k, n, v95, v99))
+
+    ax.set_yticks([r[0] for r in rows], [r[2] for r in rows], fontsize=fs)   # y axis: the sets compared
+    ax.tick_params(axis="y", length=2.5, color=INK, labelcolor=INK)
+    ax.set_ylabel("set of formulas", fontsize=fs + 0.5, color=INK)
+    ax.set_ylim(yy + 0.6, rows[0][0] + 0.6)
+    ax.set_xlim(-20, 113)                              # room for the values on both sides of the dots
+    ax.set_xticks([0, 25, 50, 75, 100])              # x and y axes meet at the corner
+    for xg in (0, 25, 50, 75, 100):
+        ax.axvline(xg, color=GRID, lw=0.5, zorder=0)
+    ax.grid(False)
+    ax.tick_params(axis="x", labelsize=fs, labelcolor="#000000")
+    ax.set_xlabel("formulas flagged as unusual (%)", fontsize=fs + 0.5, color="#000000")
     from matplotlib.lines import Line2D
-    fig.legend(handles=[Line2D([], [], marker="o", ls="", ms=5, color=BLUE, label="threshold accepting 95 % of lipids"),
-                        Line2D([], [], marker="o", ls="", ms=5, mfc="white", mec=BLUE, mew=1.2, label="accepting 99 %")],
-               loc="outside upper center", ncol=2, fontsize=6.3, handletextpad=0.1, columnspacing=0.8)
+    fig.legend(handles=[Line2D([], [], marker="o", ls="", ms=4.4, color=INK, mec=INK, mew=1.0,
+                               label="threshold accepting 95 % of held-out lipid formulas"),
+                        Line2D([], [], marker="o", ls="", ms=4.4, mfc="white", mec=INK, mew=1.0,
+                               label="threshold accepting 99 % of held-out lipid formulas")],
+               loc="outside upper center", ncol=1, fontsize=fs - 0.2, handletextpad=0.2, columnspacing=1.2,
+               labelcolor="#000000")
+    pd.DataFrame(plotted, columns=["set", "n", "flagged_pct_95", "flagged_pct_99"]).to_csv(
+        FIG / "m6_distance_check_plotted_values.csv", index=False)
+    fig.savefig(FIG / "m6_distance_check.svg", bbox_inches="tight")
     save(fig, "m6_distance_check", log)
 
 
@@ -434,7 +520,11 @@ def main():
     log = mc.logger(f"53_figures_tables_{SET}_{MODEL}")
     log(f"53 — FIGURES AND TABLES · {SET} · {MODEL}")
     FIG.mkdir(exist_ok=True)
-    for f in (fig_leak_limit, fig_features, fig_models, fig_confusion, fig_external, fig_conformal, fig_rules, fig_novelty):
+    allf = (fig_leak_limit, fig_features, fig_models, fig_confusion, fig_external, fig_conformal, fig_rules, fig_novelty)
+    only = OPT.get("only")                             # e.g. --only=fig_models,fig_novelty
+    for f in allf:
+        if only and f.__name__ not in only.split(","):
+            continue
         log(f"- {f.__name__}")
         f(log)
 
