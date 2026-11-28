@@ -1,0 +1,43 @@
+========================================================================================
+90 — SPLIT BY HOMOLOGOUS SERIES (peer-review point 1) · R2C · RF-weighted · 5 folds · seeds 0-2
+========================================================================================
+connected families (formulas linked by chains of ±CH2, ±C2H4, ±H2): 1,752; entries in the largest 6,907 (13.8 %); with this grouping no formula has a one-step relative on the other side
+entries 49,966; formulas 9,935; homologous series 1,998; entries in the largest series 1,383 (2.8 %); series with a single formula 779
+  task A · split by formula (as the paper)  seed 0: accuracy  94.24  macro F1  92.55  balanced acc.  92.42; with relative 96.1 % of test entries, accuracy 94.67 / 83.61 % (with / without)  [3 s]
+  task A · split by formula (as the paper)  seed 1: accuracy  95.36  macro F1  93.57  balanced acc.  93.05  [0 s]
+  task A · split by formula (as the paper)  seed 2: accuracy  95.26  macro F1  93.52  balanced acc.  93.23  [0 s]
+  task A · split by homologous series       seed 0: accuracy  94.96  macro F1  93.00  balanced acc.  92.40; with relative 82.7 % of test entries, accuracy 95.78 / 91.04 % (with / without)  [1 s]
+  task A · split by homologous series       seed 1: accuracy  95.03  macro F1  93.08  balanced acc.  92.45  [0 s]
+  task A · split by homologous series       seed 2: accuracy  94.86  macro F1  92.90  balanced acc.  92.24  [0 s]
+  task A · split by connected family (strict) seed 0: accuracy  91.06  macro F1  88.42  balanced acc.  88.65; with relative 0.0 % of test entries, accuracy nan / 91.06 % (with / without)  [35 s]
+  task A · split by connected family (strict) seed 1: accuracy  91.28  macro F1  88.68  balanced acc.  88.92  [34 s]
+  task A · split by connected family (strict) seed 2: accuracy  91.33  macro F1  88.71  balanced acc.  88.85  [34 s]
+  task C · split by formula (as the paper)  seed 0: accuracy  84.57  macro F1  57.79  balanced acc.  56.20; with relative 96.4 % of test entries, accuracy 85.06 / 71.45 % (with / without)  [3 s]
+  task C · split by formula (as the paper)  seed 1: accuracy  84.34  macro F1  58.21  balanced acc.  57.11  [1 s]
+  task C · split by formula (as the paper)  seed 2: accuracy  83.73  macro F1  57.01  balanced acc.  55.82  [0 s]
+  task C · split by homologous series       seed 0: accuracy  82.26  macro F1  53.03  balanced acc.  52.26; with relative 84.0 % of test entries, accuracy 82.36 / 81.74 % (with / without)  [1 s]
+  task C · split by homologous series       seed 1: accuracy  82.20  macro F1  51.87  balanced acc.  51.18  [0 s]
+  task C · split by homologous series       seed 2: accuracy  82.68  macro F1  52.25  balanced acc.  51.58  [0 s]
+  task C · split by connected family (strict) seed 0: accuracy  72.34  macro F1  44.81  balanced acc.  44.21; with relative 0.0 % of test entries, accuracy nan / 72.34 % (with / without)  [60 s]
+  task C · split by connected family (strict) seed 1: accuracy  72.91  macro F1  44.45  balanced acc.  43.62  [61 s]
+  task C · split by connected family (strict) seed 2: accuracy  72.33  macro F1  43.28  balanced acc.  42.86  [70 s]
+
+  Mean over the three seeds (accuracy / macro F1):
+    task A · by formula (as the paper)  accuracy  94.95 ± 0.62 · macro F1  93.21 ± 0.57 · F1 (classes ≥ 20 entries)  93.21
+    task A · by homologous series       accuracy  94.95 ± 0.08 · macro F1  92.99 ± 0.09 · F1 (classes ≥ 20 entries)  92.99
+    task A · by connected family (strict) accuracy  91.22 ± 0.15 · macro F1  88.60 ± 0.16 · F1 (classes ≥ 20 entries)  88.60
+    task C · by formula (as the paper)  accuracy  84.21 ± 0.43 · macro F1  57.67 ± 0.61 · F1 (classes ≥ 20 entries)  71.64
+    task C · by homologous series       accuracy  82.38 ± 0.26 · macro F1  52.38 ± 0.59 · F1 (classes ≥ 20 entries)  67.30
+    task C · by connected family (strict) accuracy  72.53 ± 0.34 · macro F1  44.18 ± 0.80 · F1 (classes ≥ 20 entries)  57.26
+
+  Sensitivity per category, task A, seed 0 (by formula / by series / by connected family):
+    Fatty Acyls                  n = 11,691    91.17 /  95.15 /  92.69
+    Glycerophospholipids         n = 10,544    99.97 /  99.97 /  99.58
+    Glycerolipids                n =  7,795    97.72 /  97.60 /  83.31
+    Polyketides                  n =  7,218    94.97 /  95.08 /  94.71
+    Sphingolipids                n =  4,631    98.32 /  97.15 /  95.94
+    Sterol Lipids                n =  4,097    91.75 /  91.70 /  82.57
+    Prenol Lipids                n =  2,639    67.37 /  66.65 /  65.02
+    Saccharolipids               n =  1,351    98.08 /  95.85 /  95.41
+
+  Saved: results/90_homologous_split.csv, 90_homologous_split_per_category.csv, 90_series_groups.csv

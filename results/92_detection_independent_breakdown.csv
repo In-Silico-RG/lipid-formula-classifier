@@ -1,0 +1,36 @@
+set,group,formulas,found_pct
+MassBank,all,1719,60.79115764979639
+MassBank,category: Fatty Acyls,521,32.437619961612285
+MassBank,category: Glycerolipids,54,98.14814814814815
+MassBank,category: Glycerophospholipids,309,96.11650485436894
+MassBank,category: Polyketides,343,58.309037900874635
+MassBank,category: Prenol Lipids,197,55.83756345177665
+MassBank,category: Saccharolipids,2,0.0
+MassBank,category: Sphingolipids,101,77.22772277227723
+MassBank,category: Sterol Lipids,192,71.875
+MassBank,shared with a non-lipid database,1265,51.067193675889335
+MassBank,not shared,454,87.88546255506607
+MassBank,carbon band: C<=15,320,18.75
+MassBank,carbon band: C16-25,612,53.26797385620915
+MassBank,carbon band: C26-35,288,74.30555555555556
+MassBank,carbon band: C36-50,447,89.93288590604027
+MassBank,carbon band: C>50,52,82.6923076923077
+MassBank,formula with >= 10 LIPID MAPS entries,531,84.36911487758945
+MassBank,formula with 1 entry,407,33.660933660933665
+GNPS,all,867,96.65513264129181
+GNPS,category: (not in LIPID MAPS),87,79.3103448275862
+GNPS,category: Fatty Acyls,18,94.44444444444444
+GNPS,category: Glycerolipids,253,99.2094861660079
+GNPS,category: Glycerophospholipids,402,99.00497512437812
+GNPS,category: Prenol Lipids,3,0.0
+GNPS,category: Sphingolipids,97,98.96907216494846
+GNPS,category: Sterol Lipids,7,100.0
+GNPS,shared with a non-lipid database,208,97.59615384615384
+GNPS,not shared,659,96.35811836115326
+GNPS,carbon band: C<=15,2,50.0
+GNPS,carbon band: C16-25,49,100.0
+GNPS,carbon band: C26-35,72,95.83333333333334
+GNPS,carbon band: C36-50,544,97.61029411764706
+GNPS,carbon band: C>50,200,94.0
+GNPS,formula with >= 10 LIPID MAPS entries,392,100.0
+GNPS,formula with 1 entry,64,87.5

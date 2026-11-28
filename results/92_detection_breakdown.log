@@ -1,0 +1,79 @@
+========================================================================================
+92 — LIPID DETECTION: precision, prevalence and the MassBank gap (peer-review point 3)
+========================================================================================
+(a) Cross-validation, task B: 9,935 lipid and 83,740 non-lipid formulas (ratio 1 : 8.4), 3 seeds
+    sensitivity 78.71 ± 0.25 %   specificity 98.66 ± 0.01 %   precision 87.44 ± 0.08 %   average precision (AUC-PR) 92.01 %
+    sensitivity by group, seed 0:
+      shared with a non-lipid database             n =  3,923    62.38 %
+      not shared                                   n =  6,012    89.75 %
+      category: Fatty Acyls                        n =  2,283    60.45 %
+      category: Glycerolipids                      n =    662    96.83 %
+      category: Glycerophospholipids               n =  2,040    96.57 %
+      category: Polyketides                        n =  1,391    54.71 %
+      category: Prenol Lipids                      n =    784    71.17 %
+      category: Saccharolipids                     n =    126    84.92 %
+      category: Sphingolipids                      n =  1,670    96.71 %
+      category: Sterol Lipids                      n =    979    82.84 %
+      carbon band: C<=15                           n =    738    36.04 %
+      carbon band: C16-25                          n =  2,017    65.69 %
+      carbon band: C26-35                          n =  2,178    75.80 %
+      carbon band: C36-50                          n =  2,718    89.92 %
+      carbon band: C>50                            n =  2,284    94.44 %
+
+(b) Precision against prevalence (positive predictive value), from sensitivity and specificity
+    CV         1 lipid per     1 non-lipids: precision  98.3 %
+    CV         1 lipid per   8.4 non-lipids: precision  87.5 %
+    CV         1 lipid per    20 non-lipids: precision  74.6 %
+    CV         1 lipid per   100 non-lipids: precision  37.0 %
+
+(c) Independent sets: GNPS 867 lipid formulas; MassBank 1,719 lipids and 4,041 measured non-lipids; HMDB 1,917 non-lipids
+    MassBank (one model without the formulas of both groups): lipids found 60.79 %, non-lipids rejected 98.44 %; GNPS lipids found 96.66 %; HMDB non-lipids rejected 98.28 %
+    MassBank, lipids against measured non-lipids (1,719 : 4,041 = 1 : 2.35): ROC AUC 96.87 %, average precision 93.35 %; precision at the default threshold 94.31 %
+      threshold 0.5: lipids found  60.8 %  non-lipids called lipid  1.56 %  precision  94.3 %
+      threshold 0.4: lipids found  70.9 %  non-lipids called lipid  2.20 %  precision  93.2 %
+      threshold 0.3: lipids found  79.2 %  non-lipids called lipid  3.46 %  precision  90.7 %
+      threshold 0.2: lipids found  86.0 %  non-lipids called lipid  5.59 %  precision  86.7 %
+      threshold 0.1: lipids found  92.7 %  non-lipids called lipid  9.95 %  precision  79.8 %
+    MassBank   1 lipid per     1 non-lipids: precision  97.5 %
+    MassBank   1 lipid per   8.4 non-lipids: precision  82.3 %
+    MassBank   1 lipid per    20 non-lipids: precision  66.1 %
+    MassBank   1 lipid per   100 non-lipids: precision  28.1 %
+
+    Share of lipid formulas recognised, independent sets (seed 0)
+      MassBank all                                          n = 1,719    60.79 %
+      MassBank category: Fatty Acyls                        n =   521    32.44 %
+      MassBank category: Glycerolipids                      n =    54    98.15 %
+      MassBank category: Glycerophospholipids               n =   309    96.12 %
+      MassBank category: Polyketides                        n =   343    58.31 %
+      MassBank category: Prenol Lipids                      n =   197    55.84 %
+      MassBank category: Saccharolipids                     n =     2     0.00 %
+      MassBank category: Sphingolipids                      n =   101    77.23 %
+      MassBank category: Sterol Lipids                      n =   192    71.88 %
+      MassBank shared with a non-lipid database             n = 1,265    51.07 %
+      MassBank not shared                                   n =   454    87.89 %
+      MassBank carbon band: C<=15                           n =   320    18.75 %
+      MassBank carbon band: C16-25                          n =   612    53.27 %
+      MassBank carbon band: C26-35                          n =   288    74.31 %
+      MassBank carbon band: C36-50                          n =   447    89.93 %
+      MassBank carbon band: C>50                            n =    52    82.69 %
+      MassBank formula with >= 10 LIPID MAPS entries        n =   531    84.37 %
+      MassBank formula with 1 entry                         n =   407    33.66 %
+      GNPS     all                                          n =   867    96.66 %
+      GNPS     category: (not in LIPID MAPS)                n =    87    79.31 %
+      GNPS     category: Fatty Acyls                        n =    18    94.44 %
+      GNPS     category: Glycerolipids                      n =   253    99.21 %
+      GNPS     category: Glycerophospholipids               n =   402    99.00 %
+      GNPS     category: Prenol Lipids                      n =     3     0.00 %
+      GNPS     category: Sphingolipids                      n =    97    98.97 %
+      GNPS     category: Sterol Lipids                      n =     7   100.00 %
+      GNPS     shared with a non-lipid database             n =   208    97.60 %
+      GNPS     not shared                                   n =   659    96.36 %
+      GNPS     carbon band: C<=15                           n =     2    50.00 %
+      GNPS     carbon band: C16-25                          n =    49   100.00 %
+      GNPS     carbon band: C26-35                          n =    72    95.83 %
+      GNPS     carbon band: C36-50                          n =   544    97.61 %
+      GNPS     carbon band: C>50                            n =   200    94.00 %
+      GNPS     formula with >= 10 LIPID MAPS entries        n =   392   100.00 %
+      GNPS     formula with 1 entry                         n =    64    87.50 %
+
+  Saved: results/92_detection_*.csv

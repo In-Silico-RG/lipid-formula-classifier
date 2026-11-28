@@ -1,0 +1,44 @@
+========================================================================================
+91 — EXTERNAL SETS: composition-adjusted accuracy and empty prediction sets (peer-review points 2, 5)
+========================================================================================
+CV reference (task A, 3 seeds): entry accuracy 94.95 %; per-category sensitivity (entries / formulas):
+   Fatty Acyls                 93.81 /  91.02
+   Glycerolipids               97.74 /  87.25
+   Glycerophospholipids        99.97 /  99.73
+   Polyketides                 95.22 /  91.99
+   Prenol Lipids               68.28 /  74.72
+   Saccharolipids              97.93 /  84.66
+   Sphingolipids               98.20 /  96.57
+   Sterol Lipids               92.06 /  84.46
+
+(a) Observed accuracy (seed 0) against the accuracy expected from cross-validation, given each set's composition
+  GNPS      n =   866  observed  95.15 %  expected (CV, per formula)  94.44 %  expected (CV, per entry)  98.65 %  difference  +0.71
+      Glycerophospholipids       n =   422 ( 48.7 %)  observed  99.53  CV  99.73 (formulas) /  99.97 (entries)
+      Glycerolipids              n =   317 ( 36.6 %)  observed  88.01  CV  87.25 (formulas) /  97.74 (entries)
+      Sphingolipids              n =   105 ( 12.1 %)  observed  99.05  CV  96.57 (formulas) /  98.20 (entries)
+      Fatty Acyls                n =    13 (  1.5 %)  observed 100.00  CV  91.02 (formulas) /  93.81 (entries)
+      Sterol Lipids              n =     5 (  0.6 %)  observed 100.00  CV  84.46 (formulas) /  92.06 (entries)
+      Prenol Lipids              n =     4 (  0.5 %)  observed  75.00  CV  74.72 (formulas) /  68.28 (entries)
+  MassBank  n = 1,719  observed  87.49 %  expected (CV, per formula)  90.38 %  expected (CV, per entry)  92.46 %  difference  -2.89
+      Fatty Acyls                n =   521 ( 30.3 %)  observed  97.12  CV  91.02 (formulas) /  93.81 (entries)
+      Polyketides                n =   343 ( 20.0 %)  observed  93.29  CV  91.99 (formulas) /  95.22 (entries)
+      Glycerophospholipids       n =   309 ( 18.0 %)  observed 100.00  CV  99.73 (formulas) /  99.97 (entries)
+      Prenol Lipids              n =   197 ( 11.5 %)  observed  46.70  CV  74.72 (formulas) /  68.28 (entries)
+      Sterol Lipids              n =   192 ( 11.2 %)  observed  73.96  CV  84.46 (formulas) /  92.06 (entries)
+      Sphingolipids              n =   101 (  5.9 %)  observed  88.12  CV  96.57 (formulas) /  98.20 (entries)
+      Glycerolipids              n =    54 (  3.1 %)  observed  85.19  CV  87.25 (formulas) /  97.74 (entries)
+      Saccharolipids             n =     2 (  0.1 %)  observed   0.00  CV  84.66 (formulas) /  97.93 (entries)
+  NIST      n =   329  observed  98.18 %  expected (CV, per formula)  94.36 %  expected (CV, per entry)  98.17 %  difference  +3.82
+      Glycerophospholipids       n =   147 ( 44.7 %)  observed 100.00  CV  99.73 (formulas) /  99.97 (entries)
+      Glycerolipids              n =    83 ( 25.2 %)  observed 100.00  CV  87.25 (formulas) /  97.74 (entries)
+      Sphingolipids              n =    58 ( 17.6 %)  observed 100.00  CV  96.57 (formulas) /  98.20 (entries)
+      Sterol Lipids              n =    29 (  8.8 %)  observed  82.76  CV  84.46 (formulas) /  92.06 (entries)
+      Fatty Acyls                n =    12 (  3.6 %)  observed  91.67  CV  91.02 (formulas) /  93.81 (entries)
+
+(b) 95 % prediction sets on the external sets (final model refitted without the set's formulas, seed 0)
+  GNPS      category   n =   866  top-1  95.15 %  coverage  80.83 %  size 0.92  empty  11.0 %  single  86.4 %  >=2 labels   2.7 %  top-1 right but not covered  14.4 %
+  MassBank  category   n = 1,719  top-1  87.49 %  coverage  90.34 %  size 1.17  empty   3.3 %  single  77.1 %  >=2 labels  19.6 %  top-1 right but not covered   3.7 %
+  NIST      category   n =   329  top-1  98.18 %  coverage  95.44 %  size 1.01  empty   3.6 %  single  92.1 %  >=2 labels   4.3 %  top-1 right but not covered   4.6 %
+  NIST      main_class n =   329  top-1  86.93 %  coverage  99.39 %  size 1.49  empty   0.0 %  single  54.4 %  >=2 labels  45.6 %  top-1 right but not covered   0.0 %
+
+  Saved: results/91_external_composition.csv, 91_external_composition_per_category.csv, 91_external_prediction_sets.csv

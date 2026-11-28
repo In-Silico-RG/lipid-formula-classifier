@@ -1,0 +1,16 @@
+group,formulas,sensitivity
+shared with a non-lipid database,3923,62.375732857507
+not shared,6012,89.75382568196939
+category: Fatty Acyls,2283,60.44678055190539
+category: Glycerolipids,662,96.82779456193353
+category: Glycerophospholipids,2040,96.56862745098039
+category: Polyketides,1391,54.70884255930984
+category: Prenol Lipids,784,71.1734693877551
+category: Saccharolipids,126,84.92063492063492
+category: Sphingolipids,1670,96.7065868263473
+category: Sterol Lipids,979,82.83963227783453
+carbon band: C<=15,738,36.043360433604335
+carbon band: C16-25,2017,65.69162121963312
+carbon band: C26-35,2178,75.80348943985308
+carbon band: C36-50,2718,89.91905813097866
+carbon band: C>50,2284,94.43957968476357

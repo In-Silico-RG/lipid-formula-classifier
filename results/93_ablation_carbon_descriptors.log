@@ -1,0 +1,52 @@
+========================================================================================
+93 — ABLATION OF THE CARBON-NUMBER DESCRIPTORS (peer-review point 6)
+========================================================================================
+(a) Cross-validation, mean ± SD over seeds 0-2
+  task A RF-weighted R2               accuracy  92.26 ± 0.26   macro F1  90.27 ± 0.31   F1(classes>=20)  90.27   [116 s]
+  task A RF-weighted R2 + C mod 5     accuracy  93.70 ± 0.17   macro F1  92.09 ± 0.16   F1(classes>=20)  92.09   [115 s]
+  task A RF-weighted R2 + C parity    accuracy  94.57 ± 0.54   macro F1  92.48 ± 0.47   F1(classes>=20)  92.48   [117 s]
+  task A RF-weighted R2C (both)       accuracy  94.95 ± 0.62   macro F1  93.21 ± 0.57   F1(classes>=20)  93.21   [117 s]
+  task A XGB         R2               accuracy  94.40 ± 0.42   macro F1  92.28 ± 0.42   F1(classes>=20)  92.28   [138 s]
+  task A XGB         R2 + C mod 5     accuracy  94.73 ± 0.38   macro F1  92.74 ± 0.36   F1(classes>=20)  92.74   [147 s]
+  task A XGB         R2 + C parity    accuracy  94.97 ± 0.13   macro F1  92.78 ± 0.19   F1(classes>=20)  92.78   [150 s]
+  task A XGB         R2C (both)       accuracy  95.09 ± 0.09   macro F1  93.09 ± 0.08   F1(classes>=20)  93.09   [153 s]
+  task C RF-weighted R2               accuracy  80.69 ± 0.28   macro F1  55.55 ± 0.41   F1(classes>=20)  68.08   [203 s]
+  task C RF-weighted R2 + C mod 5     accuracy  82.28 ± 0.13   macro F1  56.97 ± 0.20   F1(classes>=20)  69.47   [197 s]
+  task C RF-weighted R2 + C parity    accuracy  83.52 ± 0.35   macro F1  57.43 ± 0.46   F1(classes>=20)  70.94   [195 s]
+  task C RF-weighted R2C (both)       accuracy  84.21 ± 0.43   macro F1  57.67 ± 0.61   F1(classes>=20)  71.64   [187 s]
+
+  Gain over R2 (macro F1 points, mean of seeds):
+    task A RF-weighted R2 + C mod 5: +1.81   R2 + C parity: +2.20   R2C (both): +2.94
+    task A XGB         R2 + C mod 5: +0.46   R2 + C parity: +0.50   R2C (both): +0.81
+    task C RF-weighted R2 + C mod 5: +1.42   R2 + C parity: +1.88   R2C (both): +2.11
+
+  F1 per category, task A, RF-weighted (R2 → R2C):
+    Fatty Acyls                n = 11,691    87.65 →  93.14   (+5.49)
+    Glycerophospholipids       n = 10,544    99.75 →  99.75   (+0.00)
+    Glycerolipids              n =  7,795    98.29 →  98.39   (+0.10)
+    Polyketides                n =  7,218    96.27 →  96.51   (+0.23)
+    Sphingolipids              n =  4,631    98.25 →  98.28   (+0.03)
+    Sterol Lipids              n =  4,097    74.57 →  85.85   (+11.28)
+    Prenol Lipids              n =  2,639    69.00 →  75.36   (+6.36)
+    Saccharolipids             n =  1,351    98.41 →  98.44   (+0.02)
+
+(b) Independent sets, category accuracy by variant (final model refitted without the set's formulas; seeds 0-2)
+  GNPS      n =   866  R2                94.57 ± 0.12 %
+  GNPS      n =   866  R2 + C mod 5      94.46 ± 0.20 %
+  GNPS      n =   866  R2 + C parity     95.19 ± 0.18 %
+  GNPS      n =   866  R2C (both)        95.23 ± 0.24 %
+  MassBank  n = 1,719  R2                86.95 ± 0.13 %
+  MassBank  n = 1,719  R2 + C mod 5      87.43 ± 0.06 %
+  MassBank  n = 1,719  R2 + C parity     87.12 ± 0.18 %
+  MassBank  n = 1,719  R2C (both)        87.55 ± 0.06 %
+  NIST      n =   329  R2                97.77 ± 0.18 %
+  NIST      n =   329  R2 + C mod 5      98.38 ± 0.18 %
+  NIST      n =   329  R2 + C parity     98.78 ± 0.00 %
+  NIST      n =   329  R2C (both)        98.58 ± 0.35 %
+
+(c) Impurity importance in the random forest fitted on all entries (R2C), task A
+    C mod 5: importance  2.25 %  (rank 15 of 24)
+    C mod 2: importance  0.69 %  (rank 18 of 24)
+    top 8: H_C 12.0 %, H 10.9 %, C 9.6 %, MASA 8.0 %, POLARES 6.7 %, DBE 6.7 %, P_C 6.0 %, O 5.4 %
+
+  Saved: results/93_ablation_*.csv

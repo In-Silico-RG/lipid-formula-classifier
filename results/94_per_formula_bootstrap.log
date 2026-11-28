@@ -1,0 +1,40 @@
+========================================================================================
+94 — PER-FORMULA VIEW, BOOTSTRAP OVER FORMULAS, PAIRED MODEL COMPARISON, kNN ON UNIQUE FORMULAS
+========================================================================================
+
+=== task A (category) · 49,966 entries · 9,935 formulas ===
+  upper limits computed here (strict): per entry 97.46 %, per formula (equal weight) 98.24 %
+  (a) the 5 largest formulas hold 1,430 entries (2.86 %), the 50 largest 4,812 (9.6 %); largest: C22H34O6 (531 entries, 1.06 %)
+      accuracy on those 5 formulas 86.99 %; on the remaining entries 95.19 % (all entries 94.95 %)
+  (b) final model, accuracy per entry 94.95 % (limit 97.46); per formula, equal weight 91.61 % (limit 98.24); per formula against its majority label 92.37 %; per formula, permissive 93.46 %
+      formulas with 1 entry      : 4,344 (43.7 % of the formulas,  8.7 % of the entries) accuracy  88.6 %
+      formulas with 2-5 entries  : 3,555 (35.8 % of the formulas, 20.2 % of the entries) accuracy  92.8 %
+      formulas with 6-20 entries : 1,558 (15.7 % of the formulas, 32.0 % of the entries) accuracy  95.5 %
+      formulas with > 20 entries :   478 ( 4.8 % of the formulas, 39.1 % of the entries) accuracy  97.3 %
+  (c) accuracy by seed: 94.24, 95.36, 95.26; mean 94.95 ± 0.62 (seed 0 = 94.24, -0.72 from the mean)
+  (d) bootstrap over formulas (2000 resamples): final model accuracy 94.95 % [95 % interval 94.22, 95.59]; distance to the entry limit 2.51 points [1.87, 3.24]
+      XGBoost accuracy 95.09 % [94.63, 95.53]; paired difference RF-weighted minus XGBoost -0.13 points [-0.88, +0.33] (share of resamples in which RF-weighted is higher: 39.3 %)
+
+=== task C (main class) · 49,966 entries · 9,935 formulas ===
+  upper limits computed here (strict): per entry 91.18 %, per formula (equal weight) 95.54 %
+  (a) the 5 largest formulas hold 1,430 entries (2.86 %), the 50 largest 4,812 (9.6 %); largest: C22H34O6 (531 entries, 1.06 %)
+      accuracy on those 5 formulas 56.08 %; on the remaining entries 85.04 % (all entries 84.21 %)
+  (b) final model, accuracy per entry 84.21 % (limit 91.18); per formula, equal weight 83.30 % (limit 95.54); per formula against its majority label 85.05 %; per formula, permissive 88.95 %
+      formulas with 1 entry      : 4,344 (43.7 % of the formulas,  8.7 % of the entries) accuracy  80.3 %
+      formulas with 2-5 entries  : 3,555 (35.8 % of the formulas, 20.2 % of the entries) accuracy  85.3 %
+      formulas with 6-20 entries : 1,558 (15.7 % of the formulas, 32.0 % of the entries) accuracy  87.0 %
+      formulas with > 20 entries :   478 ( 4.8 % of the formulas, 39.1 % of the entries) accuracy  83.1 %
+  (c) accuracy by seed: 84.57, 84.34, 83.73; mean 84.21 ± 0.43 (seed 0 = 84.57, +0.36 from the mean)
+  (d) bootstrap over formulas (2000 resamples): final model accuracy 84.21 % [95 % interval 81.94, 85.92]; distance to the entry limit 6.97 points [5.26, 9.24]
+
+=== (e) nearest neighbours, task A, same folds, scored per entry ===
+  R2C  k = 1  fitted on entries         accuracy  81.87 ± 0.31  macro F1  77.94
+  R2C  k = 1  fitted on unique formulas accuracy  79.75 ± 0.32  macro F1  76.04
+  R2C  k = 5  fitted on entries         accuracy  84.35 ± 0.57  macro F1  80.46
+  R2C  k = 5  fitted on unique formulas accuracy  87.15 ± 0.29  macro F1  82.66
+  T12  k = 1  fitted on entries         accuracy  89.56 ± 0.35  macro F1  86.93
+  T12  k = 1  fitted on unique formulas accuracy  90.33 ± 0.57  macro F1  88.21
+  T12  k = 5  fitted on entries         accuracy  92.23 ± 0.17  macro F1  89.54
+  T12  k = 5  fitted on unique formulas accuracy  91.98 ± 0.21  macro F1  89.50
+
+  Saved: results/94_*.csv

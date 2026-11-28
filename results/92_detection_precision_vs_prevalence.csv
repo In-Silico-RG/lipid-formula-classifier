@@ -1,0 +1,9 @@
+non_lipids_per_lipid,source,precision
+1.0,cross-validation,98.32422444863028
+8.4,cross-validation,87.47649281783654
+20.0,cross-validation,74.5785965768346
+100.0,cross-validation,36.97764813829563
+1.0,MassBank test,97.49957401535208
+8.4,MassBank test,82.27593286271258
+20.0,MassBank test,66.09777915519156
+100.0,MassBank test,28.054026744314736

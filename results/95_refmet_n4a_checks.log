@@ -1,0 +1,33 @@
+========================================================================================
+95 — REFMET LIPIDS, N4a AGAINST COCONUT LIPID-LIKE FORMULAS, COUNTS, CONFUSION MATRIX (peer-review points)
+========================================================================================
+    candidates 22,036: {'discarded': 21836, 'non_lipid': 200}; kept: the RefMet lipids set aside (label 'discarded')
+(a) RefMet lipid formulas outside LIPID MAPS and outside the training table: 21,836
+    called lipid by the final detection model (3 seeds): 68.56 ± 0.21 % (cross-validation sensitivity on LIPID MAPS formulas: see 92_detection_breakdown.log)
+      C<=15    n =    148     2.03 %
+      C16-25   n =  1,224    22.06 %
+      C26-35   n =  3,064    46.74 %
+      C36-50   n =  5,461    69.20 %
+      C>50     n = 11,939    79.38 %
+
+(b) COCONUT lipid-like formulas against the artificial sets (N4a 28,468, N4b 4,988)
+    COCONUT: 98,708 distinct formula strings, 93,261 valid; lipid-like by the paper's rule: 45,690
+    N4a: 28,468 formulas; 10.18 % coincide with a COCONUT lipid-like formula (2,897); 10.18 % with any COCONUT formula
+    N4b: 4,988 formulas; 0.08 % coincide with a COCONUT lipid-like formula (4); 0.08 % with any COCONUT formula
+    (N4a/N4b exclude the 116 354 formulas of the final table and the measured sets, so these coincidences are formulas the pipeline never counted as non-lipids; COCONUT is only one of the catalogues in which such formulas could appear.)
+
+(c) Non-lipid formulas in the final table 83,740; rejected by classifier/features.py: 332; usable 83,408
+
+(d) Category, out-of-fold, seed 0: 2,879 errors in 49,966 entries (accuracy 94.24 %); counts:
+predicted             Fatty Acyls  Glycerolipids  Glycerophospholipids  Polyketides  Prenol Lipids  Saccharolipids  Sphingolipids  Sterol Lipids
+true                                                                                                                                            
+Fatty Acyls                 10659             21                     5           53            140               2             46            765
+Glycerolipids                 105           7617                     3            1             19               5              9             36
+Glycerophospholipids            0              0                 10541            0              0               1              1              1
+Polyketides                   153             17                     5         6855             54               0              5            129
+Prenol Lipids                 388             30                    21           56           1778               4              9            353
+Saccharolipids                 14              3                     2            0              0            1325              1              6
+Sphingolipids                  65              0                    10            1              0               1           4553              1
+Sterol Lipids                 187              7                     8           34            102               0              0           3759
+
+  Saved: results/95_*.csv
